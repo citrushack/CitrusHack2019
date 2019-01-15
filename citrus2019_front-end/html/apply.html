@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- Meta -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+    <!-- AnimateOnScroll -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- Custom Stylesheet -->
+    <link rel="stylesheet" type="text/css" href="../css/apply.css">
+
+	<title>Apply - CitrusHack 2019</title>
+</head>
+<body>
+	<nav id="top-nav" class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+        <a class="navbar-brand" href="#"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+            <div class = "nav">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                        <a class="nav-link link-hover" href="home.html">HOME</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link link-hover" href="login.html">LOGIN</a>
+                    </li>
+                </ul>
+            </div>  
+        </div>
+    </nav>
+
+    <div id="form-container" class="container" data-aos="fade-in" data-aos-easing="ease-in">
+    	<div class="logo-container">
+            <img src="../assets/img/shine.png" alt="CitrusHack logo">
+            <img src="../assets/img/shine.png">
+            <img src="../assets/img/shine.png">
+            <img src="../assets/img/shine.png">                    
+        </div>  
+    	<h2 class="text-center" id="citrus-hack"><span id="Citrus">Citrus</span><span id="Hack">Hack</span></h2>
+    	<h1 class="text-center">YOUR APPLICATION</h1>
+    	<form>
+			<div class="form-group">
+				<h3 class="text-center">ACCOUNT INFORMATION</h3>
+				
+				<div class="row">
+					<div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6">	
+						<label class="required" for="first-name">First Name</label>
+						<input type="fname" class="form-control" id="first-name">
+					</div>
+					<div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6">	
+						<label class="required" for="last-name">Last Name</label>
+						<input type="lname" class="form-control" id="last-name">
+					</div>
+				</div>	
+				
+				<label class="required" for="email-address">Email</label>
+				<input type="email" class="form-control" id="email-address">
+				
+				<div class="row">
+					<div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6">	
+						<label class="required" for="password1">Password</label>
+						<input type="password" class="form-control" id="password1">
+					</div>
+					<div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6">	
+						<label class="required" for="password2">Confirm Password</label>
+						<input type="password" class="form-control" id="password2">
+					</div>
+				</div>
+
+			</div>
+			<div class="form-group">
+				<h3 class="text-center">SCHOOL INFORMATION</h3>
+				
+				<label class="required" for="school">School</label>
+				<input type="school" class="form-control" id="school">
+				
+				<div class="row">
+					<div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6">	
+						<label class="required" for="level-of-study">Level of Study</label>
+						<select id="level-of-study" class="custom-select">
+							<option selected></option>
+							<option value="1">One</option>
+							<option value="2">Two</option>
+							<option value="3">Three</option>
+						</select>
+					</div>
+					<div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6">	
+						<label class="required" for="graduation-year">Graduation Year</label>
+						<select id="graduation-year" class="custom-select">
+							<option selected></option>
+							<option value="1">One</option>
+							<option value="2">Two</option>
+							<option value="3">Three</option>
+						</select>
+					</div>
+				</div>
+				
+				<label class="required" for="major">Major</label>			
+				<input type="major" class="form-control" id="major">
+
+			</div>
+			<div class="form-group">
+				<h3 class="text-center">ADDITIONAL INFORMATION</h3>
+				
+				<div class="row">
+					<div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6">	
+						<label class="required" for="gender">Gender</label>
+						<select id="gender" class="custom-select">
+							<option selected></option>
+							<option value="1">One</option>
+							<option value="2">Two</option>
+							<option value="3">Three</option>
+						</select>
+					</div>
+					<div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6">	
+						<label class="required" for="dob">Date of Birth</label>
+						<input type="date" id="dob" class="form-control">
+					</div>
+				</div>
+				
+				<label class="required" for="race">Race/Ethnicity</label>
+				<select id="race" class="custom-select">
+					<option selected></option>
+					<option value="1">One</option>
+					<option value="2">Two</option>
+					<option value="3">Three</option>
+				</select>
+				
+				<div class="row">
+					<div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6">	
+						<label class="required" for="phone">Phone Number</label>
+						<input type="text" name="phone" class="form-control" id="phone" >
+					</div>
+					<div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6">	
+						<label class="required" for="shirt">Shirt Size</label>
+						<select id="race" class="custom-select">
+							<option selected></option>
+							<option value="1">One</option>
+							<option value="2">Two</option>
+							<option value="3">Three</option>
+						</select>
+					</div>
+				</div>
+				
+				<label for="diet">Dietary Restrictions</label>
+				<input type="diet" class="form-control" id="diet">
+			</div>
+			<div class="form-group">
+				<h3 class="text-center">PROFILE INFORMATION</h3>
+				
+				<div class="row">
+					<div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6">	
+						<label for="LinkedIn">LinkedIn</label>
+						<input type="url" name="LinkedIn" id="LinkedIn" placeholder="https://" class="form-control">
+					</div>
+					<div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6">	
+						<label for="GitHub">GitHub</label>
+						<input type="url" name="GitHub" id="GitHub" placeholder="https://" class="form-control">
+					</div>
+				</div>
+				
+				<label for="additional-link">Additional link (portfolio, website, etc.)</label>
+				<input type="url" name="additional-link" id="additional-link" placeholder="https://" class="form-control">
+				
+				<label for="self-description" class="required">I would describe myself as a...</label>
+				<input type="self-description" class="form-control" id="self-description" placeholder="Designer, Full-stack Master, Hardware Junkie, Big Data Enthusiast, etc.">
+
+				<label for="essay" class="required">What would you like to learn or gain out of coming to CitrusHack?</label>
+  				<textarea class="form-control" rows="5" id="essay"></textarea>
+
+  				<label for="resume" class="required">Resume (PDF format via GoogleDrive, DropBox, etc.)</label>
+				<input type="url" name="resume" id="resume" placeholder="https://" class="form-control">
+				<small>Please make sure that sharing settings for your resume file allow viewability to anyone with the link.</small>
+			</div>
+			<div class="form-group">
+				<h3 class="text-center">CONDUCT AND POLICIES</h3>
+				<p>All CitrusHack participants must adhere to the MLH Code of Conduct at all times during the event. By checking the following box, you hereby agree to follow all rules and regulations outlined in the official MLH Code of conduct.</p>
+				<div class="form-check">
+					<input type="checkbox" class="form-check-input" id="code-of-conduct-check">
+					<label class="form-check-label required" for="code-of-conduct-check">I have read and agree to the <a href="https://static.mlh.io/docs/mlh-code-of-conduct.pdf">MLH Code of Conduct</a>.</label>
+				</div>
+				<br>
+				
+				<p>By participating in CitrusHack, you must allow the use of your application information to be passed along to MLH to be used to promote other MLH affiliated events. By checking the following box, you hereby agree to us sharing your information with MLH:</p>
+				<div class="form-check">
+					<input type="checkbox" class="form-check-input" id="information-check">
+					<label class="form-check-label required" for="information-check">I authorize you to share my application/registration information for event administration, ranking, MLH administration, pre- and post-event informational e-mails, and occasional messages about hackathons in-line with the ​MLH Privacy Policy​. I further I agree to the terms of both the ​<a href="https://github.com/MLH/mlh-policies/blob/master/prize-terms-and-conditions/contest-terms.md">MLH Contest Terms and Conditions​</a> and the <a href="https://mlh.io/privacy">MLH Privacy Policy​</a>.</label>
+				</div>
+			</div>
+			<div class="text-center">
+				<button type="submit" class="button text-center">SUBMIT</button>
+			</div>
+		</form> 	
+    </div>
+<!-- Scripts -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.10/jquery.mask.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+<!-- AOS -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>AOS.init();</script>
+
+<script>
+	$('#phone').mask("(999)999-9999", {placeholder:"(___)___-____"});
+</script>
+</body>
+</html>

@@ -87,18 +87,23 @@
 						<label class="required" for="level-of-study">Level of Study</label>
 						<select id="level-of-study" class="custom-select">
 							<option selected></option>
-							<option value="1">One</option>
-							<option value="2">Two</option>
-							<option value="3">Three</option>
+							<option value="1">Undergraduate</option>
+							<option value="2">Graduate</option>
+							<option value="3">High School</option>
+							<option value="4">Prefer not to disclose</option>
 						</select>
 					</div>
 					<div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6">	
 						<label class="required" for="graduation-year">Graduation Year</label>
 						<select id="graduation-year" class="custom-select">
 							<option selected></option>
-							<option value="1">One</option>
-							<option value="2">Two</option>
-							<option value="3">Three</option>
+							<option value="1">2018</option>
+							<option value="2">2019</option>
+							<option value="3">2020</option>
+							<option value="4">2021</option>
+							<option value="5">2022</option>
+							<option value="6">2023 or later</option>
+							<option value="7">Prefer not to disclose</option>
 						</select>
 					</div>
 				</div>
@@ -115,23 +120,29 @@
 						<label class="required" for="gender">Gender</label>
 						<select id="gender" class="custom-select">
 							<option selected></option>
-							<option value="1">One</option>
-							<option value="2">Two</option>
-							<option value="3">Three</option>
+							<option value="1">Female</option>
+							<option value="2">Male</option>
+							<option value="3">Other</option>
+							<option value="4">Prefer not to disclose</option>
 						</select>
 					</div>
 					<div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6">	
 						<label class="required" for="dob">Date of Birth</label>
-						<input type="date" id="dob" class="form-control">
+						<input type="date" id="dob" class="form-control" placeholder="mm/dd/yyyy">
 					</div>
 				</div>
 				
 				<label class="required" for="race">Race/Ethnicity</label>
 				<select id="race" class="custom-select">
 					<option selected></option>
-					<option value="1">One</option>
-					<option value="2">Two</option>
-					<option value="3">Three</option>
+					<option value="1">American Indian or Alaskan Native</option>
+					<option value="2">Asian/Pacific Islander</option>
+					<option value="3">Black or African American</option>
+					<option value="4">Hispanic</option>
+					<option value="5">White/Caucasian</option>
+					<option value="6">Other</option>
+					<option value="7">Prefer not to disclose</option>
+
 				</select>
 				
 				<div class="row">
@@ -143,9 +154,12 @@
 						<label class="required" for="shirt">Shirt Size</label>
 						<select id="race" class="custom-select">
 							<option selected></option>
-							<option value="1">One</option>
-							<option value="2">Two</option>
-							<option value="3">Three</option>
+							<option value="1">XS</option>
+							<option value="2">S</option>
+							<option value="3">M</option>
+							<option value="3">L</option>
+							<option value="4">XL</option>
+							<option value="5">XXL</option>
 						</select>
 					</div>
 				</div>
@@ -212,6 +226,7 @@
 <script>AOS.init();</script>
 
 <script>
+	$('#phone').mask("99/99/9999", {placeholder:"mm/dd/yyyy"});
 	$('#phone').mask("(999)999-9999", {placeholder:"(___)___-____"});
 </script>
 </body>

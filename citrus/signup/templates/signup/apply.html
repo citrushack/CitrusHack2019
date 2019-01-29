@@ -12,7 +12,8 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
     <!-- Custom Stylesheet -->
-    <link rel="stylesheet" type="text/css" href="../css/apply.css">
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static "signup/css/apply.css" %}">
 
 	<title>Apply - CitrusHack 2019</title>
 </head>
@@ -39,10 +40,14 @@
 
     <div id="form-container" class="container" data-aos="fade-in" data-aos-easing="ease-in">
     	<div class="logo-container">
-            <img src="../assets/img/shine.png" alt="CitrusHack logo">
-            <img src="../assets/img/shine.png">
-            <img src="../assets/img/shine.png">
-            <img src="../assets/img/shine.png">                    
+    		{% load static %}
+            <img src="{% static "assets/img/shine.png" %}" alt="CitrusHack logo">
+            {% load static %}
+            <img src="{% static "assets/img/shine.png" %}">
+            {% load static %}
+            <img src="{% static "assets/img/shine.png" %}">
+            {% load static %}
+            <img src="{% static "assets/img/shine.png" %}">
         </div>  
     	<h2 class="text-center" id="citrus-hack"><span id="Citrus">Citrus</span><span id="Hack">Hack</span></h2>
     	<h1 class="text-center">YOUR APPLICATION</h1>

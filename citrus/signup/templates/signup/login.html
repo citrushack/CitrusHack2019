@@ -8,7 +8,8 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
 	<!-- Custom Stylesheet -->
-    <link rel="stylesheet" type="text/css" href="../css/login.css">
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static "signup/css/login.css" %}">
 
 	<title>Login - CitrusHack 2019</title>
 </head>
@@ -37,10 +38,14 @@
         <div class="text-center">
             <div class="ui-card text-center" data-aos="fade-in" data-aos-easing="ease-in">
             	<div class="logo-container">
-                    <img src="../assets/img/shine.png" alt="CitrusHack logo">
-                    <img src="../assets/img/shine.png">
-                    <img src="../assets/img/shine.png">
-                    <img src="../assets/img/shine.png">                 
+                    {% load static %}
+                    <img src="{% static "assets/img/shine.png" %}" alt="CitrusHack logo">
+                    {% load static %}
+                    <img src="{% static "assets/img/shine.png" %}">
+                    {% load static %}
+                    <img src="{% static "assets/img/shine.png" %}">
+                    {% load static %}
+                    <img src="{% static "assets/img/shine.png" %}">               
                 </div> 
             	<h1><span id="Citrus">Citrus</span><span id="Hack">Hack</span></h1>
             	<input type="text" name="FirstName" placeholder="Email">

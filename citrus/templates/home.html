@@ -15,7 +15,9 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
     <!-- Custom Stylesheet -->
+    {% load static %}
     <link rel="stylesheet" type="text/css" href="../css/home.css">
+    <link rel="stylesheet" type="text/css" href="{% static '/css/home.css' %}">
 
     <title>CitrusHack 2019</title>
   </head>
@@ -45,13 +47,18 @@
             </div>
         </nav>
 
+
     	<div id = "main-hero">
     		<div id = "main-titles">
                 <div class="logo-container">
-                    <img id="logo" data-aos="zoom-in" src="../assets/img/shine.png" alt="CitrusHack logo">
-                    <img data-aos="zoom-in" src="../assets/img/shine.png">
-                    <img data-aos="zoom-in" src="../assets/img/shine.png">
-                    <img data-aos="zoom-in" src="../assets/img/shine.png">                    
+                    {% load static %}
+                    <img id="logo" data-aos="zoom-in" src="{% static "assets/img/shine.png" %}" alt="CitrusHack logo">
+                    {% load static %}
+                    <img data-aos="zoom-in" src="{% static "assets/img/shine.png" %}">
+                    {% load static %}
+                    <img data-aos="zoom-in" src="{% static "assets/img/shine.png" %}">
+                    {% load static %}
+                    <img data-aos="zoom-in" src="{% static "assets/img/shine.png" %}">                    
                 </div>                   
                 <svg id="logo-text" width="654" height="87" viewBox="0 0 654 87" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <mask id="path-1-outside-1" maskUnits="userSpaceOnUse" x="-0.130859" y="-0.240234" width="654" height="87" fill="none">
@@ -162,7 +169,8 @@
                         <p class="info-text">Citrus Hack is where hundreds of students from all over Southern California (and a few from out-of-state) come together and form teams, aiming to build a project of their own from scratch over the duration of 36 hours.<br><br>Citrus Hack is focused on the brilliant partnership between education and competition. While “hackers” compete for prizes, they hone their technical skills along the way.</p>
         			</div>
                     <div class = "col-4"> <!-- FIX FOR ALL DEVICE WIDTHS -->
-                        <img src="../assets/img/computer.png" alt="" style="width: 400px;height: 386px;">
+                        {% load static %}
+                        <img src="{% static "assets/img/computer.png" %}" alt="" style="width: 400px;height: 386px;">
                     </div>
                 </div> 
     		</div>
@@ -181,7 +189,8 @@
             <div class="container">
                 <div class="row">    
                     <div class="track-card text-center col-3"> <!-- FIX FOR ALL DEVICE WIDTHS -->
-                        <img class="track-icon" src="../assets/tracks/cube.png">
+                        {% load static %}
+                        <img class="track-icon" src="{% static "assets/tracks/cube.png" %}">
                         <br>
                         <h3 class="track-title">Nomad</h3>
                         <br>
@@ -192,7 +201,8 @@
                         </p>
                     </div>
                     <div class="track-card text-center col-3"> <!-- FIX FOR ALL DEVICE WIDTHS -->
-                        <img class="track-icon" src="../assets/tracks/plant.png">
+                        {% load static %}
+                        <img class="track-icon" src="{% static "assets/tracks/plant.png" %}">
                         <br>
                         <h3 class="track-title">Apprentice</h3>
                         <br>
@@ -203,7 +213,8 @@
                         </p>
                     </div>
                     <div class="track-card text-center col-3"> <!-- FIX FOR ALL DEVICE WIDTHS -->
-                        <img class="track-icon" src="../assets/tracks/brain.png">
+                        {% load static %}
+                        <img class="track-icon" src="{% static "assets/tracks/brain.png" %}">
                         <br>
                         <h3 class="track-title">Quant</h3>
                         <br>
@@ -214,7 +225,8 @@
                         </p>
                     </div>
                     <div class="track-card text-center col-3"> <!-- FIX FOR ALL DEVICE WIDTHS -->
-                        <img class="track-icon" src="../assets/tracks/city.png">
+                        {% load static %}
+                        <img class="track-icon" src="{% static "assets/tracks/city.png" %}">
                         <br>
                         <h3 class="track-title">Visionary</h3>
                         <br>
@@ -225,7 +237,8 @@
                         </p>
                     </div>
                     <div class="track-card text-center col-3"> <!-- FIX FOR ALL DEVICE WIDTHS -->
-                        <img class="track-icon" src="../assets/tracks/plant.png">
+                        {% load static %}
+                        <img class="track-icon" src="{% static "assets/tracks/plant.png" %}">
                         <br>
                         <h3 class="track-title">Blockmaster</h3>
                         <br>
@@ -236,7 +249,8 @@
                         </p>
                     </div>
                     <div class="track-card text-center col-3"> <!-- FIX FOR ALL DEVICE WIDTHS -->
-                        <img class="track-icon" src="../assets/tracks/city.png">
+                        {% load static %}
+                        <img class="track-icon" src="{% static "assets/tracks/city.png" %}">
                         <br>
                         <h3 class="track-title">Practicioner</h3>
                         <br>
@@ -247,7 +261,8 @@
                         </p>
                     </div>
                     <div class="track-card text-center col-3"> <!-- FIX FOR ALL DEVICE WIDTHS -->
-                        <img class="track-icon" src="../assets/tracks/cube.png">
+                        {%load static %}
+                        <img class="track-icon" src="{% static "assets/tracks/cube.png" %}">
                         <br>
                         <h3 class="track-title">Commissionaire</h3>
                         <br>
@@ -258,7 +273,8 @@
                         </p>
                     </div>
                     <div class="track-card text-center col-3"> <!-- FIX FOR ALL DEVICE WIDTHS -->
-                        <img class="track-icon" src="../assets/tracks/brain.png">
+                        {% load static %}
+                        <img class="track-icon" src="{% static "assets/tracks/brain.png" %}">
                         <br>
                         <h3 class="track-title">Cartographer</h3>
                         <br>
@@ -279,15 +295,15 @@
                 <div class="row">
                     <div class="text-center col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4"> 
                         <h3 class="helper-title volunteer-text text-center">Mentor</h3>
-                        <a href="http://youtube.com"><img src="../assets/img/emblem-mnt.png" style="height:250px;width:250px;" class="volunteer-emblem"></a>
+                        <a href="http://youtube.com">{% load static %}<img src="{% static "assets/img/emblem-mnt.png" %}" style="height:250px;width:250px;" class="volunteer-emblem"></a>
                     </div>
                     <div class="text-center col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4"> 
                         <h3 class="helper-title volunteer-text text-center">Volunteer</h3>
-                        <a href="http://youtube.com"><img src="../assets/img/emblem-vol.png" style="height:250px;width:250px;" class="volunteer-emblem"></a>
+                        <a href="http://youtube.com">{% load static %}<img src="{% static "assets/img/emblem-vol.png" %}" style="height:250px;width:250px;" class="volunteer-emblem"></a>
                     </div>
                     <div class="text-center col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4"> 
                         <h3 class="helper-title volunteer-text text-center">Workshop Leader</h3>
-                        <a href="http://youtube.com"><img src="../assets/img/emblem-wsl.png" style="height:250px;width:250px;" class="volunteer-emblem"></a>
+                        <a href="http://youtube.com">{% load static %}<img src="{% static "assets/img/emblem-wsl.png" %}" style="height:250px;width:250px;" class="volunteer-emblem"></a>
                     </div>
                 </div>
             </div>
@@ -465,17 +481,20 @@
             <div class="row">
                 <div class="col-xs-12 text-center first-tier">
                     <a href="https://www.equipovision.com/">
-                        <img class="hvr-grow" src="../assets/supporters/sponsor/equipo.png" alt="EquipoVision logo">
+                        {% load static %}
+                        <img class="hvr-grow" src="{% static "assets/supporters/sponsor/equipo.png" %}" alt="EquipoVision logo">
                     </a>
                 </div>
                 <div class="col-xs-12 text-center first-tier">
                     <a href="https://gigabyte.com/us/">
-                        <img class="hvr-grow" src="../assets/supporters/sponsor/gigabyte.svg" alt="Gigabyte logo" style="filter: brightness(0) invert(1);">
+                        {% load static %}
+                        <img class="hvr-grow" src="{% static "assets/supporters/sponsor/gigabyte.svg" %}" alt="Gigabyte logo" style="filter: brightness(0) invert(1);">
                     </a>
                 </div>
                 <div class="col-xs-12 text-center first-tier">
                     <a href="https://www.autodesk.com/">
-                        <img class="hvr-grow" src="../assets/supporters/sponsor/autodesk.png" alt="Autodesk logo" style="filter: brightness(0) invert(1);">
+                        {% load static %}
+                        <img class="hvr-grow" src="{% static "assets/supporters/sponsor/autodesk.png" %}" alt="Autodesk logo" style="filter: brightness(0) invert(1);">
                     </a>
                 </div>
             </div>
@@ -597,12 +616,14 @@
             <div class="row align-items-center">
                 <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 text-center second-tier">
                     <a href="http://acmucr.org">
-                        <img class="hvr-grow" src="../assets/supporters/org/acm.png" alt="ACM at UCR logo">
+                        {% load static %}
+                        <img class="hvr-grow" src="{% static "assets/supporters/org/acm.png" %}" alt="ACM at UCR logo">
                     </a>
                 </div>
                 <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 text-center second-tier">
                     <a href="https://ieee.ee.ucr.edu/">
-                        <img class="hvr-grow" src="../assets/supporters/org/ieee.png" alt="IEEE logo">
+                        {% load static %}
+                        <img class="hvr-grow" src="{% static "assets/supporters/org/ieee.png" %}" alt="IEEE logo">
                     </a>
                 </div>
             </div>

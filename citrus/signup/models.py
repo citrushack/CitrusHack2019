@@ -48,14 +48,19 @@ class MyUser(AbstractBaseUser):
         max_length=255,
         unique=True,
     )
-    #date_of_birth = models.DateField()
+    first_name = models.CharField(max_length=30)
+    last_name = models.CharField(max_length=30)
+    
+    #Info that is NOT saved upon signup
+    email_confirmed = models.BooleanField(default=False)
+    app_status = models.CharField(max_length=30, default ="Pending")
     is_active = models.BooleanField(default=False)
     is_admin = models.BooleanField(default=False)
 
     objects = MyUserManager()
 
     USERNAME_FIELD = 'email'
-    REQUIRED_FIELDS = [] #'date_of_birth'
+    REQUIRED_FIELDS = []
 
     def __str__(self):
         return self.email
@@ -80,59 +85,72 @@ class MyUser(AbstractBaseUser):
         return self.is_admin
 
 class Profile(models.Model):
+    # OneToOne Relationship between MyUser and Profile Model (basically linked)
     user = models.OneToOneField(MyUser, on_delete=models.CASCADE)
-    email_confirmed = models.BooleanField(default=False)
-    first_name = models.CharField(max_length=30, blank=True)
-    last_name = models.CharField(max_length=30, blank=True)
-    age = models.CharField(max_length=30,null=True, blank=True) # change to age
-    school = models.CharField(max_length=100, blank=True)
-    major = models.CharField(max_length=30, blank=True)
-    appStatus = models.CharField(max_length=30, default ="Pending")
-    #email_confirmed = models.BooleanField(default=False)
-    phoneNumber = models.CharField(max_length=12, blank=True)
-    genderOptions = (
-      ("Female", "Female"),
-      ("Male", "Male"),  
-      ("Other", "Other"), 
+
+    #School Information
+    school = models.CharField(max_length=50)
+    LEVEL_OF_STUDY_CHOICES = (
+      ("Undergraduate", "Undergraduate"),
+      ("Graduate", "Graduate"),
+      ("High School","High School"),
       ("Prefer not to disclose", "Prefer not to disclose"),
-      )
-    Gender = models.CharField(max_length=30, choices=genderOptions, blank=True)
-    raceOptions = (
-      ('Asian', 'Asian'), 
-      ('Black or African American','Black or African American'), 
-      ('Latino or Latin American','Latino or Latin American'), 
-      ('Native American', 'Native American'),  
-      ('Native Hawaiian or other Pacific Islander','Native Hawaiian or other Pacific Islander'), 
-      ('Other','Other'),
-      ('Prefer not to diclose', 'Prefer not to disclose'),
-      ('Two or more races', 'Two or more races'), 
-      ('White', 'White'), 
-      )
-    Race = models.CharField(max_length=30, choices=raceOptions, blank=True)
-    studyOptions = (
-      ("1st Year", "1st Year"),
-      ("2nd Year", "2nd Year"),
-      ("3rd Year","3rd Year"),
-      ("4th Year", "4th Year"),
-      ("5th Year or beyond", "5th Year or beyond"),
-      ("Prefer not to disclose", "Prefer not to disclose"),
-      )
-    LevelofStudy = models.CharField(max_length=30, choices=studyOptions, default="")
-    yearOptions = (
+    )
+    level_of_study = models.CharField(max_length=30, choices=LEVEL_OF_STUDY_CHOICES)
+    GRADUATION_YEAR_CHOICES = (
+      ("2018", "2018"),
       ("2019", "2019"),
       ("2020", "2020"),
       ("2021", "2021"),
       ("2022", "2022"),
-      ("2023", "2023"),
-      ("2024", "2024"),
-      ("2025", "2025"),
-      )
-    gradYear = models.CharField(max_length=30, choices=yearOptions, default="")
-    dietRestrictions = models.CharField(max_length=100, default="")
-    Resume = models.URLField(max_length=500, blank=True)
-    conductBox = models.BooleanField(default=False)
-    shareBox = models.BooleanField(default=False)
-    meme = models.URLField(max_length=500, blank=True)
+      ("2023 or later", "2023 or later"),
+      ("Prefer not to disclose", "Prefer not to disclose"),
+    )
+    graduation_year = models.CharField(max_length=30, choices=GRADUATION_YEAR_CHOICES)
+    major = models.CharField(max_length=30)
+
+    #Additional Information
+    GENDER_CHOICES = (
+      ("Female", "Female"),
+      ("Male", "Male"),  
+      ("Other", "Other"), 
+      ("Prefer not to disclose", "Prefer not to disclose"),
+    )
+    gender = models.CharField(max_length=30, choices=GENDER_CHOICES)
+    date_of_birth = models.DateField()
+    RACE_CHOICES = (
+      ('Asian/Pacific Islander', 'Asian/Pacific Islander'), 
+      ('Black or African American','Black or African American'),
+      ('Hispanic','Hispanic'),
+      ('Native American', 'Native American'),   
+      ('White/Caucasian', 'White/Caucasian'),
+      ('Other','Other'),
+      ('Prefer not to diclose', 'Prefer not to disclose'), 
+    )
+    race = models.CharField(max_length=30, choices=RACE_CHOICES)
+    phone_number = models.CharField(max_length=12)
+    SHIRT_SIZE_CHOICES = (
+      ("XS", "XS"),
+      ("S", "S"),
+      ("M", "M"),
+      ("L", "L"),
+      ("XL", "XL"),
+      ("XXL", "XXL"),
+    )
+    shirt_size = models.CharField(max_length=3, choices=SHIRT_SIZE_CHOICES)
+    dietary_restrictions = models.CharField(max_length=100, default="", blank=True)
+
+    #Profile Information
+    linkedin = models.URLField(max_length=500, blank=True)
+    github = models.URLField(max_length=500, blank=True)
+    additional_link = models.URLField(max_length=500, blank=True)
+    description = models.CharField(max_length=100, default="")
+    learn_or_gain = models.CharField(max_length=250, default="")
+    resume = models.URLField(max_length=500, blank=True)
+    
+    #Conduct and Policies
+    conduct_box = models.BooleanField(default=False)
+    share_box = models.BooleanField(default=False)
 
 
 #might be better to have signal codes somewhere else 

@@ -64,7 +64,7 @@ class UserAdmin(BaseUserAdmin):
     # The fields to be used in displaying the User model.
     # These override the definitions on the base UserAdmin
     # that reference specific fields on auth.User.
-    list_display = ('email', 'is_admin', 'get_fname','get_status', 'get_diet') #'date_of_birth'
+    list_display = ('email', 'is_admin', )#'get_fname','get_status', 'get_diet') #'date_of_birth'
     list_select_related=('profile',)
     list_filter = ('is_admin',  )
     fieldsets = (
@@ -83,17 +83,17 @@ class UserAdmin(BaseUserAdmin):
     search_fields = ('email',)
     ordering = ('email',)
     filter_horizontal = ()
-    def get_fname(self, instance):
-        return instance.profile.first_name
-    get_fname.short_description = 'Name'
+    # def get_fname(self, instance):
+    #     return instance.profile.first_name
+    # get_fname.short_description = 'Name'
 
-    def get_status(self, instance):
-        return instance.profile.appStatus
-    get_status.short_description = 'Status'
+    # def get_status(self, instance):
+    #     return instance.profile.appStatus
+    # get_status.short_description = 'Status'
     
-    def get_diet(self, instance):
-        return instance.profile.dietRestrictions
-    get_diet.short_description = 'diet'
+    # def get_diet(self, instance):
+    #     return instance.profile.dietRestrictions
+    # get_diet.short_description = 'diet'
 
 # Now register the new UserAdmin...
 admin.site.register(MyUser, UserAdmin)

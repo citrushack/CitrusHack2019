@@ -27,21 +27,22 @@ def apply(request):
        profile_form = ProfileForm(request.POST)
        if user_form.is_valid() and profile_form.is_valid():
            user = user_form.save()
-           user.is_active = False
+           #user.is_active = False
            user.refresh_from_db()  # load the profile instance created by the signal
            profile_form = ProfileForm(request.POST, instance=user.profile)
            profile_form.full_clean()
            profile_form.save()
+           #user.save()
            current_site = get_current_site(request)
            subject = 'Activate Your CitrusHack Account'
-           message = render_to_string('account_activation/email.html', {
+           message = render_to_string('signup/account_activation_email.html', {
                'user': user,
                'domain': current_site.domain,
                'uid': urlsafe_base64_encode(force_bytes(user.pk)).decode(),
                'token': account_activation_token.make_token(user),
            })
            user.email_user(subject, message)
-           return redirect('account_activation_sent.html')
+           return redirect('account_activation_sent')
     else:
        user_form = SignUpForm()
        profile_form = ProfileForm()
@@ -49,7 +50,7 @@ def apply(request):
     #return render(request, 'signup/apply.html', {'user_form': user_form, 'profile_form': profile_form})
 
 def account_activation_sent(request):
-    return render(request, 'account_activation/sent.html')
+    return render(request, 'signup/account_activation_sent.html')
 
 def activate(request, uidb64, token):
     try:
@@ -65,4 +66,4 @@ def activate(request, uidb64, token):
         login(request, user)
         return redirect('home')
     else:
-        return render(request, 'account_activation/invalid.html')
+        return render(request, 'signup/account_activation_invalid.html')

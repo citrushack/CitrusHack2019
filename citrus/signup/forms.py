@@ -18,6 +18,7 @@ class ProfileForm(forms.ModelForm):
    # BooleanField default blank is true hence only by setting required=True in forms.py will make it required 
    conduct_box = forms.BooleanField(required=True)
    share_box = forms.BooleanField(required=True)
+
    class Meta:
       model = Profile
       fields = (

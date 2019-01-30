@@ -48,12 +48,12 @@ class MyUser(AbstractBaseUser):
         max_length=255,
         unique=True,
     )
-    first_name = models.CharField(max_length=30)
-    last_name = models.CharField(max_length=30)
+    first_name = models.CharField(max_length=30, default="")
+    last_name = models.CharField(max_length=30, default="")
     
     #Info that is NOT saved upon signup
     email_confirmed = models.BooleanField(default=False)
-    app_status = models.CharField(max_length=30, default ="Pending")
+    app_status = models.CharField(max_length=30, default ="PENDING")
     is_active = models.BooleanField(default=False)
     is_admin = models.BooleanField(default=False)
 
@@ -89,8 +89,9 @@ class Profile(models.Model):
     user = models.OneToOneField(MyUser, on_delete=models.CASCADE)
 
     #School Information
-    school = models.CharField(max_length=50)
+    school = models.CharField(max_length=50, default="")
     LEVEL_OF_STUDY_CHOICES = (
+      (None, ''),
       ("Undergraduate", "Undergraduate"),
       ("Graduate", "Graduate"),
       ("High School","High School"),
@@ -98,6 +99,7 @@ class Profile(models.Model):
     )
     level_of_study = models.CharField(max_length=30, choices=LEVEL_OF_STUDY_CHOICES)
     GRADUATION_YEAR_CHOICES = (
+      (None, ''),
       ("2018", "2018"),
       ("2019", "2019"),
       ("2020", "2020"),
@@ -106,19 +108,21 @@ class Profile(models.Model):
       ("2023 or later", "2023 or later"),
       ("Prefer not to disclose", "Prefer not to disclose"),
     )
-    graduation_year = models.CharField(max_length=30, choices=GRADUATION_YEAR_CHOICES)
-    major = models.CharField(max_length=30)
+    graduation_year = models.CharField(max_length=30, choices=GRADUATION_YEAR_CHOICES, default="")
+    major = models.CharField(max_length=30, default="")
 
     #Additional Information
     GENDER_CHOICES = (
+      (None, ''),
       ("Female", "Female"),
       ("Male", "Male"),  
       ("Other", "Other"), 
       ("Prefer not to disclose", "Prefer not to disclose"),
     )
-    gender = models.CharField(max_length=30, choices=GENDER_CHOICES)
-    date_of_birth = models.DateField()
+    gender = models.CharField(max_length=30, choices=GENDER_CHOICES, default="")
+    date_of_birth = models.CharField(max_length=10, default="")#models.DateField()
     RACE_CHOICES = (
+      (None, ''),
       ('Asian/Pacific Islander', 'Asian/Pacific Islander'), 
       ('Black or African American','Black or African American'),
       ('Hispanic','Hispanic'),
@@ -127,9 +131,10 @@ class Profile(models.Model):
       ('Other','Other'),
       ('Prefer not to diclose', 'Prefer not to disclose'), 
     )
-    race = models.CharField(max_length=30, choices=RACE_CHOICES)
-    phone_number = models.CharField(max_length=12)
+    race = models.CharField(max_length=30, choices=RACE_CHOICES, default="")
+    phone_number = models.CharField(max_length=12, default="")
     SHIRT_SIZE_CHOICES = (
+      (None, ''),
       ("XS", "XS"),
       ("S", "S"),
       ("M", "M"),
@@ -137,20 +142,20 @@ class Profile(models.Model):
       ("XL", "XL"),
       ("XXL", "XXL"),
     )
-    shirt_size = models.CharField(max_length=3, choices=SHIRT_SIZE_CHOICES)
+    shirt_size = models.CharField(max_length=3, choices=SHIRT_SIZE_CHOICES, default="")
     dietary_restrictions = models.CharField(max_length=100, default="", blank=True)
 
     #Profile Information
-    linkedin = models.URLField(max_length=500, blank=True)
-    github = models.URLField(max_length=500, blank=True)
-    additional_link = models.URLField(max_length=500, blank=True)
-    description = models.CharField(max_length=100, default="")
+    linkedin = models.URLField(max_length=200, blank=True, default="")
+    github = models.URLField(max_length=200, blank=True, default="")
+    additional_link = models.URLField(max_length=500, blank=True, default="")
+    description = models.CharField(max_length=200, default="")
     learn_or_gain = models.CharField(max_length=250, default="")
-    resume = models.URLField(max_length=500, blank=True)
+    resume = models.URLField(max_length=500, blank=True, default="")
     
     #Conduct and Policies
-    conduct_box = models.BooleanField(default=False)
-    share_box = models.BooleanField(default=False)
+    conduct_box = models.BooleanField(null=True)
+    share_box = models.BooleanField(null=True)
 
 
 #might be better to have signal codes somewhere else 

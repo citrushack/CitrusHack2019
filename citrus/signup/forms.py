@@ -1,9 +1,12 @@
 from django import forms
 from django.contrib.auth.forms import UserCreationForm
+# from django.contrib.auth.forms import AuthenticationForm
+# from django.forms.widgets import PasswordInput, TextInput
 from .models import MyUser
 from .models import Profile
 
 class SignUpForm(UserCreationForm):
+
    class Meta:
       model = MyUser
       fields = (
@@ -44,3 +47,8 @@ class ProfileForm(forms.ModelForm):
          'conduct_box',
          'share_box',
       )
+
+
+# class CustomAuthForm(AuthenticationForm):
+#     username = forms.CharField(widget=TextInput(attrs={'placeholder': 'Email'}))
+#     password = forms.CharField(widget=PasswordInput(attrs={'placeholder':'Password'}))

@@ -1,3 +1,4 @@
+{% load widget_tweaks %}
 <!DOCTYPE html>
 <html>
 <head>
@@ -50,17 +51,50 @@
 
             	<h1><span id="Citrus">Citrus</span><span id="Hack">Hack</span></h1>
                 
-                <form method="post" action="{% url 'login' %}">
-            	   <input type="text" name="FirstName" placeholder="Email">
-                    <br>
-            	   <input type="password" name="Password" placeholder="Password">
-            	<a href="" class="button text-center"><div id="login">LOGIN</div></a>
-            	<hr>
-
                 
+
+                {% if next %}
+                    {% if user.is_authenticated %}
+                    <p>Your account doesn't have access to this page. To proceed,
+                    please login with an account that has access.</p>
+                    {% else %}
+                    <p>Please login to see this page.</p>
+                    {% endif %}
+                {% endif %}
+
+                <form method="post" action="{% url 'login' %}">
+            	{% csrf_token %}
+                <!-- <label for="your_name">Your name: </label> -->
+                <!-- <input type="text" name="email" placeholder="Email" value="{{ form.username }}"> -->
+               <!--  <input type="text" name="FirstName" placeholder="Email"> -->
+               
+               <!--  <div class="form-group">
+                    <div id="username"> -->
+                {% render_field form.username placeholder=form.username.label %}
+                        <!-- {{ form.username }} -->
+                   <!--  </div>
+                </div> -->
+                <br>
+                <!-- <div class="form-group">
+                    <div id="password"> -->
+                {% render_field form.password placeholder=form.password.label %}
+                    <!-- </div>
+                </div> -->
+                
+                <input id="login" type="submit" value="LOGIN" class="button text-center">
+
+
+                <input type="hidden" name="next" value="{{ next }}">
+                {% if form.errors %}
+                <br>
+                <small>Your username and password didn't match. Please try again.</small>
+                {% endif %}
+                </form>
+                
+                <hr>
             	<a href="{% url 'apply' %}" class="button text-center"><div id="apply">APPLY</div></a>
             	<hr>
-            	<a id="pw-link" href="reset.html">FORGOT PASSWORD?</a>
+            	<a id="pw-link" href="{% url 'password_reset' %}">FORGOT PASSWORD?</a>
 
             </div>
         </div>

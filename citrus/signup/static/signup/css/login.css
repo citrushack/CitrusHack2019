@@ -159,7 +159,7 @@ h1 {
 
 .button {
 	font-size:20px;
-	max-width:25vw;
+	width:100%;
 	color:white;
 	text-decoration:none;
 	letter-spacing: 0.1em;
@@ -178,6 +178,7 @@ h1 {
 	border: 3px solid #229196;
 	box-sizing: border-box;
 	border-radius: 12px;
+	cursor: pointer;
 }
 
 #apply {
@@ -198,6 +199,10 @@ h1 {
 
 #pw-link:hover {
 	text-decoration:none;
+}
+
+small {
+	color:red;
 }
 
 hr {

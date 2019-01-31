@@ -44,11 +44,8 @@ class MyUserManager(BaseUserManager):
 
 
 class MyUser(AbstractBaseUser):
-    email = models.EmailField(
-        verbose_name='email address',
-        max_length=255,
-        unique=True,
-    )
+    email = models.EmailField(max_length=255, unique=True)
+        # verbose_name='Email',
     first_name = models.CharField(max_length=30, default="")
     last_name = models.CharField(max_length=30, default="")
     
@@ -150,8 +147,8 @@ class Profile(models.Model):
     linkedin = models.URLField(max_length=200, blank=True, default="")
     github = models.URLField(max_length=200, blank=True, default="")
     additional_link = models.URLField(max_length=500, blank=True, default="")
-    description = models.CharField(max_length=200, default="")
-    learn_or_gain = models.CharField(max_length=250, default="")
+    description = models.CharField(max_length=50, default="")
+    learn_or_gain = models.CharField(max_length=1000, default="")
     resume = models.URLField(max_length=500, blank=True, default="")
     
     #Conduct and Policies

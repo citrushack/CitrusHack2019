@@ -47,15 +47,21 @@
                     {% load static %}
                     <img src="{% static "assets/img/shine.png" %}">               
                 </div> 
+
             	<h1><span id="Citrus">Citrus</span><span id="Hack">Hack</span></h1>
-            	<input type="text" name="FirstName" placeholder="Email">
-                <br>
-            	<input type="password" name="Password" placeholder="Password">
+                
+                <form method="post" action="{% url 'login' %}">
+            	   <input type="text" name="FirstName" placeholder="Email">
+                    <br>
+            	   <input type="password" name="Password" placeholder="Password">
             	<a href="" class="button text-center"><div id="login">LOGIN</div></a>
             	<hr>
+
+                
             	<a href="{% url 'apply' %}" class="button text-center"><div id="apply">APPLY</div></a>
             	<hr>
             	<a id="pw-link" href="reset.html">FORGOT PASSWORD?</a>
+
             </div>
         </div>
     </div>

@@ -46,8 +46,8 @@ def apply(request):
     else:
        user_form = SignUpForm()
        profile_form = ProfileForm()
-    return render(request, 'signup/dummyapply.html', {'user_form': user_form, 'profile_form': profile_form})
-    #return render(request, 'signup/apply.html', {'user_form': user_form, 'profile_form': profile_form})
+    #return render(request, 'signup/dummyapply.html', {'user_form': user_form, 'profile_form': profile_form})
+    return render(request, 'signup/apply.html', {'user_form': user_form, 'profile_form': profile_form})
 
 def account_activation_sent(request):
     return render(request, 'signup/account_activation_sent.html')

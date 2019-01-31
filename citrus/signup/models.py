@@ -155,8 +155,8 @@ class Profile(models.Model):
     resume = models.URLField(max_length=500, blank=True, default="")
     
     #Conduct and Policies
-    conduct_box = models.BooleanField(null=True)
-    share_box = models.BooleanField(null=True)
+    conduct_box = models.BooleanField(default=False)
+    share_box = models.BooleanField(default=False)
 
 
 #might be better to have signal codes somewhere else 

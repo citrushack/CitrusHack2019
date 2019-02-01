@@ -88,7 +88,7 @@ svg{
   	right: 0;
   	bottom: 0;
   	left: 0;
-  	width: 75%;
+  	width: 75vw;
   	height: 475px;
   	line-height: 40px;
   	letter-spacing: 0.1em;
@@ -103,7 +103,7 @@ svg{
 
 .logo-container img {
 	margin:auto;
-	position: absolute;
+	position:absolute;
 	display:block;
 	height:200px;
 	width:200px;
@@ -138,8 +138,6 @@ svg{
 	transform: translate(-30px, 0px);
 	opacity: .1;
 }
-
-
 
 /*CITRUS HACK logo-text SVG STYLES*/
 
@@ -247,7 +245,8 @@ svg{
 }
 
 #subtitles-1 {
-	width: 45%;
+	width: 45vw;
+	height: auto;
 	-webkit-text-shadow: 0px 11px 15px 3px rgba(0,0,0,0.25);
 	-moz-text-shadow: 0px 11px 15px 3px rgba(0,0,0,0.25);
 	text-shadow: 0px 11px 15px 3px rgba(0,0,0,0.25);
@@ -276,7 +275,8 @@ svg{
 }
 
 #subtitles-2 {
-	width: 40%;
+	width: 40vw;
+	height: auto;
 	-webkit-text-shadow: 0px 11px 15px 3px rgba(0,0,0,0.25);
 	-moz-text-shadow: 0px 11px 15px 3px rgba(0,0,0,0.25);
 	text-shadow: 0px 11px 15px 3px rgba(0,0,0,0.25);
@@ -319,6 +319,146 @@ svg{
 	color: #FFFFFF;	
 }
 
+/* 
+  ##Device = Tablets, Ipads (portrait)
+  ##Screen = B/w 768px to 1024px
+*/
+
+@media (min-width: 768px) and (max-width: 1024px) {
+	.logo-container {
+		margin-left:auto;
+		margin-right:auto;
+		height:200px;
+		width:200px;
+	}
+
+	.logo-container img {
+		margin:auto;
+		position:absolute;
+		display:block;
+		height:200px;
+		width:200px;
+		transition: 0.25s;
+		transition-timing-function: ease-out;
+		
+	}
+
+    #logo-text {
+		width:500px;
+		height:auto;
+		margin-bottom: 20px;
+		animation: fill 0.5s ease forwards 0.75s;
+	}
+
+	#subtitles-1 {
+		width: 375px;
+		height: auto;
+		margin-bottom: 20px;
+		animation: fill-sub 0.5s ease forwards 0.9s;
+	}
+
+	#subtitles-2 {
+		width: 345px;
+		height: auto;
+		margin-bottom: 20px;
+		animation: fill-sub-2 0.5s ease forwards 1s;
+	}
+  
+}
+
+
+
+/* 
+  ##Device = Most of the Smartphones Mobiles (Portrait)
+  ##Screen = B/w 320px to 479px
+*/
+
+@media (min-width: 320px) and (max-width: 480px) {
+	.logo-container {
+		margin-left:auto;
+		margin-right:auto;
+		height:150px;
+		width:150px;
+	}
+
+	.logo-container img {
+		margin:auto;
+		position:absolute;
+		display:block;
+		height:150px;
+		width:150px;
+		transition: 0.25s;
+		transition-timing-function: ease-out;
+		
+	}
+
+	#logo-text {
+		width:280px;
+		height:auto;
+		margin-bottom: 20px;
+		animation: fill 0.5s ease forwards 0.75s;
+	}
+
+	#subtitles-1 {
+		width: 250px;
+		height: auto;
+		margin-bottom: 20px;
+		animation: fill-sub 0.5s ease forwards 0.9s;
+	}
+
+	#subtitles-2 {
+		width: 225px;
+		height: auto;
+		margin-bottom: 20px;
+		animation: fill-sub-2 0.5s ease forwards 1s;
+	}
+}
+
+@media (min-width: 500px) and (max-width: 850px) and (orientation:landscape) {
+	#main-titles {
+		margin-top: 20px;
+	}
+
+	.logo-container {
+		margin-left:auto;
+		margin-right:auto;
+		height:100px;
+		width:100px;
+	}
+
+	.logo-container img {
+		margin:auto;
+		position:absolute;
+		display:block;
+		height:100px;
+		width:100px;
+		transition: 0.25s;
+		transition-timing-function: ease-out;
+		
+	}
+
+	#logo-text {
+		width:280px;
+		height:auto;
+		margin-bottom: 20px;
+		animation: fill 0.5s ease forwards 0.75s;
+	}
+
+	#subtitles-1 {
+		width: 250px;
+		height: auto;
+		margin-bottom: 20px;
+		animation: fill-sub 0.5s ease forwards 0.9s;
+	}
+
+	#subtitles-2 {
+		width: 225px;
+		height: auto;
+		margin-bottom: 20px;
+		animation: fill-sub-2 0.5s ease forwards 1s;
+	}
+}
+
 .panel-type-1{
 	padding: 7%;
 	background-color: #141924;
@@ -330,6 +470,7 @@ svg{
 	font-weight: bold;
 	font-size: 48px;
 	letter-spacing: 0.1em;
+	color: #FFFFFF;
 }
 
 .panel-1-title {
@@ -348,7 +489,7 @@ svg{
 }
 
 .panel-type-2 {
-	padding: 5%;
+	padding: 7%;
 	background-image: linear-gradient(0.92deg, #0A0C13 4.79%, #0A0C13 4.81%, #0F121C 131.16%);
 }
 
@@ -374,7 +515,7 @@ svg{
 }
 
 .track-card {
-	padding:2%;
+	padding:25px;
 	background-image: linear-gradient(180deg, #303030 0%, #202020 100%);
 	border-style: solid;
 	border-width: 5px;
@@ -452,6 +593,10 @@ svg{
 	cursor: pointer;
 }
 
+#acc-1 {
+	margin-bottom:20px;
+}
+
 .question-text {
 	font-family: Work Sans;
 	font-style: normal;
@@ -473,7 +618,7 @@ svg{
 }
 
 #time-and-place {
-	color: #465A88;
+	color: #B6B6B6;
 }
 
 #time-and-place-text {
@@ -483,8 +628,6 @@ svg{
 	line-height: 1.5em;
 	font-size: 20px;
 	letter-spacing: 0.05em;
-
-	color: #465A88;
 }
 
 #address {

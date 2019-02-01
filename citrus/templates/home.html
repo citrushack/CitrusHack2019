@@ -48,6 +48,13 @@
                         <li><a class="dropdown-item" id="logoutlink"href = "{% url 'logout'%}">LOG OUT</a></li>
                     </ul>
                 </li> -->
+                        
+                        <li class="nav-item">
+                            <a class="nav-link link-hover" href="{% url 'profile' %}">PROFILE</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link link-hover" href="{% url 'logout' %}">LOGOUT</a>
+                        </li>
                         {% else %}
                         <li class="nav-item">
                             <a class="nav-link link-hover" href="{% url 'login' %}">LOGIN</a>
@@ -173,33 +180,31 @@
     		</div>
     	</div>
     	<div id = "whatis" class="panel-type-1">
-    		<div class = "container">	
-                <div class = "row">
-        			<div class = "col-8"> <!-- FIX FOR ALL DEVICE WIDTHS -->
-                        <h2 class="titles panel-1-title">What is CitrusHack?</h2>
-                        <p class="info-text">Citrus Hack is where hundreds of students from all over Southern California (and a few from out-of-state) come together and form teams, aiming to build a project of their own from scratch over the duration of 36 hours.<br><br>Citrus Hack is focused on the brilliant partnership between education and competition. While “hackers” compete for prizes, they hone their technical skills along the way.</p>
-        			</div>
-                    <div class = "col-4"> <!-- FIX FOR ALL DEVICE WIDTHS -->
-                        {% load static %}
-                        <img src="{% static "assets/img/computer.png" %}" alt="" style="width: 400px;height: 386px;">
-                    </div>
-                </div> 
-    		</div>
+            <div class = "row">
+    			<div class = "col-12 col-sm-12 col-md-12 col-lg-8 col-xl-8">
+                    <h2 class="titles">What is CitrusHack?</h2>
+                    <p class="info-text">Citrus Hack is where hundreds of students from all over Southern California (and a few from out-of-state) come together and form teams, aiming to build a project of their own from scratch over the duration of 36 hours.<br><br>Citrus Hack is focused on the brilliant partnership between education and competition. While “hackers” compete for prizes, they hone their technical skills along the way.</p>
+    			</div>
+                <div class = "col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4 text-center">
+                    {% load static %}
+                    <img src="{% static "assets/img/computer.png" %}" alt="" style="width: 400px;height: 386px;" class="img-fluid">
+                </div>
+            </div> 
     	</div>
-        <div id = "numbers" class="panel-type-2">
-            <div class="row container">
-                <p class="col-4 number-text text-center"><span class="number">36</span><span class="count">hours</span></p>
-                <p class="col-4 number-text text-center"><span class="number">300</span><span class="count">hackers</span></p> 
-                <p class="col-4 number-text text-center"><span class="number">80</span><span class="count">projects</span></p>
+        <div id="numbers" class="text-center panel-type-2">
+            <div class="row">
+                <p class="col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4 number-text"><span class="number">36</span><span class="count">hours</span></p>
+                <p class="col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4 number-text"><span class="number">300</span><span class="count">hackers</span></p>
+                <p class="col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4 number-text"><span class="number">80</span><span class="count">projects</span></p>
             </div>
         </div>
         <div id = "tracks" class="panel-type-1">   
-            <h2 class="titles panel-1-title">Choose Your Alignment</h2>
+            <h2 class="titles">Choose Your Alignment</h2>
             <p class="info-text">This year, participants at Citrus Hack have the opportunity to choose from different tracks based on their skills and interests.</p>
                 
             <div class="container">
                 <div class="row">    
-                    <div class="track-card text-center col-3"> <!-- FIX FOR ALL DEVICE WIDTHS -->
+                    <div class="track-card text-center col-12 col-sm-12 col-md-6 col-lg-4 col-xl-3">
                         {% load static %}
                         <img class="track-icon" src="{% static "assets/tracks/cube.png" %}">
                         <br>
@@ -211,7 +216,7 @@
                         consequat.
                         </p>
                     </div>
-                    <div class="track-card text-center col-3"> <!-- FIX FOR ALL DEVICE WIDTHS -->
+                    <div class="track-card text-center col-12 col-sm-12 col-md-6 col-lg-4 col-xl-3">
                         {% load static %}
                         <img class="track-icon" src="{% static "assets/tracks/plant.png" %}">
                         <br>
@@ -223,7 +228,7 @@
                         consequat.
                         </p>
                     </div>
-                    <div class="track-card text-center col-3"> <!-- FIX FOR ALL DEVICE WIDTHS -->
+                    <div class="track-card text-center col-12 col-sm-12 col-md-6 col-lg-4 col-xl-3">
                         {% load static %}
                         <img class="track-icon" src="{% static "assets/tracks/brain.png" %}">
                         <br>
@@ -235,7 +240,7 @@
                         consequat.
                         </p>
                     </div>
-                    <div class="track-card text-center col-3"> <!-- FIX FOR ALL DEVICE WIDTHS -->
+                    <div class="track-card text-center col-12 col-sm-12 col-md-6 col-lg-4 col-xl-3">
                         {% load static %}
                         <img class="track-icon" src="{% static "assets/tracks/city.png" %}">
                         <br>
@@ -247,7 +252,7 @@
                         consequat.
                         </p>
                     </div>
-                    <div class="track-card text-center col-3"> <!-- FIX FOR ALL DEVICE WIDTHS -->
+                    <div class="track-card text-center col-12 col-sm-12 col-md-6 col-lg-4 col-xl-3">
                         {% load static %}
                         <img class="track-icon" src="{% static "assets/tracks/plant.png" %}">
                         <br>
@@ -259,7 +264,7 @@
                         consequat.
                         </p>
                     </div>
-                    <div class="track-card text-center col-3"> <!-- FIX FOR ALL DEVICE WIDTHS -->
+                    <div class="track-card text-center col-12 col-sm-12 col-md-6 col-lg-4 col-xl-3">
                         {% load static %}
                         <img class="track-icon" src="{% static "assets/tracks/city.png" %}">
                         <br>
@@ -271,7 +276,7 @@
                         consequat.
                         </p>
                     </div>
-                    <div class="track-card text-center col-3"> <!-- FIX FOR ALL DEVICE WIDTHS -->
+                    <div class="track-card text-center col-12 col-sm-12 col-md-6 col-lg-4 col-xl-3">
                         {%load static %}
                         <img class="track-icon" src="{% static "assets/tracks/cube.png" %}">
                         <br>
@@ -283,7 +288,7 @@
                         consequat.
                         </p>
                     </div>
-                    <div class="track-card text-center col-3"> <!-- FIX FOR ALL DEVICE WIDTHS -->
+                    <div class="track-card text-center col-12 col-sm-12 col-md-6 col-lg-4 col-xl-3">
                         {% load static %}
                         <img class="track-icon" src="{% static "assets/tracks/brain.png" %}">
                         <br>
@@ -299,8 +304,8 @@
             </div> 
         </div>
         <div id = "volunteer" class="panel-type-2">
-            <h2 class="titles volunteer-text">Lend a Hand</h2>
-            <p class="info-text volunteer-text">Interested in helping out with CitrusHack in one way or another?</p>
+            <h2 class="titles">Lend a Hand</h2>
+            <p class="info-text">Interested in helping out with CitrusHack in one way or another?</p>
             <br>
             <div class="container">
                 <div class="row">
@@ -320,11 +325,11 @@
             </div>
         </div>
         <div id = "faq" class="panel-type-1">   
-            <h2 class="titles text-center panel-1-title">FAQ</h2>
+            <h2 class="titles text-center">FAQ</h2>
             <br>
             <div class="container">
                 <div class="row">   
-                    <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6"> <!-- FIX FOR ALL DEVICE WIDTHS -->
+                    <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6" id="acc-1">
                         <div id="accordion">
                             <div class="card">
                                 <div class="card-header" id="question-1">
@@ -397,7 +402,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6"> <!-- FIX FOR ALL DEVICE WIDTHS -->
+                    <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
                         <div id="accordion2">
                             <div class="card">
                                 <div class="card-header" id="question-6">
@@ -477,17 +482,22 @@
             <div class = "container">
                 <div class = "row">
                     <div class = "col-xl-6">
-                        <h2 id="time-and-place-title" class="titles">Time & Place</h2>
+                        <h2 class="titles">Time & Place</h2>
                         <p id="time-and-place-text">April 26 - 28, 2019<br>Winston Chung Hall<br>University of California, Riverside<br><span id="address">446 Winston Chung Hall, Riverside, CA 92507</span></p>
                     </div>
                     <div class = "text-center col-xl-6">
-                        <div class="mapouter"><div class="gmap_canvas"><iframe width="500" height="250" id="gmap_canvas" src="https://maps.google.com/maps?q=winston%20chung%20hall&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><a href="https://www.embedgooglemap.net">embedgooglemap.net</a></div><style>.mapouter{text-align:right;height:250px;width:500px;}.gmap_canvas {overflow:hidden;background:none!important;height:250px;width:500px;}</style></div>
+                        <div class="mapouter">
+                            <div class="gmap_canvas">
+                                <iframe width="500" height="250" id="gmap_canvas" src="https://maps.google.com/maps?q=winston%20chung%20hall&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+                            </div>
+                            <style>.mapouter{text-align:left;height:250px;width:auto;}.gmap_canvas {overflow:hidden;background:none!important;height:250px;width:auto;}</style>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
         <div id = "sponsors" class = "panel-type-1">
-            <h2 class="titles text-center panel-1-title">2018 Sponsors</h2>
+            <h2 class="titles text-center">2018 Sponsors</h2>
 
             <div class="row">
                 <div class="col-xs-12 text-center first-tier">
@@ -645,7 +655,7 @@
             </div>
             <p class="info-text text-center">
                 <br>Interested in becoming a sponsor?<br>Contact us at <a href="mailto:citrushack@gmail.com" class="sp-link">citrushack@gmail.com</a> and check out our <a href="" class="sp-link">sponsorship packet</a>.</p>
-            <h2 class="titles text-center panel-1-title">Organizers</h2>    
+            <h2 class="titles text-center">Organizers</h2>    
             <div class="row align-items-center">
                 <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 text-center second-tier">
                     <a href="http://acmucr.org">

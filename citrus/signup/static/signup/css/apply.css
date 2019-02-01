@@ -200,3 +200,7 @@ p {
 	box-sizing: border-box;
 	border-radius: 12px;
 }
+
+small {
+	color:red;
+}

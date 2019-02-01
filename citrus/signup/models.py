@@ -130,7 +130,7 @@ class Profile(models.Model):
       ('Prefer not to diclose', 'Prefer not to disclose'), 
     )
     race = models.CharField(max_length=30, choices=RACE_CHOICES, default="")
-    phone_number = models.CharField(max_length=12, default="")
+    phone_number = models.CharField(max_length=13, default="")
     SHIRT_SIZE_CHOICES = (
       (None, ''),
       ("XS", "XS"),
@@ -148,7 +148,7 @@ class Profile(models.Model):
     github = models.URLField(max_length=200, blank=True, default="")
     additional_link = models.URLField(max_length=500, blank=True, default="")
     description = models.CharField(max_length=50, default="")
-    learn_or_gain = models.CharField(max_length=1000, default="")
+    learn_or_gain = models.TextField(max_length=1000, default="")
     resume = models.URLField(max_length=500, blank=True, default="")
     
     #Conduct and Policies

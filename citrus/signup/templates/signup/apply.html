@@ -83,13 +83,17 @@
 						<label class="required" for="password1">Password</label>
 						<!-- <input type="password" class="form-control" id="password1"> -->
 						{% render_field user_form.password1 class+="form-control" %}
+						{% if form.errors %}
 						<small>{{ user_form.password1.help_text }}</small>
+						{% endif %}
 					</div>
 					<div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6">	
 						<label class="required" for="password2">Confirm Password</label>
 						<!-- <input type="password" class="form-control" id="password2"> -->
 						{% render_field user_form.password2 class+="form-control" %}
+						{% if form.errors %}
 						<small>{{ user_form.password2.help_text }}</small>
+						{% endif %}
 					</div>
 				</div>
 

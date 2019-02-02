@@ -35,14 +35,6 @@
                             <a class="nav-link link-hover" href="{% url 'home' %}">HOME</a>
                         </li>
                         {% if user.is_authenticated %}
-                        <!-- <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">ACCOUNT</a>
-                    <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                        <li><a class="dropdown-item" id="profilelink"href = "{% url 'profile'%}">PROFILE</a></li>
-                        <li><a class="dropdown-item" id="logoutlink"href = "{% url 'logout'%}">LOG OUT</a></li>
-                    </ul>
-                </li> -->
-                        
                         <li class="nav-item">
                             <a class="nav-link link-hover" href="{% url 'profile' %}">PROFILE</a>
                         </li>
@@ -63,23 +55,27 @@
             <div class="ui-card" data-aos="fade-in" data-aos-easing="ease-in">
                 <div class = "row">
                 	<div class="text-center logo-container col-12 col-sm-12 col-md-12 col-lg-2 col-xl-2">
-                        <img src="shine.png" alt="CitrusHack logo">
-                        <img src="shine.png">
-                        <img src="shine.png">
-                        <img src="shine.png">       
+                        {% load static %}
+	                    <img src="{% static "assets/img/shine.png" %}" alt="CitrusHack logo">
+	                    {% load static %}
+	                    <img src="{% static "assets/img/shine.png" %}">
+	                    {% load static %}
+	                    <img src="{% static "assets/img/shine.png" %}">
+	                    {% load static %}
+	                    <img src="{% static "assets/img/shine.png" %}">       
                         <br>        
                     </div> 
                     <div class="col-12 col-sm-12 col-md-12 col-lg-10 col-xl-10 text-left">
-                        <h1 id="name">JiHwan Kim</h1> <!-- <h1 id="name">{user.firstname} {user.lastname}</h1> -->
-                        <p id="title">Django Developer Extraordinaire</p> <!-- <p id="title">{user.description}</p> -->
-                        <p id="email">jkim393@ucr.edu</p> <!-- <p id="email">{user.email}</p>  -->
+                        <h1 id="name">{{ user.first_name }} {{ user.last_name }}</h1> <!-- <h1 id="name">{user.firstname} {user.lastname}</h1> -->
+                        <p id="title">{{ user.profile.description }}</p> <!-- <p id="title">{user.description}</p> -->
+                        <p id="email">{{ user.email }}</p> <!-- <p id="email">{user.email}</p>  -->
                     </div>
                 </div>
                 <br>
                 <div id="user-content">
                     <div id="status-view" class="text-center">
                         <h1 class="status">APPLICATION STATUS:</h1>
-                        <h2 class="status">Under review</h2><!-- <h2 class="status">{user.appstatus}</h2>  -->
+                        <h2 class="status">{{ user.app_status }}</h2><!-- <h2 class="status">{user.appstatus}</h2>  -->
                     </div>
                     <div id="table-responsive">
                         <table class="table">
@@ -89,87 +85,87 @@
                                     <th scope="row"></th>
                                     <td class="user-sec-label"><span class="label-text">ACADEMIC</span></td>
                                     <td class="attr-name">School:</td>
-                                    <td class="user-attr">University of California, Riverside</td> <!-- <td class="user-attr">{user.school}</td> -->
+                                    <td class="user-attr">{{ user.profile.school }}</td> <!-- <td class="user-attr">{user.school}</td> -->
                                 </tr>
                                 <tr class="no-border">
                                     <th scope="row"></th>
                                     <td></td>
                                     <td class="attr-name">Level of Study:</td>
-                                    <td class="user-attr">Undergraduate</td> <!-- <td class="user-attr">{user.level}</td> -->
+                                    <td class="user-attr">{{ user.profile.level_of_study}}</td> <!-- <td class="user-attr">{user.level}</td> -->
                                 </tr>
                                 <tr class="no-border">
                                     <th scope="row"></th>
                                     <td></td>
                                     <td class="attr-name">Grad Year:</td>
-                                    <td class="user-attr">2020</td> <!-- <td class="user-attr">{user.year}</td> -->
+                                    <td class="user-attr">{{ user.profile.graduation_year }}</td> <!-- <td class="user-attr">{user.year}</td> -->
                                 </tr>
                                 <tr class="no-border">
                                     <th scope="row"></th>
                                     <td></td>
                                     <td class="attr-name">Major:</td>
-                                    <td class="user-attr">Computer Science</td> <!-- <td class="user-attr">{user.major}</td>  -->
+                                    <td class="user-attr">{{ user.profile.major }}</td> <!-- <td class="user-attr">{user.major}</td>  -->
                                 </tr>
                                 <!-- DEMOGRAPHICS -->
                                 <tr>
                                     <th scope="row"></th>
                                     <td class="user-sec-label"><span class="label-text">DEMOGRAPHIC</span></td>
                                     <td class="attr-name">Gender:</td>
-                                    <td class="user-attr">Male</td> <!-- <td class="user-attr">{user.gender}</td>  -->
+                                    <td class="user-attr"> {{ user.profile.gender }}</td> <!-- <td class="user-attr">{user.gender}</td>  -->
                                 </tr>
                                 <tr class="no-border">
                                     <th scope="row"></th>
                                     <td></td>
                                     <td class="attr-name">Date of Birth:</td>
-                                    <td class="user-attr">02/08/1996</td> <!-- <td class="user-attr">{user.dob}</td> -->
+                                    <td class="user-attr"> {{ user.profile.date_of_birth }}</td> <!-- <td class="user-attr">{user.dob}</td> -->
                                 </tr>
                                 <tr class="no-border">
                                     <th scope="row"></th>
                                     <td></td>
                                     <td class="attr-name">Race/Ethnicity:</td>
-                                    <td class="user-attr">Asian/Pacific Islander</td> <!-- <td class="user-attr">{user.race}</td>  -->
+                                    <td class="user-attr">{{ user.profile.race }}</td> <!-- <td class="user-attr">{user.race}</td>  -->
                                 </tr>
                                 <tr class="no-border">
                                     <th scope="row"></th>
                                     <td></td>
                                     <td class="attr-name">Phone Number:</td>
-                                    <td class="user-attr">(951)555-5555</td> <!-- <td class="user-attr">{user.phone}</td>  -->
+                                    <td class="user-attr">{{ user.profile.phone_number }}</td> <!-- <td class="user-attr">{user.phone}</td>  -->
                                 </tr>
                                 <tr class="no-border">
                                     <th scope="row"></th>
                                     <td></td>
                                     <td class="attr-name">Shirt Size:</td>
-                                    <td class="user-attr">M</td> <!-- <td class="user-attr">{user.}</td>  -->
+                                    <td class="user-attr">{{ user.profile.shirt_size }}</td> <!-- <td class="user-attr">{user.}</td>  -->
                                 </tr>
                                 <tr class="no-border">
                                     <th scope="row"></th>
                                     <td></td>
                                     <td class="attr-name">Dietary Restrictions:</td>
-                                    <td class="user-attr"></td> <!-- <td class="user-attr">{user.}</td>  -->
+                                    <td class="user-attr">{{ user.profile.dietary_restrictions }}</td> <!-- <td class="user-attr">{user.}</td>  -->
                                 </tr>
                                 <!-- PROFILE -->
                                 <tr>
                                     <th scope="row"></th>
                                     <td class="user-sec-label"><span class="label-text">PROFILE</span></td>
                                     <td class="attr-name">LinkedIn:</td>
-                                    <td class="user-attr"><a class="profile-link"href="https://www.linkedin.com/in/jkim393/">https://www.linkedin.com/in/jkim393/</a></td> <!-- <td class="user-attr"><a class="profile-link"href="{user.linkedin}">{user.linkedin}</a></td>  -->
+                                    <td class="user-attr"><a class="profile-link"href="{{ user.profile.linkedin }}">{{ user.profile.linkedin }}</a></td> <!-- <td class="user-attr"><a class="profile-link"href="{user.linkedin}">{user.linkedin}</a></td>  -->
                                 </tr>
                                 <tr class="no-border">
                                     <th scope="row"></th>
                                     <td></td>
                                     <td class="attr-name">GitHub:</td>
-                                    <td class="user-attr"><a class="profile-link"href="https://github.com/jkim393">https://github.com/jkim393/</a></td> <!-- <td class="user-attr"><a class="profile-link"href="{user.github}">{user.github}</a></td> -->
+                                    <td class="user-attr"><a class="profile-link"href="{{ user.profile.github }}">{{ user.profile.github }}</a></td> <!-- <td class="user-attr"><a class="profile-link"href="{user.github}">{user.github}</a></td> -->
                                 </tr>
                                 <tr class="no-border">
                                     <th scope="row"></th>
                                     <td></td>
                                     <td class="attr-name">Personal:</td>
-                                    <td class="user-attr"><a class="profile-link"href="http://jihwan.kim/">http://jihwan.kim/</a></td> <!-- <td class="user-attr"><a class="profile-link"href="{user.website}">{user.website}</a></td> -->
+                                    <td class="user-attr"><a class="profile-link"href="{{ user.profile.additional_link }}">{{ user.profile.additional_link }}</a></td> <!-- <td class="user-attr"><a class="profile-link"href="{user.website}">{user.website}</a></td> -->
                                 </tr>
                                 <tr class="no-border">
                                     <th scope="row"></th>
                                     <td></td>
                                     <td class="attr-name">Resume:</td>
-                                    <td class="user-attr"><a class="profile-link"href="http://porterrobinson.com/">http://porterrobinson.com/</a></td> <!-- <td class="user-attr"><a class="profile-link"href="{user.resume}">{user.resume}</a></td> -->
+                                    <td class="user-attr"><a class="profile-link"href="{{ user.profile.resume }}">{{ user.profile.resume }}</a></td> <!-- <td class="user-attr"><a class="profile-link"href="{user.resume}">{user.resume}</a></td> -->
                                 </tr>
                                 <tr>
                                     <th scope="row"></th>
@@ -183,10 +179,10 @@
                     
                     <blockquote>
                         <p class="quotation"> 
-                            At CitrusHack I would love to lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit
+                            {{ user.profile.learn_or_gain }}
                             <!-- {user.learn/gain} -->
                         </p>
-                    <footer> —JiHwan Kim</footer><!-- <footer> —{user.firstname} {user.lastname}</footer>  -->
+                    <footer> —{{ user.first_name }} {{ user.last_name }}</footer><!-- <footer> —{user.firstname} {user.lastname}</footer>  -->
                     </blockquote> 
                 </div>
             </div>

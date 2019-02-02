@@ -74,20 +74,18 @@
                
                <!--  <div class="form-group">
                     <div id="username"> -->
-                {% render_field form.username placeholder=form.username.label %}
+                {% render_field form.username placeholder=form.username.label class+="inputboxes" %}
                         <!-- {{ form.username }} -->
                    <!--  </div>
                 </div> -->
                 <br>
                 <!-- <div class="form-group">
                     <div id="password"> -->
-                {% render_field form.password placeholder=form.password.label %}
+                {% render_field form.password placeholder=form.password.label class+="inputboxes" %}
                     <!-- </div>
                 </div> -->
-                
-                <input id="login" type="submit" value="LOGIN" class="button text-center">
-
-
+                <br>
+                <input id="login" type="submit" value="LOGIN" class="text-center">
                 <input type="hidden" name="next" value="{{ next }}">
                 {% if form.errors %}
                 <br>

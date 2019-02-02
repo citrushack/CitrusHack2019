@@ -174,7 +174,7 @@ small {
 	font-weight:700;
 	margin:0;
 	letter-spacing: .1rem;
-	color:#dddddd;
+	color:#E33D3D;
 }
 
 p {
@@ -199,8 +199,4 @@ p {
 	border: 3px solid #229196;
 	box-sizing: border-box;
 	border-radius: 12px;
-}
-
-small {
-	color:red;
 }

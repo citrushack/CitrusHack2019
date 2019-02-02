@@ -158,8 +158,7 @@ h1 {
 }
 
 .button {
-	font-size:20px;
-	width:100%;
+	font-size:20px;	
 	color:white;
 	text-decoration:none;
 	letter-spacing: 0.1em;
@@ -172,8 +171,16 @@ h1 {
 }
 
 #login {
+	margin: 5% 5% 0% 5%;
 	padding: 2px;
-	margin:15px;
+	font-size:20px;
+	
+	min-width:90%;
+
+	color:white;
+	text-decoration:none;
+	letter-spacing: 0.1em;
+	text-color:white;
 	background: linear-gradient(360deg, #229196 0%, #6AD8DC 100%);
 	border: 3px solid #229196;
 	box-sizing: border-box;
@@ -182,8 +189,9 @@ h1 {
 }
 
 #apply {
+	margin:5%;
 	padding: 2px;
-	margin:15px;
+	width:90%;
 	background: linear-gradient(0deg, #329C80 0%, #3EE8BB 100%);
 	border: 3px solid #329C80;
 	box-sizing: border-box;
@@ -202,12 +210,17 @@ h1 {
 }
 
 small {
-	color:red;
+	color:#E33D3D;
 }
 
 hr {
 	width:90%;
 	background:#9A9A9A;
+}
+
+.inputboxes {
+	max-width:90%;
+	margin-top: 5%;
 }
 
 #pw-link:after{

@@ -600,9 +600,9 @@ svg{
 .question-text {
 	font-family: Work Sans;
 	font-style: normal;
-	font-weight: bold;
-	font-size: 22px;
-	letter-spacing: 0.15em;
+	font-weight: 700;
+	font-size: 20px;
+	letter-spacing: 0.03em;
 }
 
 .question-text:after {
@@ -615,6 +615,21 @@ svg{
 	content:"+";
 	float: right;
     color: inherit;
+}
+
+.question-link {
+	color:white; 
+	text-decoration:underline; 
+	color:#EEEEEE;
+	transition: 0.2s;
+}
+
+.question-link:hover{
+	color:#39B188;
+}
+
+.card-body {
+	font-family: Titillium Web;
 }
 
 #time-and-place {

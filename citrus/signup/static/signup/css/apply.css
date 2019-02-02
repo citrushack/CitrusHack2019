@@ -177,6 +177,10 @@ small {
 	color:#E33D3D;
 }
 
+small.essay-text {
+	color:#ffffff;
+}
+
 p {
 	font-weight:700;
 	color: #dddddd;

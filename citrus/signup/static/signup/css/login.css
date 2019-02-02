@@ -240,3 +240,7 @@ hr {
 #pw-link:hover::after {
 	width: 100%;
 }
+
+.error-text {
+	margin: 5% 5% 0% 5%;
+}

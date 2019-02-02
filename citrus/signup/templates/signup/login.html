@@ -84,13 +84,14 @@
                 {% render_field form.password placeholder=form.password.label class+="inputboxes" %}
                     <!-- </div>
                 </div> -->
-                <br>
-                <input id="login" type="submit" value="LOGIN" class="text-center">
-                <input type="hidden" name="next" value="{{ next }}">
                 {% if form.errors %}
                 <br>
-                <small>Your username and password didn't match. Please try again.</small>
+                <small class="error-text">Username or password not correct.<br>Please try again.</small>
+                {% else %}
+                <br>
                 {% endif %}
+                <input id="login" type="submit" value="LOGIN" class="text-center">
+                <input type="hidden" name="next" value="{{ next }}">
                 </form>
                 
                 <hr>

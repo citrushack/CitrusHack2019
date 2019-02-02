@@ -88,15 +88,15 @@ body {
 }
 
 img {
-	height: 150px;
+	height: 160px;
 	width: auto;
 }
 
 .logo-container {
 	margin-left:auto;
 	margin-right:auto;
-	height:200px;
-	width:200px;
+	height:160px;
+	width:160px;
 }
 
 .logo-container img {
@@ -135,17 +135,23 @@ img {
 	opacity: .1;
 }
 
+/*#id-tags {
+	margin-left: 5%;
+}*/
+
 #name {
 	text-transform: uppercase;
 	font-weight: 700;
 	color: white;
 	letter-spacing: 0.1em;
+	margin-bottom: 0;
 }
 
 #title {
 	text-transform: uppercase;
 	color: #309b76;
 	letter-spacing: 0.1em;
+	margin-bottom: 0;
 }
 
 #email {
@@ -195,7 +201,6 @@ td {
 	color: white;
 	font-weight: 700;
 }
-
 
 .attr-name {
 	color: #C5C5C5;
@@ -252,6 +257,74 @@ footer{
 	text-align: right;
 	font-size: 1.5em;
 	font-style: italic;
+}
+
+/* 
+  ##Device = Tablets, Ipads (portrait)
+  ##Screen = B/w 768px to 1024px
+*/
+
+@media (min-width: 565px) {
+	.mobile {
+		display: none;
+	}
+}
+
+/* 
+  ##Device = Most of the Smartphones Mobiles (Portrait)
+  ##Screen = B/w 320px to 479px
+*/
+
+@media (min-width: 320px) and (max-width: 565px) {
+	#status-head {
+		font-size: 24px;
+	}
+
+	#status-value {
+		font-size: 20px;
+	}
+
+	.mobile-hide {
+		display: none;
+	}
+	.quotation{
+		color: #c5c5c5;
+		font-size: 18px;
+		margin: 0 auto;
+		quotes: "\201C""\201D""\2018""\2019";
+		padding: 10px 20px;
+		line-height: 1.4;
+	}
+	.quotation:before {
+		content: open-quote;
+		display: inline;
+		height: 0;
+		line-height: 0;
+		left: -10px;
+		position: relative;
+		top: 18px;
+		color: #03A8E8;
+		font-size: 2.4em;
+	}
+	.quotation::after {
+		content: close-quote;
+		display: inline;
+		height: 0;
+		line-height: 0;
+		left: 10px;
+		position: relative;
+		top: 20px;
+		color: #03A8E8;
+		font-size: 2.4em;
+	}
+
+	footer{
+		color:#C5C5C5;
+		margin:0;
+		text-align: right;
+		font-size: 0.8em;
+		font-style: italic;
+	}
 }
 
 #footer {

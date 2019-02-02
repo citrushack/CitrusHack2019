@@ -18,7 +18,7 @@
     {% load static %}
     <link rel="stylesheet" type="text/css" href="{% static "signup/css/profile.css" %}">
 
-	<title>Login - CitrusHack 2019</title>
+	<title>{{ user.first_name }} {{ user.last_name }} - CitrusHack 2019</title>
 </head>
 <body>
     <div id="content">
@@ -54,31 +54,37 @@
         <div class="text-center">
             <div class="ui-card" data-aos="fade-in" data-aos-easing="ease-in">
                 <div class = "row">
-                	<div class="text-center logo-container col-12 col-sm-12 col-md-12 col-lg-2 col-xl-2">
-                        {% load static %}
-	                    <img src="{% static "assets/img/shine.png" %}" alt="CitrusHack logo">
-	                    {% load static %}
-	                    <img src="{% static "assets/img/shine.png" %}">
-	                    {% load static %}
-	                    <img src="{% static "assets/img/shine.png" %}">
-	                    {% load static %}
-	                    <img src="{% static "assets/img/shine.png" %}">       
-                        <br>        
-                    </div> 
-                    <div class="col-12 col-sm-12 col-md-12 col-lg-10 col-xl-10 text-left">
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-2 col-xl-2 
+                    text-xl-right text-lg-right text-md-right text-sm-right text-right">
+                    	<div class="logo-container">
+                            {% load static %}
+    	                    <img src="{% static "assets/img/shine.png" %}" alt="CitrusHack logo">
+    	                    {% load static %}
+    	                    <img src="{% static "assets/img/shine.png" %}">
+    	                    {% load static %}
+    	                    <img src="{% static "assets/img/shine.png" %}">
+    	                    {% load static %}
+    	                    <img src="{% static "assets/img/shine.png" %}">       
+                            <br>        
+                        </div>
+                    </div>     
+                    <div id="id-tags" class="col-12 col-sm-12 col-md-12 col-lg-10 col-xl-10 
+                    text-xl-left text-lg-left text-md-center text-sm-center text-center">
+                        <br>
                         <h1 id="name">{{ user.first_name }} {{ user.last_name }}</h1> <!-- <h1 id="name">{user.firstname} {user.lastname}</h1> -->
                         <p id="title">{{ user.profile.description }}</p> <!-- <p id="title">{user.description}</p> -->
                         <p id="email">{{ user.email }}</p> <!-- <p id="email">{user.email}</p>  -->
+                        <br>
                     </div>
+                    <br>
                 </div>
-                <br>
                 <div id="user-content">
                     <div id="status-view" class="text-center">
-                        <h1 class="status">APPLICATION STATUS:</h1>
-                        <h2 class="status">{{ user.app_status }}</h2><!-- <h2 class="status">{user.appstatus}</h2>  -->
+                        <h1 id="status-head" class="status">APPLICATION STATUS:</h1>
+                        <h2 id="status-value" class="status">{{ user.app_status }}</h2><!-- <h2 class="status">{user.appstatus}</h2>  -->
                     </div>
-                    <div id="table-responsive">
-                        <table class="table">
+                    <div class="table-responsive">
+                        <table id="user-info-table" class="table mobile-hide">
                             <tbody>
                                 <!-- ACADEMIC -->
                                 <tr>
@@ -175,9 +181,94 @@
                                 </tr>
                             </tbody>
                         </table>
+                        <table id="mobile-table" class="table mobile">
+                            <tbody>
+                                <!-- ACADEMIC -->
+                                <tr>
+                                    <th scope="row"></th>
+                                    <td class="attr-name">School:</td>
+                                    <td class="user-attr">{{ user.profile.school }}</td> <!-- <td class="user-attr">{user.school}</td> -->
+                                </tr>
+                                <tr class="no-border">
+                                    <th scope="row"></th>
+                                    <td class="attr-name">Level of Study:</td>
+                                    <td class="user-attr">{{ user.profile.level_of_study}}</td> <!-- <td class="user-attr">{user.level}</td> -->
+                                </tr>
+                                <tr class="no-border">
+                                    <th scope="row"></th>
+                                    <td class="attr-name">Grad Year:</td>
+                                    <td class="user-attr">{{ user.profile.graduation_year }}</td> <!-- <td class="user-attr">{user.year}</td> -->
+                                </tr>
+                                <tr class="no-border">
+                                    <th scope="row"></th>
+                                    <td class="attr-name">Major:</td>
+                                    <td class="user-attr">{{ user.profile.major }}</td> <!-- <td class="user-attr">{user.major}</td>  -->
+                                </tr>
+                                <!-- DEMOGRAPHICS -->
+                                <tr>
+                                    <th scope="row"></th>
+                                    <td class="attr-name">Gender:</td>
+                                    <td class="user-attr"> {{ user.profile.gender }}</td> <!-- <td class="user-attr">{user.gender}</td>  -->
+                                </tr>
+                                <tr class="no-border">
+                                    <th scope="row"></th>
+                                    <td class="attr-name">Date of Birth:</td>
+                                    <td class="user-attr"> {{ user.profile.date_of_birth }}</td> <!-- <td class="user-attr">{user.dob}</td> -->
+                                </tr>
+                                <tr class="no-border">
+                                    <th scope="row"></th>
+                                    <td class="attr-name">Race/Ethnicity:</td>
+                                    <td class="user-attr">{{ user.profile.race }}</td> <!-- <td class="user-attr">{user.race}</td>  -->
+                                </tr>
+                                <tr class="no-border">
+                                    <th scope="row"></th>
+                                    <td class="attr-name">Phone Number:</td>
+                                    <td class="user-attr">{{ user.profile.phone_number }}</td> <!-- <td class="user-attr">{user.phone}</td>  -->
+                                </tr>
+                                <tr class="no-border">
+                                    <th scope="row"></th>
+                                    <td class="attr-name">Shirt Size:</td>
+                                    <td class="user-attr">{{ user.profile.shirt_size }}</td> <!-- <td class="user-attr">{user.}</td>  -->
+                                </tr>
+                                <tr class="no-border">
+                                    <th scope="row"></th>
+                                    <td class="attr-name">Dietary Restrictions:</td>
+                                    <td class="user-attr">{{ user.profile.dietary_restrictions }}</td> <!-- <td class="user-attr">{user.}</td>  -->
+                                </tr>
+                                <!-- PROFILE -->
+                                <tr>
+                                    <th scope="row"></th>
+                                    <td class="attr-name">LinkedIn:</td>
+                                    <td class="user-attr"><a class="profile-link"href="{{ user.profile.linkedin }}">{{ user.profile.linkedin }}</a></td> <!-- <td class="user-attr"><a class="profile-link"href="{user.linkedin}">{user.linkedin}</a></td>  -->
+                                </tr>
+                                <tr class="no-border">
+                                    <th scope="row"></th>
+                                    <td class="attr-name">GitHub:</td>
+                                    <td class="user-attr"><a class="profile-link"href="{{ user.profile.github }}">{{ user.profile.github }}</a></td> <!-- <td class="user-attr"><a class="profile-link"href="{user.github}">{user.github}</a></td> -->
+                                </tr>
+                                <tr class="no-border">
+                                    <th scope="row"></th>
+                                    <td class="attr-name">Personal:</td>
+                                    <td class="user-attr"><a class="profile-link"href="{{ user.profile.additional_link }}">{{ user.profile.additional_link }}</a></td> <!-- <td class="user-attr"><a class="profile-link"href="{user.website}">{user.website}</a></td> -->
+                                </tr>
+                                <tr class="no-border">
+                                    <th scope="row"></th>
+                                    <td class="attr-name">Resume:</td>
+                                    <td class="user-attr"><a class="profile-link"href="{{ user.profile.resume }}">{{ user.profile.resume }}</a></td> <!-- <td class="user-attr"><a class="profile-link"href="{user.resume}">{user.resume}</a></td> -->
+                                </tr>
+                            </tbody>
+                        </table>
                     </div>
                     
-                    <blockquote>
+                    <blockquote id="essay" class="mobile-hide">
+                        <p class="quotation"> 
+                            {{ user.profile.learn_or_gain }}
+                            <!-- {user.learn/gain} -->
+                        </p>
+                    <footer> —{{ user.first_name }} {{ user.last_name }}</footer><!-- <footer> —{user.firstname} {user.lastname}</footer>  -->
+                    </blockquote> 
+
+                    <blockquote id="mobile-essay" class="mobile">
                         <p class="quotation"> 
                             {{ user.profile.learn_or_gain }}
                             <!-- {user.learn/gain} -->

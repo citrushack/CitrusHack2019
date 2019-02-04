@@ -204,3 +204,11 @@ p {
 	box-sizing: border-box;
 	border-radius: 12px;
 }
+
+small.essay-length-good{
+	color: #329C80 !important;
+}
+
+small.essay-too-long{
+	color: #E33D3D !important;
+}

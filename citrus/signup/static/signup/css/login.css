@@ -87,8 +87,8 @@ body {
 }
 
 input {
-	margin:15px;
-	max-width:25vw;
+	margin:5%;
+	max-width:90%;
 	border-radius: 4px;
 	letter-spacing: 0.1em;
 	padding: 5px;

@@ -237,11 +237,13 @@
 				{% render_field profile_form.description placeholder="Designer, Full-stack Master, Hardware Junkie, Big Data Enthusiast, etc." class+="form-control" %}
 				<small>{{ profile_form.description.help_text }}</small>
 
-				<label for="essay" class="required">What would you like to learn or gain out of coming to CitrusHack?</label>
+				<label for="essay" class="required">What would you like to learn or gain out of coming to CitrusHack? (250-1000 characters)</label>
   				<!-- <textarea class="form-control" rows="5" id="essay"></textarea> -->
-  				{% render_field profile_form.learn_or_gain class+="form-control" rows="5" %}
+  				{% render_field profile_form.learn_or_gain class+="form-control count-chars" rows="5" %}
   				<small>{{ profile_form.learn_or_gain.help_text }}</small>
+  				<div class="text-right"><small class="essay-text char-count">0</small><small class="essay-text">/1000</small></div>
 
+  				<br>
   				<label for="resume">Resume (PDF format via GoogleDrive, DropBox, etc.)</label>
 				<!-- <input type="url" name="resume" id="resume" placeholder="https://" class="form-control"> -->
 				{% render_field profile_form.resume placeholder="https://" class+="form-control" %}
@@ -288,6 +290,21 @@
 <script>
 	// $('#dob').mask("99/99/9999", {placeholder:"mm/dd/yyyy"});
 	$('.phone-input').mask("(999)999-9999", {placeholder:"(___)___-____"});
+
+	$('.count-chars').on('keyup',function(){
+		var charCount = $(this).val().length;
+		$(".char-count").text(charCount);
+
+		if(charCount < 250) {
+			$(".char-count").removeClass("essay-length-good essay-too-long");
+		}
+
+		if (charCount > 250 && charCount < 1000) {
+			$(".char-count").addClass("essay-length-good");
+		}
+	});
+
+</script>
 </script>
 </body>
 </html>

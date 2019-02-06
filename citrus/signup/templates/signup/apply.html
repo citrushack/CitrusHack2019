@@ -75,7 +75,7 @@
 				</div>	
 				
 				<label class="required" for="email-address">Email</label>
-				{% render_field user_form.email class+="form-control" %}
+				{% render_field user_form.email class+="form-control email-box" %}
 				<small>{{ user_form.email.help_text }}</small>
 				
 				<div class="row">
@@ -83,9 +83,9 @@
 						<label class="required" for="password1">Password</label>
 						<!-- <input type="password" class="form-control" id="password1"> -->
 						{% render_field user_form.password1 class+="form-control" %}
-						{% if form.errors %}
+						<!-- {% if form.errors %} -->
 						<small>{{ user_form.password1.help_text }}</small>
-						{% endif %}
+						<!-- {% endif %} -->
 					</div>
 					<div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6">	
 						<label class="required" for="password2">Confirm Password</label>
@@ -103,7 +103,7 @@
 				
 				<label class="required" for="school">School</label>
 				<!-- <input type="school" class="form-control" id="school"> -->
-				{% render_field profile_form.school class+="form-control" %}
+				{% render_field profile_form.school class+="form-control" class+="school-box" %}
 				<small>{{ profile_form.school.help_text }}</small>
 
 				<div class="row">
@@ -286,25 +286,7 @@
 <!-- AOS -->
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script>AOS.init();</script>
-
-<script>
-	// $('#dob').mask("99/99/9999", {placeholder:"mm/dd/yyyy"});
-	$('.phone-input').mask("(999)999-9999", {placeholder:"(___)___-____"});
-
-	$('.count-chars').on('keyup',function(){
-		var charCount = $(this).val().length;
-		$(".char-count").text(charCount);
-
-		if(charCount < 250) {
-			$(".char-count").removeClass("essay-length-good");
-		}
-
-		if (charCount > 250 && charCount < 1000) {
-			$(".char-count").addClass("essay-length-good");
-		}
-	});
-
-</script>
-</script>
+{% load static %}
+<script src="{% static "signup/js/apply.js" %}"></script>
 </body>
 </html>

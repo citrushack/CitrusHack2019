@@ -667,6 +667,8 @@ $('.email-box').on('change',function(){
 	{"domain": "stockton.edu", "name": "Richard Stockton College of New Jersey"},
 	{"domain": "rider.edu", "name": "Rider University"},
 	{"domain": "ripon.edu", "name": "Ripon College"},
+	{"domain": "rcc.edu", "name": "Riverside Community College"},
+	{"domain": "rccd.edu", "name": "Riverside Community College District"},
 	{"domain": "riv.edu", "name": "Rivier College"},
 	{"domain": "roanoke.edu", "name": "Roanoke College"},
 	{"domain": "rmu.edu", "name": "Robert Morris University"},

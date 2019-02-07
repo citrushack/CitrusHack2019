@@ -9,7 +9,7 @@ $('.count-chars').on('keyup',function(){
 		$(".char-count").removeClass("essay-length-good");
 	}
 
-	if (charCount >= 250 && charCount < 1000) {
+	if (charCount >= 250 && charCount <= 1000) {
 		$(".char-count").addClass("essay-length-good");
 	}
 });

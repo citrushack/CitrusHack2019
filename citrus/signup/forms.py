@@ -12,12 +12,15 @@ class SignUpForm(UserCreationForm):
       fields = (
          'first_name',
          'last_name',
+	 'preferred_name',
          'email', 
          'password1', 
          'password2', 
       )
 
 class ProfileForm(forms.ModelForm):
+   #learn or gain textfield is charfield with widget=forms.textarea in modelforms, min_length only in forms
+   learn_or_gain = forms.CharField(min_length=250, widget=forms.Textarea)
    # BooleanField default blank is true hence only by setting required=True in forms.py will make it required 
    conduct_box = forms.BooleanField(required=True)
    share_box = forms.BooleanField(required=True)

@@ -1,5 +1,9 @@
 {% autoescape off %}
+{% if user.preferred_name != "" %}
+Hi {{ user.preferred_name }},
+{% else %}
 Hi {{ user.first_name }},
+{% endif %}
 
 Please click on the link below to confirm your registration:
 

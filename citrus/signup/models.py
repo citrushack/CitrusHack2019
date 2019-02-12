@@ -48,7 +48,7 @@ class MyUser(AbstractBaseUser):
         # verbose_name='Email',
     first_name = models.CharField(max_length=30, default="")
     last_name = models.CharField(max_length=30, default="")
-    
+    preferred_name = models.CharField(max_length=30, blank=True, default="")    
     #Info that is NOT saved upon signup
     email_confirmed = models.BooleanField(default=False)
     app_status = models.CharField(max_length=30, default ="PENDING")
@@ -90,9 +90,10 @@ class Profile(models.Model):
     school = models.CharField(max_length=50, default="")
     LEVEL_OF_STUDY_CHOICES = (
       (None, ''),
-      ("Undergraduate", "Undergraduate"),
-      ("Graduate", "Graduate"),
-      ("High School","High School"),
+      ("Freshman", "Freshman"),
+      ("Sophomore", "Sophomore"),
+      ("Junior","Junior"),
+      ("Senior", "Senior"),
       ("Prefer not to disclose", "Prefer not to disclose"),
     )
     level_of_study = models.CharField(max_length=30, choices=LEVEL_OF_STUDY_CHOICES)

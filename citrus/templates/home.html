@@ -39,16 +39,7 @@
                         <li class="nav-item">
                             <a class="nav-link active" href="{% url 'home' %}">HOME</a>
                         </li>
-
                         {% if user.is_authenticated %}
-                        <!-- <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">ACCOUNT</a>
-                    <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                        <li><a class="dropdown-item" id="profilelink"href = "{% url 'profile'%}">PROFILE</a></li>
-                        <li><a class="dropdown-item" id="logoutlink"href = "{% url 'logout'%}">LOG OUT</a></li>
-                    </ul>
-                </li> -->
-                        
                         <li class="nav-item">
                             <a class="nav-link link-hover" href="{% url 'profile' %}">PROFILE</a>
                         </li>
@@ -178,7 +169,8 @@
                 {% if user.is_authenticated %}
                 {% else %}
                 <br>
-    			<a href="{% url 'apply' %}"><div data-aos="fade-up" data-aos-delay="1100" id="apply-button"> <i class="fas fa-user-plus"></i>  APPLY </div></a>
+    			<!-- <a href="{% url 'apply' %}"><div data-aos="fade-up" data-aos-delay="1100" id="apply-button"> <i class="fas fa-user-plus"></i>  APPLY </div></a> -->
+                <div data-aos="fade-up" data-aos-delay="1100" id="apply-button"> COMING SOON </div>
                 {% endif %}
     		</div>
     	</div>
@@ -262,15 +254,15 @@
                 <div class="row">
                     <div class="text-center col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4"> 
                         <h3 class="helper-title volunteer-text text-center">Mentor</h3>
-                        <a href="https://docs.google.com/forms/d/e/1FAIpQLScp0a5PhwBc-36Im7HkytyqlvTiQSPnNIg3rtaHlSVAPn3U1g/viewform?usp=sf_link">{% load static %}<img src="{% static "assets/img/emblem-mnt.png" %}" style="height:250px;width:250px;" class="volunteer-emblem"></a>
+                        <a href="https://docs.google.com/forms/d/e/1FAIpQLScp0a5PhwBc-36Im7HkytyqlvTiQSPnNIg3rtaHlSVAPn3U1g/viewform?usp=sf_link">{% load static %}<img src="{% static "assets/img/mentor.svg" %}" style="margin-top:20px;height:180px;width:180px;" class="volunteer-emblem"></a>
                     </div>
                     <div class="text-center col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4"> 
                         <h3 class="helper-title volunteer-text text-center">Volunteer</h3>
-                        <a href="https://docs.google.com/forms/d/e/1FAIpQLSdK66VnO-NYPyL_qN8P3GZYUuehluLNB_dgDpiQx9anj8OP3A/viewform?usp=sf_link">{% load static %}<img src="{% static "assets/img/emblem-vol.png" %}" style="height:250px;width:250px;" class="volunteer-emblem"></a>
+                        <a href="https://docs.google.com/forms/d/e/1FAIpQLSdK66VnO-NYPyL_qN8P3GZYUuehluLNB_dgDpiQx9anj8OP3A/viewform?usp=sf_link">{% load static %}<img src="{% static "assets/img/volunteer.svg" %}" style="margin-top:20px;height:180px;width:180px;" class="volunteer-emblem"></a>
                     </div>
                     <div class="text-center col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4"> 
                         <h3 class="helper-title volunteer-text text-center">Workshop Leader</h3>
-                        <a href="https://docs.google.com/forms/d/1jl_xvG1ojitGRm9AmfU7zRqbo0SpgDU4u1qPJMNhEAw/">{% load static %}<img src="{% static "assets/img/emblem-wsl.png" %}" style="height:250px;width:250px;" class="volunteer-emblem"></a>
+                        <a href="https://docs.google.com/forms/d/1jl_xvG1ojitGRm9AmfU7zRqbo0SpgDU4u1qPJMNhEAw/">{% load static %}<img src="{% static "assets/img/workshop.svg" %}" style="margin-top:20px;height:180px;width:180px;" class="volunteer-emblem"></a>
                     </div>
                 </div>
             </div>
@@ -364,7 +356,7 @@
                                     </h5>
                                 </div>
                                 <div id="answer-6" class="collapse" aria-labelledby="question-6" data-parent="#accordion2">
-                                    <div class="card-body">The CitrusHack team is committed to facilitating a positive learning environment for hackers of all skill levels. Every participant will have access to some awesome workshops and top-notch mentors that can help point you in the direction if you ever get stuck.
+                                    <div class="card-body">The CitrusHack team is committed to facilitating a positive learning environment for hackers of all skill levels. Every participant will have access to some awesome workshops and top-notch mentors that can help point you in the right direction if you ever get stuck.
                                     </div>
                                 </div>
                             </div>
@@ -517,7 +509,8 @@
                 <a class="iconSize" href="https://www.instagram.com/citrushack_ucr/"><i class="fab fa-instagram" id="in-foot"></i></a>
             </p>
             <p class="info-text text-center">
-                Made with &#9829; in Riverside, CA<br>
+                Icons designed by <a class="question-link" href="https://www.flaticon.com/authors/eucalyp">Eucalp</a> from <a class="question-link" href="https://www.flaticon.com">Flaticon</a><br>
+                Website made with <span class="question-link" style="text-decoration: none">&#9829;</span> in Riverside, CA<br>
                 &#169; 2019 CitrusHack
             </p>
         </div>

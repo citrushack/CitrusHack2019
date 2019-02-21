@@ -114,23 +114,25 @@ class Profile(models.Model):
     GENDER_CHOICES = (
       (None, ''),
       ("Female", "Female"),
-      ("Male", "Male"),  
-      ("Other", "Other"), 
+      ("Male", "Male"),   
       ("Prefer not to disclose", "Prefer not to disclose"),
+      ("Other (Please Specify)","Other (Please Specify)"),
     )
     gender = models.CharField(max_length=30, choices=GENDER_CHOICES, default="")
+    gender_other = models.CharField(max_length=30, blank=True, default="")    
     date_of_birth = models.CharField(max_length=10, default="")#models.DateField()
     RACE_CHOICES = (
       (None, ''),
+      ('American Indian or Alaskan Native','American Indian or Alaskan Native'),
       ('Asian/Pacific Islander', 'Asian/Pacific Islander'), 
       ('Black or African American','Black or African American'),
       ('Hispanic','Hispanic'),
-      ('Native American', 'Native American'),   
       ('White/Caucasian', 'White/Caucasian'),
-      ('Other','Other'),
+      ('Multiple ethnicity/Other (Please Specify)','Multiple ethnicity/Other (Please Specify)'),
       ('Prefer not to diclose', 'Prefer not to disclose'), 
     )
     race = models.CharField(max_length=30, choices=RACE_CHOICES, default="")
+    race_other = models.CharField(max_length=50, blank=True, default="")
     phone_number = models.CharField(max_length=13, default="")
     SHIRT_SIZE_CHOICES = (
       (None, ''),

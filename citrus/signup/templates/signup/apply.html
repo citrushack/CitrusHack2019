@@ -190,6 +190,10 @@
 					</div>
 				</div>
 				
+				<label for="gender_other">Gender if Other</label>
+				<!-- <input type="diet" class="form-control" id="diet"> -->
+				{% render_field profile_form.gender_other class+="form-control" %}
+
 				<label class="required" for="race">Race/Ethnicity</label>
 				<!-- <select id="race" class="custom-select">
 					<option selected></option>
@@ -205,6 +209,11 @@
 				{% render_field profile_form.race class+="form-control" %}
 				<small>{{ profile_form.race.help_text }}</small>
 				
+				<label for="race_other">Race if Other</label>
+				<!-- <input type="diet" class="form-control" id="diet"> -->
+				{% render_field profile_form.race_other class+="form-control" %}
+
+
 				<div class="row">
 					<div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6">	
 						<label class="required" for="phone">Phone Number</label>

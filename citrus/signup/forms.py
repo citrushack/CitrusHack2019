@@ -33,9 +33,11 @@ class ProfileForm(forms.ModelForm):
          'graduation_year',
          'major', 
 
-         'gender', 
+         'gender',
+	 'gender_other', 
          'date_of_birth',
          'race',
+	 'race_other',
          'phone_number',
          'shirt_size',
          'dietary_restrictions',

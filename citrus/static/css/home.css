@@ -1,9 +1,21 @@
 
 @import url('https://fonts.googleapis.com/css?family=Titillium+Web:200,400,700|Work+Sans:500,700');
 
+@font-face {
+  font-family: Form;
+  src: url(../Form/Form.otf);
+}
+
+:root {
+	--primary-bg-color: #130F12;
+	--secondary-bg-color: #131414;
+	--primary-accent-color: #FC0E90;
+	--secondary-accent-color: #1DA4FF;
+}
+
 body{
 	overflow-x: hidden;
-	background-color: #141924;
+	background-color: var(--primary-bg-color);
 }
 
 svg{
@@ -29,10 +41,10 @@ svg{
 }
 
 .nav-link {
-	font-family: Titillium Web;
+	font-family: Form;
 	font-style: normal;
 	font-weight: bold;
-	font-size: 28px;
+	font-size: 20px;
 	letter-spacing: 0.05em;
 	color: white !important;
 	position: relative;
@@ -41,11 +53,11 @@ svg{
 .link-hover:after {
 	content:"";
 	position: absolute;
-	width: 100%;
+	width: 90%;
 	height: 2px;
 	bottom: 0;
 	left: 0;
-	background-color: #39B188;
+	background-color: var(--accent-color);
 	visibility: hidden;
 	-webkit-transform: scaleX(0);
 	transform: scaleX(0);
@@ -62,11 +74,11 @@ svg{
 .active:after{
 	content:"";
 	position: absolute;
-	width: 100%;
+	width: 90%;
 	height: 2px;
 	bottom: 0;
 	left: 0;
-	background-color: #39B188;
+	background-color: var(--accent-color);
 }
 
 #main-hero {
@@ -461,14 +473,21 @@ svg{
 
 .panel-type-1{
 	padding: 7%;
-	background-color: #141924;
+	background-color: var(--primary-bg-color);
+}
+
+.leading-block{
+	width:120px;
+	height:7px;
+	background-color: red;
 }
 
 .titles {
-	font-family: Titillium Web;
+	text-transform: uppercase;
+	font-family: Form;
 	font-style: normal;
 	font-weight: bold;
-	font-size: 48px;
+	font-size: 32px;
 	letter-spacing: 0.1em;
 	color: #FFFFFF;
 }
@@ -478,9 +497,8 @@ svg{
 }
 
 .info-text {
-	font-family: Work Sans;
-	font-style: normal;
-	font-weight: 500;
+	font-family: Titillium Web;
+	font-weight: 400;
 	line-height: 1.75em;
 	font-size: 20px;
 	letter-spacing: 0.05em;
@@ -490,7 +508,7 @@ svg{
 
 .panel-type-2 {
 	padding: 7%;
-	background-image: linear-gradient(0.92deg, #0A0C13 4.79%, #0A0C13 4.81%, #0F121C 131.16%);
+	background-color: var(--secondary-bg-color);
 }
 
 #numbers {
@@ -618,14 +636,16 @@ svg{
 }
 
 .question-link {
-	color:white; 
-	text-decoration:underline; 
-	color:#EEEEEE;
-	transition: 0.2s;
+	text-decoration:none; 
+	color:#bbbbbb;
+	text-shadow: 0px 0px 2px var(--primary-accent-color);
+	transition: 0.3s;
 }
 
 .question-link:hover{
-	color:#39B188;
+	text-decoration: none;
+	color:#EEEEEE;
+	text-shadow: 0px 0px 10px var(--primary-accent-color);
 }
 
 .card-body {
@@ -706,12 +726,12 @@ svg{
 
 #footer {
 	padding: 2%;
-	background-color: #0a0c13;
 }
 
 .iconSize {
 	text-decoration:none;
 	color: #bbbbbb;
+	text-shadow: 0px 0px 2px var(--secondary-accent-color);
 	font-size: 175%;
 	margin: 2.5%;
 	margin-top: 1%;
@@ -720,4 +740,5 @@ svg{
 
 .iconSize:hover {
 	color:white;
+	text-shadow: 0px 0px 10px var(--secondary-accent-color);
 }

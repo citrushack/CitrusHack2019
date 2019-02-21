@@ -57,7 +57,7 @@ svg{
 	height: 2px;
 	bottom: 0;
 	left: 0;
-	background-color: var(--accent-color);
+	background-color: var(--primary-accent-color);
 	visibility: hidden;
 	-webkit-transform: scaleX(0);
 	transform: scaleX(0);
@@ -78,13 +78,13 @@ svg{
 	height: 2px;
 	bottom: 0;
 	left: 0;
-	background-color: var(--accent-color);
+	background-color: var(--primary-accent-color);
 }
 
 #main-hero {
-	background-color: #141924;
+	background-color: var(--primary-bg-color);
 	background-image: url("../assets/img/mainhero.png");
-	background-attachment: fixed;
+	/*background-attachment: fixed;*/
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;

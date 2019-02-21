@@ -208,3 +208,7 @@ p {
 small.essay-length-good{
 	color: #329C80 !important;
 }
+
+.form-error {
+	color: red;
+}

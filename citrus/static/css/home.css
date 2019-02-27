@@ -19,7 +19,7 @@ body{
 }
 
 svg{
-	margin:7px;
+	/*margin:7px;*/
 }
 
 #top-nav {
@@ -83,163 +83,148 @@ svg{
 
 #main-hero {
 	background-color: var(--primary-bg-color);
+	/*background-color: lightblue;*/
 	background-image: url("../assets/img/mainhero.png");
-	/*background-attachment: fixed;*/
+	position: relative
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-	height: 100vh;
+	height: 115vh;
 	width: 100vw;
 }
 
 #main-titles{
-	text-align:center;
+	/*border-style: solid;
+	border-color: red;
+  	border-width: 2px;*/
   	position: absolute;
-  	margin: auto;
-  	top: 0;
-  	right: 0;
-  	bottom: 0;
-  	left: 0;
-  	width: 75vw;
-  	height: 475px;
-  	line-height: 40px;
-  	letter-spacing: 0.1em;
+  	right: 10.5%;
+  	top: 36.4%;
+  	text-align: center;
 }
 
 .logo-container {
 	margin-left:auto;
 	margin-right:auto;
-	height:200px;
-	width:200px;
+	width:435px; 
+	height: 39px;
 }
 
-.logo-container img {
+.logo-container svg {
 	margin:auto;
 	position:absolute;
 	display:block;
-	height:200px;
-	width:200px;
+	width:435px; 
+	height: 39px;
 	transition: 0.25s;
 	transition-timing-function: ease-out;
-	
 }
 
-.logo-container:hover img:nth-child(1){
-	-webkit-transform: translate(30px, 0px);
-	-moz-transform: translate(30px, 0px);
-	transform: translate(30px, 0px);
+.logo-container:hover svg:nth-child(2){
+	-webkit-transform: translate(-2px, -4px);
+	-moz-transform: translate(-2px, -4px);
+	transform: translate(-2px, -4px);
 }
 
-.logo-container:hover img:nth-child(2){
-	-webkit-transform: translate(10px, 0px);
-	-moz-transform: translate(10px, 0px);
-	transform: translate(10px, 0px);
-	opacity: .7;
+.logo-container:hover svg:nth-child(3){
+	-webkit-transform: translate(2px, 4px);
+	-moz-transform: translate(2px, 4px);
+	transform: translate(2px, 4px);	
 }
 
-.logo-container:hover img:nth-child(3){
-	-webkit-transform: translate(-10px, 0px);
-	-moz-transform: translate(-10px, 0px);
-	transform: translate(-10px, 0px);	
-	opacity: .4;
+#logo-white {
+	z-index: 3;
+    animation: fill-w 0.5s ease forwards 1.15s;
 }
 
-.logo-container:hover img:nth-child(4){
-	-webkit-transform: translate(-30px, 0px);
-	-moz-transform: translate(-30px, 0px);
-	transform: translate(-30px, 0px);
-	opacity: .1;
+#logo-pink {
+	z-index: 2;
+    animation: fill-p 0.5s ease forwards 1.15s;
 }
 
-/*CITRUS HACK logo-text SVG STYLES*/
-
-#logo-text {
-	width:50%;
-	-webkit-text-shadow: 0px 11px 15px 3px rgba(0,0,0,0.25);
-	-moz-text-shadow: 0px 11px 15px 3px rgba(0,0,0,0.25);
-	text-shadow: 0px 11px 15px 3px rgba(0,0,0,0.25);
-	animation: fill 0.5s ease forwards 0.75s;
+#logo-blue {
+	z-index: 1;
+    animation: fill-b 0.5s ease forwards 1.15s;
 }
 
 /*C*/
-#logo-text path:nth-child(2){
-	stroke-dasharray: 364px;
-	stroke-dashoffset: 364px;
+.logo-svg path:nth-child(2){
+	stroke-dasharray: 237;
+	stroke-dashoffset: 237;
 	animation: line-anim 0.5s ease forwards 0.1s;
-	
 }
 
 /*I*/
-#logo-text path:nth-child(3){
-	stroke-dasharray: 178px;
-	stroke-dashoffset: 178px;
-	animation: line-anim 0.5s ease forwards 0.15s;
+.logo-svg path:nth-child(3){
+	stroke-dasharray: 149;
+	stroke-dashoffset: 149;
+	animation: line-anim 0.5s ease forwards 0.17s;
 	
 }
 
 /*T*/
-#logo-text path:nth-child(4){
-	stroke-dasharray: 301px;
-	stroke-dashoffset: 301px;
-	animation: line-anim 0.5s ease forwards 0.2s;
+.logo-svg path:nth-child(4){
+	stroke-dasharray: 221;
+	stroke-dashoffset: 221;
+	animation: line-anim 0.5s ease forwards 0.24s;
 
 }
 
 /*R*/
-#logo-text path:nth-child(5){
-	stroke-dasharray: 227px;
-	stroke-dashoffset: 227px;
-	animation: line-anim 0.5s ease forwards 0.25s;
+.logo-svg path:nth-child(5){
+	stroke-dasharray: 299;
+	stroke-dashoffset: 299;
+	animation: line-anim 0.5s ease forwards 0.31s;
 
 }
 
 /*U*/
-#logo-text path:nth-child(6){
-	stroke-dasharray: 351px;
-	stroke-dashoffset: 351px;
-	animation: line-anim 0.5s ease forwards 0.3s;
+.logo-svg path:nth-child(6){
+	stroke-dasharray: 246;
+	stroke-dashoffset: 246;
+	animation: line-anim 0.5s ease forwards 0.38s;
 
 }
 
 /*S*/
-#logo-text path:nth-child(7){
-	stroke-dasharray: 347px;
-	stroke-dashoffset: 347px;
-	animation: line-anim 0.5s ease forwards 0.35s;
-
-}
-
-/*H*/
-#logo-text path:nth-child(8){
-	stroke-dasharray: 426px;
-	stroke-dashoffset: 426px;
-	animation: line-anim 0.5s ease forwards 0.4s;
-
-}
-
-/*A*/
-#logo-text path:nth-child(9){
-	stroke-dasharray: 265px;
-	stroke-dashoffset: 265px;
+.logo-svg path:nth-child(7){
+	stroke-dasharray: 291;
+	stroke-dashoffset: 291;
 	animation: line-anim 0.5s ease forwards 0.45s;
 
 }
 
+/*H*/
+.logo-svg path:nth-child(8){
+	stroke-dasharray: 282;
+	stroke-dashoffset: 282;
+	animation: line-anim 0.5s ease forwards 0.52s;
+
+}
+
+/*A*/
+.logo-svg path:nth-child(9){
+	stroke-dasharray: 255;
+	stroke-dashoffset: 255;
+	animation: line-anim 0.56s ease forwards 0.59s;
+
+}
+
 /*C*/
-#logo-text path:nth-child(10){
-	stroke-dasharray: 238px;
-	stroke-dashoffset: 238px;
-	animation: line-anim 0.5s ease forwards 0.5s;
+.logo-svg path:nth-child(10){
+	stroke-dasharray: 237;
+	stroke-dashoffset: 237;
+	animation: line-anim 0.63s ease forwards 0.66s;
 
 }
 
 /*K*/
-#logo-text path:nth-child(11){
-	stroke-dasharray: 356px;
-	stroke-dashoffset: 356px;
-	animation: line-anim 0.5s ease forwards 0.55s;
-
+.logo-svg path:nth-child(11){
+	stroke-dasharray: 285;
+	stroke-dashoffset: 285;
+	animation: line-anim 0.70s ease forwards 0.73s;
 }
+
 
 @keyframes line-anim{
 	to {
@@ -247,7 +232,7 @@ svg{
 	}
 }
 
-@keyframes fill{
+@keyframes fill-w{
 	from{
 		fill: transparent;
 	}
@@ -256,19 +241,54 @@ svg{
 	}
 }
 
+@keyframes fill-p{
+	from{
+		fill: transparent;
+	}
+	to {
+		fill: #991380;
+	}
+}
+
+@keyframes fill-b{
+	from{
+		fill: transparent;
+	}
+	to {
+		fill: #306A99;
+	}
+}
+
 #subtitles-1 {
-	width: 45vw;
+	width: 435px;
 	height: auto;
-	-webkit-text-shadow: 0px 11px 15px 3px rgba(0,0,0,0.25);
-	-moz-text-shadow: 0px 11px 15px 3px rgba(0,0,0,0.25);
-	text-shadow: 0px 11px 15px 3px rgba(0,0,0,0.25);
-	animation: fill-sub 0.5s ease forwards 0.9s;
+	animation: fill-w 0.5s ease forwards 1.45s;
 }
 
 #subtitles-1 path{
 	stroke-dasharray: 180px;
 	stroke-dashoffset: 180px;
-	animation: line-anim-2 0.23s ease forwards .83s;
+	animation: line-anim 0.23s ease forwards 1.35s;
+}
+
+
+
+hr {
+	border-top: 1px solid white;
+	margin: 6.5% 0 6.5% 0;
+}
+
+#subtitles-2 {
+	width: 311px;
+	height: auto;
+	animation: fill-w 0.5s ease forwards 1.68s;
+	margin: 3.75% 0 14.66% 0;
+}
+
+#subtitles-2 path{
+	stroke-dasharray: 180px;
+	stroke-dashoffset: 180px;
+	animation: line-anim 0.23s ease forwards 1.55s;
 }
 
 @keyframes line-anim-2{
@@ -277,58 +297,20 @@ svg{
 	}
 }
 
-@keyframes fill-sub{
-	from{
-		fill: transparent;
-	}
-	to {
-		fill: #35CDD4;
-	}
-}
-
-#subtitles-2 {
-	width: 40vw;
-	height: auto;
-	-webkit-text-shadow: 0px 11px 15px 3px rgba(0,0,0,0.25);
-	-moz-text-shadow: 0px 11px 15px 3px rgba(0,0,0,0.25);
-	text-shadow: 0px 11px 15px 3px rgba(0,0,0,0.25);
-	animation: fill-sub-2 0.5s ease forwards 1s;
-}
-
-#subtitles-2 path{
-	stroke-dasharray: 180px;
-	stroke-dashoffset: 180px;
-	animation: line-anim-3 0.23s ease forwards 0.86s;
-}
-
-@keyframes line-anim-3{
-	to {
-		stroke-dashoffset: 0px;
-	}
-}
-
-@keyframes fill-sub-2{
-	from{
-		fill: transparent;
-	}
-	to {
-		fill: #35CDD4;
-	}
-}
 
 #apply-button {
-	background: linear-gradient(#3EE8BB 0%, #329C80 100%);
+	background: #CCCCCC;
 	box-sizing: border-box;
-	border-radius: 12px;
+	border-radius: 6px;
 	display: inline-block;
-	padding: 14px;
-	font-family: Titillium Web;
+	padding: 10px 8px 8px 12px;
+	font-family: Form;
 	font-style: normal;
 	font-weight: normal;
-	font-size: 24px;
+	font-size: 18px;
 	text-align: center;
-	letter-spacing: 0.1em;
-	color: #FFFFFF;	
+	letter-spacing: 0.4em;
+	color: #000000;	
 }
 
 /* 
@@ -625,13 +607,16 @@ svg{
 }
 
 .volunteer-emblem {
+	-webkit-filter: drop-shadow(0px 0px 10px var(--primary-accent-color));
+	-moz-filter:	drop-shadow(0px 0px 10px var(--primary-accent-color));
+    filter:         drop-shadow(0px 0px 10px var(--primary-accent-color)); 
 	transition: 0.4s;
 }
 
 .volunteer-emblem:hover {
-	-webkit-filter: drop-shadow(0px 0px 20px #FF0000);
-	-moz-filter:	drop-shadow(0px 0px 20px #FF0000);
-    filter:         drop-shadow(0px 0px 20px #FF0000); 
+	-webkit-filter: drop-shadow(0px 0px 20px var(--primary-accent-color));
+	-moz-filter:	drop-shadow(0px 0px 20px var(--primary-accent-color));
+    filter:         drop-shadow(0px 0px 20px var(--primary-accent-color)); 
 }
 
 .helper-title {

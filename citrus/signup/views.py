@@ -49,6 +49,23 @@ def apply(request):
     #return render(request, 'signup/dummyapply.html', {'user_form': user_form, 'profile_form': profile_form})
     return render(request, 'signup/apply.html', {'user_form': user_form, 'profile_form': profile_form})
 
+@transaction.atomic
+def update_profile(request):
+    if not request.user.is_authenticated:
+        return redirect('login')
+
+    if request.method == 'POST':
+        profile_form = ProfileForm(request.POST, instance=request.user.profile)
+        if profile_form.is_valid():
+            profile_form.save()
+       #     messages.success(request, _('Your profile was successfully updated!'))
+            return redirect('profile')
+       # else:
+       #     messages.error(request, _('Please correct the error below.'))
+    else:
+        profile_form = ProfileForm(instance=request.user.profile)
+    return render(request, 'signup/edit.html', { 'profile_form': profile_form })
+
 def account_activation_sent(request):
     return render(request, 'signup/account_activation_sent.html')
 

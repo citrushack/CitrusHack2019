@@ -1,40 +1,37 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-127067482-2"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
+    <head>
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-127067482-2"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
 
-        gtag('config', 'UA-127067482-2');
-    </script>
+            gtag('config', 'UA-127067482-2');
+        </script>
 
-    <!-- Meta -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <!-- Meta -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 
-    <!-- FontAwesome -->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+        <!-- FontAwesome -->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
 
-    <!-- AnimateOnScroll -->
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+        <!-- AnimateOnScroll -->
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
-    <!-- Custom Stylesheet -->
-    {% load static %}
-    <link rel="stylesheet" type="text/css" href="../css/home.css">
-    <link rel="stylesheet" type="text/css" href="{% static '/css/home.css' %}">
+        <!-- Custom Stylesheet -->
+        {% load static %}
+        <link rel="stylesheet" type="text/css" href="../css/home.css">
+        <link rel="stylesheet" type="text/css" href="{% static '/css/home.css' %}">
 
-    <title>CitrusHack 2019</title>
-  </head>
-
-<!-- above: index.html -->
-
-
+        <title>CitrusHack 2019</title>
+    </head>
+<a id="mlh-trust-badge" style="display:block;max-width:100px;min-width:60px;position:absolute;left:50px;top:0;width:10%;z-index:10000" href="https://mlh.io/seasons/na-2019/events?utm_source=na-hackathon&utm_medium=TrustBadge&utm_campaign=2019-season&utm_content=gray" target="_blank"><img src="https://s3.amazonaws.com/logged-assets/trust-badge/2019/mlh-trust-badge-2019-gray.svg" alt="Major League Hacking 2019 Hackathon Season" style="width:100%"></a> 
   <body>
     <div id="content">
       	<nav id="top-nav" class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
@@ -69,42 +66,7 @@
 
     	<div id = "main-hero">
     		<!-- <div id = "main-titles">
-                <div class="logo-container">
-                    {% load static %}
-                    <img id="logo" data-aos="zoom-in" src="{% static "assets/img/shine.png" %}" alt="CitrusHack logo">
-                    {% load static %}
-                    <img data-aos="zoom-in" src="{% static "assets/img/shine.png" %}">
-                    {% load static %}
-                    <img data-aos="zoom-in" src="{% static "assets/img/shine.png" %}">
-                    {% load static %}
-                    <img data-aos="zoom-in" src="{% static "assets/img/shine.png" %}">                    
-                </div>                   
-                <svg id="logo-text" width="654" height="87" viewBox="0 0 654 87" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <mask id="path-1-outside-1" maskUnits="userSpaceOnUse" x="-0.130859" y="-0.240234" width="654" height="87" fill="none">
-                    <rect fill="white" x="-0.130859" y="-0.240234" width="654" height="87"/>
-                    <path d="M54.1491 83.6798C45.9091 85.3598 38.5091 86.1998 31.9491 86.1998C25.3891 86.1998 20.0691 85.3198 15.9891 83.5598C11.9891 81.7198 8.86914 78.9198 6.62914 75.1598C4.46914 71.3198 2.94914 66.9598 2.06914 62.0798C1.26914 57.1198 0.869141 50.9598 0.869141 43.5998C0.869141 36.2398 1.26914 30.0798 2.06914 25.1198C2.94914 20.0798 4.46914 15.6398 6.62914 11.7998C8.86914 7.95976 11.9891 5.15976 15.9891 3.39977C19.9891 1.63976 25.1891 0.759766 31.5891 0.759766C37.9891 0.759766 45.5091 1.63976 54.1491 3.39977L53.7891 11.1998C45.7091 9.75976 38.5091 9.03976 32.1891 9.03976C23.3891 9.03976 17.5491 11.6798 14.6691 16.9598C11.8691 22.1598 10.4691 31.0798 10.4691 43.7198C10.4691 50.0398 10.7091 55.1198 11.1891 58.9598C11.7491 62.7998 12.7891 66.2798 14.3091 69.3998C15.8291 72.4398 18.0291 74.6398 20.9091 75.9998C23.8691 77.2798 28.1491 77.9198 33.7491 77.9198C39.4291 77.9198 46.1091 77.1998 53.7891 75.7598L54.1491 83.6798Z"/>
-                    <path d="M79.7026 84.9998V24.9998H88.7026V84.9998H79.7026ZM79.7026 11.4398V0.99976H88.7026V11.4398H79.7026Z"/>
-                    <path d="M149.033 32.7998H129.953V61.4798C129.953 68.3598 130.433 72.8798 131.393 75.0398C132.433 77.1998 134.833 78.2798 138.593 78.2798L149.273 77.5598L149.873 84.9998C144.513 85.8798 140.433 86.3198 137.633 86.3198C131.393 86.3198 127.073 84.7998 124.673 81.7598C122.273 78.7198 121.073 72.9198 121.073 64.3598V32.7998H112.553V24.9998H121.073V6.63976H129.953V24.9998H149.033V32.7998Z"/>
-                    <path d="M172.023 84.9998V24.9998H180.903V33.1598C187.863 28.3598 195.183 25.1998 202.863 23.6798V32.7998C199.503 33.4398 195.983 34.4398 192.303 35.7998C188.703 37.1598 185.943 38.3598 184.023 39.3998L181.023 40.9598V84.9998H172.023Z"/>
-                    <path d="M262.947 24.9998H271.947V84.9998H262.947V80.7998C256.947 84.3998 251.027 86.1998 245.187 86.1998C237.027 86.1998 231.587 84.0798 228.867 79.8398C226.227 75.5998 224.907 67.7598 224.907 56.3198V24.9998H233.907V56.1998C233.907 64.9198 234.667 70.7598 236.187 73.7198C237.707 76.6798 241.147 78.1598 246.507 78.1598C249.147 78.1598 251.827 77.7998 254.547 77.0798C257.267 76.2798 259.347 75.5198 260.787 74.7998L262.947 73.7198V24.9998Z"/>
-                    <path d="M320.097 31.8398C311.377 31.8398 307.017 34.8798 307.017 40.9598C307.017 43.7598 308.017 45.7598 310.017 46.9598C312.017 48.0798 316.577 49.2798 323.697 50.5598C330.817 51.7598 335.857 53.4798 338.817 55.7198C341.777 57.9598 343.257 62.1598 343.257 68.3198C343.257 74.4798 341.257 78.9998 337.257 81.8798C333.337 84.7598 327.577 86.1998 319.977 86.1998C315.017 86.1998 309.177 85.6398 302.457 84.5198L298.857 83.9198L299.337 76.1198C308.457 77.4798 315.337 78.1598 319.977 78.1598C324.617 78.1598 328.137 77.4398 330.537 75.9998C333.017 74.4798 334.257 71.9998 334.257 68.5598C334.257 65.0398 333.217 62.6798 331.137 61.4798C329.057 60.1998 324.497 58.9998 317.457 57.8798C310.417 56.7598 305.417 55.1198 302.457 52.9598C299.497 50.7998 298.017 46.7998 298.017 40.9598C298.017 35.1198 300.057 30.7998 304.137 27.9998C308.297 25.1998 313.457 23.7998 319.617 23.7998C324.497 23.7998 330.617 24.3598 337.977 25.4798L341.337 26.0798L341.097 33.7598C332.217 32.4798 325.217 31.8398 320.097 31.8398Z"/>
-                    <path d="M416.199 84.9998V51.1598H385.839V84.9998H369.279V3.39977H385.839V36.7598H416.199V3.39977H432.759V84.9998H416.199Z"/>
-                    <path d="M507.009 43.7198V68.6798C507.169 70.5998 507.489 71.9598 507.969 72.7598C508.449 73.4798 509.449 73.9998 510.969 74.3198L510.489 86.4398C506.409 86.4398 503.129 86.1598 500.649 85.5998C498.249 85.0398 495.809 83.9198 493.329 82.2398C487.569 85.0398 481.689 86.4398 475.689 86.4398C463.289 86.4398 457.089 79.8798 457.089 66.7598C457.089 60.3598 458.809 55.8398 462.249 53.1998C465.689 50.4798 470.969 48.8798 478.089 48.3998L490.929 47.4398V43.7198C490.929 41.2398 490.369 39.5598 489.249 38.6798C488.129 37.7198 486.329 37.2398 483.849 37.2398L461.289 38.1998L460.809 27.0398C469.369 24.7198 477.489 23.5598 485.169 23.5598C492.929 23.5598 498.489 25.1598 501.849 28.3598C505.289 31.5598 507.009 36.6798 507.009 43.7198ZM480.009 59.5598C475.529 59.9598 473.289 62.3598 473.289 66.7598C473.289 71.1598 475.249 73.3598 479.169 73.3598C482.209 73.3598 485.529 72.8798 489.129 71.9198L490.929 71.4398V58.5998L480.009 59.5598Z"/>
-                    <path d="M556.779 23.5598C560.939 23.5598 566.259 24.1998 572.739 25.4798L575.979 26.1998L575.498 38.9198C569.178 38.2798 564.498 37.9598 561.458 37.9598C555.938 37.9598 552.259 39.1598 550.419 41.5598C548.659 43.8798 547.779 48.3198 547.779 54.8798C547.779 61.4398 548.659 65.9598 550.419 68.4398C552.259 70.8398 555.978 72.0398 561.578 72.0398L575.498 71.0798L575.979 83.9198C567.419 85.5998 560.899 86.4398 556.419 86.4398C547.539 86.4398 541.139 83.9598 537.219 78.9998C533.379 73.9598 531.458 65.9198 531.458 54.8798C531.458 43.8398 533.458 35.8798 537.458 30.9998C541.458 26.0398 547.899 23.5598 556.779 23.5598Z"/>
-                    <path d="M615.973 84.9998H599.893V0.99976H615.973V48.7598L622.093 47.6798L633.973 24.9998H651.973L636.373 53.4398L652.813 84.9998H634.693L622.573 61.5998L615.973 62.6798V84.9998Z"/>
-                    </mask>
-                    <path d="M54.1491 83.6798C45.9091 85.3598 38.5091 86.1998 31.9491 86.1998C25.3891 86.1998 20.0691 85.3198 15.9891 83.5598C11.9891 81.7198 8.86914 78.9198 6.62914 75.1598C4.46914 71.3198 2.94914 66.9598 2.06914 62.0798C1.26914 57.1198 0.869141 50.9598 0.869141 43.5998C0.869141 36.2398 1.26914 30.0798 2.06914 25.1198C2.94914 20.0798 4.46914 15.6398 6.62914 11.7998C8.86914 7.95976 11.9891 5.15976 15.9891 3.39977C19.9891 1.63976 25.1891 0.759766 31.5891 0.759766C37.9891 0.759766 45.5091 1.63976 54.1491 3.39977L53.7891 11.1998C45.7091 9.75976 38.5091 9.03976 32.1891 9.03976C23.3891 9.03976 17.5491 11.6798 14.6691 16.9598C11.8691 22.1598 10.4691 31.0798 10.4691 43.7198C10.4691 50.0398 10.7091 55.1198 11.1891 58.9598C11.7491 62.7998 12.7891 66.2798 14.3091 69.3998C15.8291 72.4398 18.0291 74.6398 20.9091 75.9998C23.8691 77.2798 28.1491 77.9198 33.7491 77.9198C39.4291 77.9198 46.1091 77.1998 53.7891 75.7598L54.1491 83.6798Z" stroke="white" stroke-width="0.5" mask="url(#path-1-outside-1)"/>
-                    <path d="M79.7026 84.9998V24.9998H88.7026V84.9998H79.7026ZM79.7026 11.4398V0.99976H88.7026V11.4398H79.7026Z" stroke="white" stroke-width="0.5" mask="url(#path-1-outside-1)"/>
-                    <path d="M149.033 32.7998H129.953V61.4798C129.953 68.3598 130.433 72.8798 131.393 75.0398C132.433 77.1998 134.833 78.2798 138.593 78.2798L149.273 77.5598L149.873 84.9998C144.513 85.8798 140.433 86.3198 137.633 86.3198C131.393 86.3198 127.073 84.7998 124.673 81.7598C122.273 78.7198 121.073 72.9198 121.073 64.3598V32.7998H112.553V24.9998H121.073V6.63976H129.953V24.9998H149.033V32.7998Z" stroke="white" stroke-width="0.5" mask="url(#path-1-outside-1)"/>
-                    <path d="M172.023 84.9998V24.9998H180.903V33.1598C187.863 28.3598 195.183 25.1998 202.863 23.6798V32.7998C199.503 33.4398 195.983 34.4398 192.303 35.7998C188.703 37.1598 185.943 38.3598 184.023 39.3998L181.023 40.9598V84.9998H172.023Z" stroke="white" stroke-width="0.5" mask="url(#path-1-outside-1)"/>
-                    <path d="M262.947 24.9998H271.947V84.9998H262.947V80.7998C256.947 84.3998 251.027 86.1998 245.187 86.1998C237.027 86.1998 231.587 84.0798 228.867 79.8398C226.227 75.5998 224.907 67.7598 224.907 56.3198V24.9998H233.907V56.1998C233.907 64.9198 234.667 70.7598 236.187 73.7198C237.707 76.6798 241.147 78.1598 246.507 78.1598C249.147 78.1598 251.827 77.7998 254.547 77.0798C257.267 76.2798 259.347 75.5198 260.787 74.7998L262.947 73.7198V24.9998Z" stroke="white" stroke-width="0.5" mask="url(#path-1-outside-1)"/>
-                    <path d="M320.097 31.8398C311.377 31.8398 307.017 34.8798 307.017 40.9598C307.017 43.7598 308.017 45.7598 310.017 46.9598C312.017 48.0798 316.577 49.2798 323.697 50.5598C330.817 51.7598 335.857 53.4798 338.817 55.7198C341.777 57.9598 343.257 62.1598 343.257 68.3198C343.257 74.4798 341.257 78.9998 337.257 81.8798C333.337 84.7598 327.577 86.1998 319.977 86.1998C315.017 86.1998 309.177 85.6398 302.457 84.5198L298.857 83.9198L299.337 76.1198C308.457 77.4798 315.337 78.1598 319.977 78.1598C324.617 78.1598 328.137 77.4398 330.537 75.9998C333.017 74.4798 334.257 71.9998 334.257 68.5598C334.257 65.0398 333.217 62.6798 331.137 61.4798C329.057 60.1998 324.497 58.9998 317.457 57.8798C310.417 56.7598 305.417 55.1198 302.457 52.9598C299.497 50.7998 298.017 46.7998 298.017 40.9598C298.017 35.1198 300.057 30.7998 304.137 27.9998C308.297 25.1998 313.457 23.7998 319.617 23.7998C324.497 23.7998 330.617 24.3598 337.977 25.4798L341.337 26.0798L341.097 33.7598C332.217 32.4798 325.217 31.8398 320.097 31.8398Z" stroke="white" stroke-width="0.5" mask="url(#path-1-outside-1)"/>
-                    <path d="M416.199 84.9998V51.1598H385.839V84.9998H369.279V3.39977H385.839V36.7598H416.199V3.39977H432.759V84.9998H416.199Z" stroke="white" stroke-width="0.5" mask="url(#path-1-outside-1)"/>
-                    <path d="M507.009 43.7198V68.6798C507.169 70.5998 507.489 71.9598 507.969 72.7598C508.449 73.4798 509.449 73.9998 510.969 74.3198L510.489 86.4398C506.409 86.4398 503.129 86.1598 500.649 85.5998C498.249 85.0398 495.809 83.9198 493.329 82.2398C487.569 85.0398 481.689 86.4398 475.689 86.4398C463.289 86.4398 457.089 79.8798 457.089 66.7598C457.089 60.3598 458.809 55.8398 462.249 53.1998C465.689 50.4798 470.969 48.8798 478.089 48.3998L490.929 47.4398V43.7198C490.929 41.2398 490.369 39.5598 489.249 38.6798C488.129 37.7198 486.329 37.2398 483.849 37.2398L461.289 38.1998L460.809 27.0398C469.369 24.7198 477.489 23.5598 485.169 23.5598C492.929 23.5598 498.489 25.1598 501.849 28.3598C505.289 31.5598 507.009 36.6798 507.009 43.7198ZM480.009 59.5598C475.529 59.9598 473.289 62.3598 473.289 66.7598C473.289 71.1598 475.249 73.3598 479.169 73.3598C482.209 73.3598 485.529 72.8798 489.129 71.9198L490.929 71.4398V58.5998L480.009 59.5598Z" stroke="white" stroke-width="0.5" mask="url(#path-1-outside-1)"/>
-                    <path d="M556.779 23.5598C560.939 23.5598 566.259 24.1998 572.739 25.4798L575.979 26.1998L575.498 38.9198C569.178 38.2798 564.498 37.9598 561.458 37.9598C555.938 37.9598 552.259 39.1598 550.419 41.5598C548.659 43.8798 547.779 48.3198 547.779 54.8798C547.779 61.4398 548.659 65.9598 550.419 68.4398C552.259 70.8398 555.978 72.0398 561.578 72.0398L575.498 71.0798L575.979 83.9198C567.419 85.5998 560.899 86.4398 556.419 86.4398C547.539 86.4398 541.139 83.9598 537.219 78.9998C533.379 73.9598 531.458 65.9198 531.458 54.8798C531.458 43.8398 533.458 35.8798 537.458 30.9998C541.458 26.0398 547.899 23.5598 556.779 23.5598Z" stroke="white" stroke-width="0.5" mask="url(#path-1-outside-1)"/>
-                    <path d="M615.973 84.9998H599.893V0.99976H615.973V48.7598L622.093 47.6798L633.973 24.9998H651.973L636.373 53.4398L652.813 84.9998H634.693L622.573 61.5998L615.973 62.6798V84.9998Z" stroke="white" stroke-width="0.5" mask="url(#path-1-outside-1)"/>
-                </svg>
-                <br>
+                
                 <svg id="subtitles-1" width="517" height="35" viewBox="0 0 517 35" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <mask id="path-2-outside-2" maskUnits="userSpaceOnUse" x="0.0541992" y="-0.21582" width="517" height="36" fill="none">
                     <rect fill="white" x="0.0541992" y="-0.21582" width="517" height="36"/>
@@ -179,261 +141,265 @@
                 {% if user.is_authenticated %}
                 {% else %}
                 <br>
-    			<a href="{% url 'apply' %}"><div data-aos="fade-up" data-aos-delay="1100" id="apply-button"> <i class="fas fa-user-plus"></i>  APPLY </div></a>
-                 <div data-aos="fade-up" data-aos-delay="1100" id="apply-button"> COMING SOON </div>
-                {% endif %}
+    			 <a href="{% url 'apply' %}"><div data-aos="fade-up" data-aos-delay="1100" id="apply-button"> <i class="fas fa-user-plus"></i>  APPLY </div></a> -->
+                <!--  <div data-aos="fade-up" data-aos-delay="1100" id="apply-button"> COMING SOON </div>
+                {% endif %} -->
 
     		</div> -->
     	</div>
     	<div id = "whatis" class="panel-type-1">
             <div class = "row">
     			<div class = "col-12 col-sm-12 col-md-12 col-lg-8 col-xl-8">
-                    <div class="leading-block block-type-1" data-aos="fade-right"></div>
+                    <div class="leading-block block-type-1" data-aos="fade-right" data-aos-duration="200"></div>
                     <br>
-                    <h2 class="titles title-type-1">What is Citrus Hack</h2>
-                    <br>
-                    <p class="info-text text-shadow-1">Citrus Hack is where hundreds of students from all over Southern California (and a few from out-of-state) come together and form teams, aiming to build a project of their own from scratch over the duration of 36 hours.<br><br>Citrus Hack is focused on the brilliant partnership between education and competition. While “hackers” compete for prizes, they hone their technical skills along the way.</p>
+                    <h2 class="titles title-type-1" data-aos="fade-up" data-aos-delay="250">What is Citrus Hack<span class="title-symbols">?</span></h2>
+                    <p class="info-text text-shadow-1" data-aos="fade-up" data-aos-delay="350">Citrus Hack is where hundreds of students from all over Southern California (and a few from out-of-state) come together and form teams, aiming to build a project of their own from scratch over the duration of 36 hours.<br><br>Citrus Hack is focused on the brilliant partnership between education and competition. While “hackers” compete for prizes, they hone their technical skills along the way.</p>
     			</div>
-                <div class = "col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4 text-center">
+                <div class = "col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4 text-center" data-aos="fade-up" data-aos-delay="500">
                     {% load static %}
-                    <img src="{% static "assets/img/computer.png" %}" alt="" style="width: 400px;height: 386px;" class="img-fluid">
+                    <img src="{% static "assets/img/computer.png" %}" alt="" style="width: auto;height: 386px;" class="img-fluid">
                 </div>
             </div> 
     	</div>
         <div id="numbers" class="text-center panel-type-2">
             <div class="row">
-                <p class="col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4 number-text"><span class="number">36</span><span class="count">hours</span></p>
-                <p class="col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4 number-text"><span class="number">300</span><span class="count">hackers</span></p>
-                <p class="col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4 number-text"><span class="number">80</span><span class="count">projects</span></p>
+                <p data-aos="fade-down" data-aos-duration="150" class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 number-text">
+                    <span class="number">36</span>
+                    <br>
+                    <span class="count">hours</span>
+                </p>
+                <p data-aos="fade-down" data-aos-duration="150" data-aos-delay="200" class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 number-text">
+                    <span class="number">300</span>
+                    <br>
+                    <span class="count">hackers</span>
+                </p>
+                <p data-aos="fade-down" data-aos-duration="150" data-aos-delay="400" class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 number-text">
+                    <span class="number">80</span>
+                    <br>
+                    <span class="count">projects</span>
+                </p>
             </div>
         </div>
         <div id = "tracks" class="panel-type-1">   
             <div class="leading-block block-type-1" data-aos="fade-right"></div>
             <br>
             <h2 class="titles title-type-1">Choose Your Alignment</h2>
-            <p class="info-text">This year, participants at Citrus Hack have the opportunity to choose from different tracks based on their skills and interests.</p>
-                
-            <div class="container">
-                <div class="row">    
-                    <div class="track-card text-center col-12 col-sm-12 col-md-6 col-lg-6 col-xl-3">
-                        {% load static %}
-                        <img class="track-icon" src="{% static "assets/tracks/cube.png" %}">
-                        <br>
-                        <h3 class="track-title">Sentinel</h3>
-                        <br>
-                        <p class="text-left track-text">
-                            <strong>The best defense is a good offense.</strong><br><br> 
-                            Ethical projects proven to break into complex systems or withstand complex attacks will be eligible for the Sentinel track. 
-                        </p>
-                    </div>
-                    <div class="track-card text-center col-12 col-sm-12 col-md-6 col-lg-6 col-xl-3">
-                        {% load static %}
-                        <img class="track-icon" src="{% static "assets/tracks/plant.png" %}">
-                        <br>
-                        <h3 class="track-title">Reclaimer</h3>
-                        <br>
-                        <p class="text-left track-text">
-                            <strong>Make the world a little nicer to live in.</strong> <br><br> 
-                            Projects that contribute to the betterment of the environment will be eligible for the Reclaimer track.
-                        </p>
-                    </div>
-                    <div class="track-card text-center col-12 col-sm-12 col-md-6 col-lg-6 col-xl-3">
-                        {% load static %}
-                        <img class="track-icon" src="{% static "assets/tracks/brain.png" %}">
-                        <br>
-                        <h3 class="track-title">Campaigner</h3>
-                        <br>
-                        <p class="text-left track-text">
-                            <strong>Take a stand. Make a statement.</strong> <br><br>
-                            Projects that strive to solve problems within diversity and inclusivity will be eligible for the Campaigner track.                        
-                        </p>
-                    </div>
-                    <div class="track-card text-center col-12 col-sm-12 col-md-6 col-lg-6 col-xl-3">
-                        {% load static %}
-                        <img class="track-icon" src="{% static "assets/tracks/city.png" %}">
-                        <br>
-                        <h3 class="track-title">Medic</h3>
-                        <br>
-                        <p class="text-left track-text">
-                            <strong>A vital part of technology is humanity.</strong> <br><br>
-                            Projects that push for innovation within med-tech or promote a healthy lifestyle will be eligible for the Medic track.
-                        </p>
-                    </div>
+            <p class="info-text text-shadow-1">This year, participants at Citrus Hack have the opportunity to choose from different tracks based on their skills and interests.</p>
+            <div class="row">    
+                <div id="sentinel-card" class="track-card text-center col-12 col-sm-12 col-md-6 col-lg-6 col-xl-3">
+                    {% load static %}
+                    <img class="track-icon" src="{% static "assets/tracks/cube.png" %}">
+                    <br>
+                    <h3 class="track-title">Sentinel</h3>
+                    <br>
+                    <p class="text-left track-text">
+                        <strong>The best defense is a good offense.</strong><br><br> 
+                        Ethical projects proven to break into complex systems or withstand complex attacks will be eligible for the Sentinel track. 
+                    </p>
                 </div>
-            </div> 
+                <div id="reclaimer-card" class="track-card text-center col-12 col-sm-12 col-md-6 col-lg-6 col-xl-3">
+                    {% load static %}
+                    <img class="track-icon" src="{% static "assets/tracks/plant.png" %}">
+                    <br>
+                    <h3 class="track-title">Reclaimer</h3>
+                    <br>
+                    <p class="text-left track-text">
+                        <strong>Make the world a little nicer to live in.</strong> <br><br> 
+                        Projects that contribute to the betterment of the environment will be eligible for the Reclaimer track.
+                    </p>
+                </div>
+                <div id="campaigner-card" class="track-card text-center col-12 col-sm-12 col-md-6 col-lg-6 col-xl-3">
+                    {% load static %}
+                    <img class="track-icon" src="{% static "assets/tracks/brain.png" %}">
+                    <br>
+                    <h3 class="track-title">Campaigner</h3>
+                    <br>
+                    <p class="text-left track-text">
+                        <strong>Take a stand. Make a statement.</strong> <br><br>
+                        Projects that strive to solve problems within diversity and inclusivity will be eligible for the Campaigner track.                        
+                    </p>
+                </div>
+                <div id="medic-card" class="track-card text-center col-12 col-sm-12 col-md-6 col-lg-6 col-xl-3">
+                    {% load static %}
+                    <img class="track-icon" src="{% static "assets/tracks/city.png" %}">
+                    <br>
+                    <h3 class="track-title">Medic</h3>
+                    <br>
+                    <p class="text-left track-text">
+                        <strong>A vital part of technology is humanity.</strong> <br><br>
+                        Projects that push for innovation within med-tech or promote a healthy lifestyle will be eligible for the Medic track.
+                    </p>
+                </div>
+            </div>
         </div>
         <div id = "volunteer" class="panel-type-2">
             <div class="leading-block block-type-2" data-aos="fade-right"></div>
             <br>
             <h2 class="titles title-type-2">Lend a Hand</h2>
             <br>
-            <div class="container">
-                <div class="row">
-                    <div class="text-center col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4"> 
-                        <h3 class="helper-title volunteer-text text-center">Mentor</h3>
-                        <a href="https://docs.google.com/forms/d/e/1FAIpQLScp0a5PhwBc-36Im7HkytyqlvTiQSPnNIg3rtaHlSVAPn3U1g/viewform?usp=sf_link">{% load static %}<img src="{% static "assets/img/mentor.png" %}" style="margin-top:20px;height:180px;width:180px;" class="volunteer-emblem"></a>
-                    </div>
-                    <div class="text-center col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4"> 
-                        <h3 class="helper-title volunteer-text text-center">Volunteer</h3>
-                        <a href="https://docs.google.com/forms/d/e/1FAIpQLSdK66VnO-NYPyL_qN8P3GZYUuehluLNB_dgDpiQx9anj8OP3A/viewform?usp=sf_link">{% load static %}<img src="{% static "assets/img/volunteer.png" %}" style="margin-top:20px;height:180px;width:180px;" class="volunteer-emblem"></a>
-                    </div>
-                    <div class="text-center col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4"> 
-                        <h3 class="helper-title volunteer-text text-center">Workshop Leader</h3>
-                        <a href="https://docs.google.com/forms/d/1jl_xvG1ojitGRm9AmfU7zRqbo0SpgDU4u1qPJMNhEAw/">{% load static %}<img src="{% static "assets/img/workshop.png" %}" style="margin-top:20px;height:180px;width:180px;" class="volunteer-emblem"></a>
-                    </div>
+            <div class="row">
+                <div class="text-center col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4"> 
+                    <a target="_blank" href="https://docs.google.com/forms/d/e/1FAIpQLScp0a5PhwBc-36Im7HkytyqlvTiQSPnNIg3rtaHlSVAPn3U1g/viewform?usp=sf_link">{% load static %}<img src="{% static "assets/img/mentor.png" %}" style="margin-top:20px;height:180px;width:180px;" class="volunteer-emblem"></a>
+                    <h3 class="helper-title volunteer-text text-center">Mentor</h3>
+                </div>
+                <div class="text-center col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4"> 
+                    <a target="_blank" href="https://docs.google.com/forms/d/e/1FAIpQLSdK66VnO-NYPyL_qN8P3GZYUuehluLNB_dgDpiQx9anj8OP3A/viewform?usp=sf_link">{% load static %}<img src="{% static "assets/img/volunteer.png" %}" style="margin-top:20px;height:180px;width:180px;" class="volunteer-emblem"></a>
+                    <h3 class="helper-title volunteer-text text-center">Volunteer</h3>
+                </div>
+                <div class="text-center col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4"> 
+                    <a target="_blank" href="https://docs.google.com/forms/d/1jl_xvG1ojitGRm9AmfU7zRqbo0SpgDU4u1qPJMNhEAw/">{% load static %}<img src="{% static "assets/img/workshop.png" %}" style="margin-top:20px;height:180px;width:180px;" class="volunteer-emblem"></a>
+                    <h3 class="helper-title volunteer-text text-center">Workshop Leader</h3>
                 </div>
             </div>
         </div>
         <div id = "faq" class="panel-type-1">
             <div class="leading-block block-type-1 center-block" data-aos="flip-right"></div>
             <br> 
-            <h2 class="titles title-type-1 text-center">FAQ</h2>
+            <h2 class="titles title-type-1 text-center"><span style="color:var(--primary-bg-color);opacity:0;">.</span>FA<span style="letter-spacing:0">Q</span></h2>
             <br>
-            <div class="container">
-                <div class="row">   
-                    <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6" id="acc-1">
-                        <div id="accordion">
-                            <div class="card">
-                                <div class="card-header" id="question-1">
-                                    <h5 class="mb-0">
-                                        <div class="question-text collapsed" data-toggle="collapse" data-target="#answer-1" aria-expanded="false" aria-controls="answer-1">
-                                        What is a hackathon?
-                                        </div>
-                                    </h5>
-                                </div>
-                                <div id="answer-1" class="collapse" aria-labelledby="question-1" data-parent="#accordion">
-                                    <div class="card-body">A hackathon is a place where you and hundreds of other people learn, build, and create new technologies over the course of one weekend! Hackathons let you try learning a new skill, commit to that crazy idea you've never had time for, or make new friendships and strengthen old ones. 
+            <div class="row">   
+                <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6" id="acc-1">
+                    <div id="accordion">
+                        <div class="card">
+                            <div class="card-header" id="question-1">
+                                <h5 class="mb-0">
+                                    <div class="question-text collapsed" data-toggle="collapse" data-target="#answer-1" aria-expanded="false" aria-controls="answer-1">
+                                    What is a hackathon?
                                     </div>
+                                </h5>
+                            </div>
+                            <div id="answer-1" class="collapse" aria-labelledby="question-1" data-parent="#accordion">
+                                <div class="card-body">A hackathon is a place where you and hundreds of other people learn, build, and create new technologies over the course of one weekend! Hackathons let you try learning a new skill, commit to that crazy idea you've never had time for, or make new friendships and strengthen old ones. 
                                 </div>
                             </div>
-                            <br>
-                            <div class="card">
-                                <div class="card-header" id="question-2">
-                                    <h5 class="mb-0">
-                                        <div class="question-text collapsed" data-toggle="collapse" data-target="#answer-2" aria-expanded="false" aria-controls="answer-2">
-                                        Who is elligible to attend?
-                                        </div>
-                                    </h5>
-                                </div>
-                                <div id="answer-2" class="collapse" aria-labelledby="question-2" data-parent="#accordion">
-                                    <div class="card-body">Any collegiate undergraduate student that has an interest in technology and learning is welcome to attend CitrusHack. You do not need any prior experience programming to attend, nor do you need to be majoring in computer science.
+                        </div>
+                        <br>
+                        <div class="card">
+                            <div class="card-header" id="question-2">
+                                <h5 class="mb-0">
+                                    <div class="question-text collapsed" data-toggle="collapse" data-target="#answer-2" aria-expanded="false" aria-controls="answer-2">
+                                    Who is elligible to attend?
                                     </div>
+                                </h5>
+                            </div>
+                            <div id="answer-2" class="collapse" aria-labelledby="question-2" data-parent="#accordion">
+                                <div class="card-body">Any collegiate undergraduate student that has an interest in technology and learning is welcome to attend CitrusHack. You do not need any prior experience programming to attend, nor do you need to be majoring in computer science.
                                 </div>
                             </div>
-                            <br>
-                            <div class="card">
-                                <div class="card-header" id="question-3">
-                                    <h5 class="mb-0">
-                                        <div class="question-text collapsed" data-toggle="collapse" data-target="#answer-3" aria-expanded="false" aria-controls="answer-3">
-                                        How much is it to attend?
-                                        </div>
-                                    </h5>
-                                </div>
-                                <div id="answer-3" class="collapse" aria-labelledby="question-3" data-parent="#accordion">
-                                    <div class="card-body">Absolutely nothing! CitrusHack has and always will be free. By attending CitrusHack you have only to gain free food, swag, workshops, and more!
+                        </div>
+                        <br>
+                        <div class="card">
+                            <div class="card-header" id="question-3">
+                                <h5 class="mb-0">
+                                    <div class="question-text collapsed" data-toggle="collapse" data-target="#answer-3" aria-expanded="false" aria-controls="answer-3">
+                                    How much is it to attend?
                                     </div>
+                                </h5>
+                            </div>
+                            <div id="answer-3" class="collapse" aria-labelledby="question-3" data-parent="#accordion">
+                                <div class="card-body">Absolutely nothing! CitrusHack has and always will be free. By attending CitrusHack you have only to gain free food, swag, workshops, and more!
                                 </div>
                             </div>
-                            <br>
-                            <div class="card">
-                                <div class="card-header" id="question-4">
-                                    <h5 class="mb-0">
-                                        <div class="question-text collapsed" data-toggle="collapse" data-target="#answer-4" aria-expanded="false" aria-controls="answer-4">
-                                        What can I create?
-                                        </div>
-                                    </h5>
-                                </div>
-                                <div id="answer-4" class="collapse" aria-labelledby="question-4" data-parent="#accordion">
-                                    <div class="card-body">You can build (but are not limited to) a website, an app, a robot, a VR game, an awesome hardware device, and everything in between! You can also use open source libraries, frameworks, and APIs to help you make your project more complex and creative. The sky is the limit!
+                        </div>
+                        <br>
+                        <div class="card">
+                            <div class="card-header" id="question-4">
+                                <h5 class="mb-0">
+                                    <div class="question-text collapsed" data-toggle="collapse" data-target="#answer-4" aria-expanded="false" aria-controls="answer-4">
+                                    What can I create?
                                     </div>
+                                </h5>
+                            </div>
+                            <div id="answer-4" class="collapse" aria-labelledby="question-4" data-parent="#accordion">
+                                <div class="card-body">You can build (but are not limited to) a website, an app, a robot, a VR game, an awesome hardware device, and everything in between! You can also use open source libraries, frameworks, and APIs to help you make your project more complex and creative. The sky is the limit!
                                 </div>
                             </div>
-                            <br>
-                            <div class="card">
-                                <div class="card-header" id="question-5">
-                                    <h5 class="mb-0">
-                                        <div class="question-text collapsed" data-toggle="collapse" data-target="#answer-5" aria-expanded="false" aria-controls="answer-5">
-                                        Do I need a team?
-                                        </div>
-                                    </h5>
-                                </div>
-                                <div id="answer-5" class="collapse" aria-labelledby="question-5" data-parent="#accordion">
-                                    <div class="card-body">Teams are not required, but are recommended. Team membership is capped at 4 members. You are welcome to form teams before the hacking begins, or during the event! If you don't have a team there will be team building opportunities at the beginning of the event.
+                        </div>
+                        <br>
+                        <div class="card">
+                            <div class="card-header" id="question-5">
+                                <h5 class="mb-0">
+                                    <div class="question-text collapsed" data-toggle="collapse" data-target="#answer-5" aria-expanded="false" aria-controls="answer-5">
+                                    Do I need a team?
                                     </div>
+                                </h5>
+                            </div>
+                            <div id="answer-5" class="collapse" aria-labelledby="question-5" data-parent="#accordion">
+                                <div class="card-body">Teams are not required, but are recommended. Team membership is capped at 4 members. You are welcome to form teams before the hacking begins, or during the event! If you don't have a team there will be team building opportunities at the beginning of the event.
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
-                        <div id="accordion2">
-                            <div class="card">
-                                <div class="card-header" id="question-6">
-                                    <h5 class="mb-0">
-                                        <div class="question-text collapsed" data-toggle="collapse" data-target="#answer-6" aria-expanded="false" aria-controls="answer-6">
-                                        What if I don't know how to code?
-                                        </div>
-                                    </h5>
-                                </div>
-                                <div id="answer-6" class="collapse" aria-labelledby="question-6" data-parent="#accordion2">
-                                    <div class="card-body">The CitrusHack team is committed to facilitating a positive learning environment for hackers of all skill levels. Every participant will have access to some awesome workshops and top-notch mentors that can help point you in the right direction if you ever get stuck.
+                </div>
+                <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+                    <div id="accordion2">
+                        <div class="card">
+                            <div class="card-header" id="question-6">
+                                <h5 class="mb-0">
+                                    <div class="question-text collapsed" data-toggle="collapse" data-target="#answer-6" aria-expanded="false" aria-controls="answer-6">
+                                    What if I don't know how to code?
                                     </div>
+                                </h5>
+                            </div>
+                            <div id="answer-6" class="collapse" aria-labelledby="question-6" data-parent="#accordion2">
+                                <div class="card-body">The CitrusHack team is committed to facilitating a positive learning environment for hackers of all skill levels. Every participant will have access to some awesome workshops and top-notch mentors that can help point you in the right direction if you ever get stuck.
                                 </div>
                             </div>
-                            <br>
-                            <div class="card">
-                                <div class="card-header" id="question-7">
-                                    <h5 class="mb-0">
-                                        <div class="question-text collapsed" data-toggle="collapse" data-target="#answer-7" aria-expanded="false" aria-controls="answer-7">
-                                        What should I bring?
-                                        </div>
-                                    </h5>
-                                </div>
-                                <div id="answer-7" class="collapse" aria-labelledby="question-7" data-parent="#accordion2">
-                                    <div class="card-body">We require all attendees bring a government issued ID. You should also bring your essentail hacking tools such as a computer, chargers for your computer and phone, and some headphones. We will have an onsite hardware lab if your project requires it, but do feel free to bring your own parts in case we run out (Note: Soldering is not allowed at CitrusHack). Also consider bringing a pillow, a blanket or sleeping bag, and a toothbrush. 
+                        </div>
+                        <br>
+                        <div class="card">
+                            <div class="card-header" id="question-7">
+                                <h5 class="mb-0">
+                                    <div class="question-text collapsed" data-toggle="collapse" data-target="#answer-7" aria-expanded="false" aria-controls="answer-7">
+                                    What should I bring?
                                     </div>
+                                </h5>
+                            </div>
+                            <div id="answer-7" class="collapse" aria-labelledby="question-7" data-parent="#accordion2">
+                                <div class="card-body">We require all attendees bring a government issued ID. You should also bring your essentail hacking tools such as a computer, chargers for your computer and phone, and some headphones. We will have an onsite hardware lab if your project requires it, but do feel free to bring your own parts in case we run out (Note: Soldering is not allowed at CitrusHack). Also consider bringing a pillow, a blanket or sleeping bag, and a toothbrush. 
                                 </div>
                             </div>
-                            <br>
-                            <div class="card">
-                                <div class="card-header" id="question-8">
-                                    <h5 class="mb-0">
-                                        <div class="question-text collapsed" data-toggle="collapse" data-target="#answer-8" aria-expanded="false" aria-controls="answer-8">
-                                        Can I prepare code before the event?
-                                        </div>
-                                    </h5>
-                                </div>
-                                <div id="answer-8" class="collapse" aria-labelledby="question-8" data-parent="#accordion2">
-                                    <div class="card-body"><strong>Unfortunately no.</strong> CitrusHack strives to be an event where anyone participating can learn or create anything within the alotted 36 hours. You are allowed to plan your project as much as you'd like before the event. However, any team found submitting a project that was started before the alotted hacking period will be automatically disqualified from judging consideration for prize categories.
+                        </div>
+                        <br>
+                        <div class="card">
+                            <div class="card-header" id="question-8">
+                                <h5 class="mb-0">
+                                    <div class="question-text collapsed" data-toggle="collapse" data-target="#answer-8" aria-expanded="false" aria-controls="answer-8">
+                                    Can I prepare code before the event?
                                     </div>
+                                </h5>
+                            </div>
+                            <div id="answer-8" class="collapse" aria-labelledby="question-8" data-parent="#accordion2">
+                                <div class="card-body"><strong>Unfortunately no.</strong> CitrusHack strives to be an event where anyone participating can learn or create anything within the alotted 36 hours. You are allowed to plan your project as much as you'd like before the event. However, any team found submitting a project that was started before the alotted hacking period will be automatically disqualified from judging consideration for prize categories.
                                 </div>
                             </div>
-                            <br>
-                            <div class="card">
-                                <div class="card-header" id="question-9">
-                                    <h5 class="mb-0">
-                                        <div class="question-text collapsed" data-toggle="collapse" data-target="#answer-9" aria-expanded="false" aria-controls="answer-9">
-                                        Is there a code of conduct?
-                                        </div>
-                                    </h5>
-                                </div>
-                                <div id="answer-9" class="collapse" aria-labelledby="question-9" data-parent="#accordion2">
-                                    <div class="card-body">All CitrusHack participants are expected to follow the <a href="https://static.mlh.io/docs/mlh-code-of-conduct.pdf" class="question-link">MLH Code of Conduct</a>.
+                        </div>
+                        <br>
+                        <div class="card">
+                            <div class="card-header" id="question-9">
+                                <h5 class="mb-0">
+                                    <div class="question-text collapsed" data-toggle="collapse" data-target="#answer-9" aria-expanded="false" aria-controls="answer-9">
+                                    Is there a code of conduct?
                                     </div>
+                                </h5>
+                            </div>
+                            <div id="answer-9" class="collapse" aria-labelledby="question-9" data-parent="#accordion2">
+                                <div class="card-body">All CitrusHack participants are expected to follow the <a target="_blank" href="https://static.mlh.io/docs/mlh-code-of-conduct.pdf" class="question-link">MLH Code of Conduct</a>.
                                 </div>
                             </div>
-                            <br>
-                            <div class="card">
-                                <div class="card-header" id="question-10">
-                                    <h5 class="mb-0">
-                                        <div class="question-text collapsed" data-toggle="collapse" data-target="#answer-10" aria-expanded="false" aria-controls="answer-10">
-                                        What if I still have a question?
-                                        </div>
-                                    </h5>
-                                </div>
-                                <div id="answer-10" class="collapse" aria-labelledby="question-10" data-parent="#accordion2">
-                                    <div class="card-body">
-                                        Email us at <a href="mailto:citrushack@gmail.com" class="question-link">citrushack@gmail.com</a>. We love answering questions!
+                        </div>
+                        <br>
+                        <div class="card">
+                            <div class="card-header" id="question-10">
+                                <h5 class="mb-0">
+                                    <div class="question-text collapsed" data-toggle="collapse" data-target="#answer-10" aria-expanded="false" aria-controls="answer-10">
+                                    What if I still have a question?
                                     </div>
+                                </h5>
+                            </div>
+                            <div id="answer-10" class="collapse" aria-labelledby="question-10" data-parent="#accordion2">
+                                <div class="card-body">
+                                    Email us at <a target="_blank" href="mailto:citrushack@gmail.com" class="question-link">citrushack@gmail.com</a>. We love answering questions!
                                 </div>
                             </div>
                         </div>
@@ -447,7 +413,7 @@
                     <div class = "col-xl-6">
                         <div class="leading-block block-type-2"></div>
                         <br>
-                        <h2 class="titles title-type-2">Time & Place</h2>
+                        <h2 class="titles title-type-2">Time<span class="title-symbols"> & </span><span style="color:var(--primary-bg-color);opacity:0;">.</span>Place</h2>
                         <p id="time-and-place-text">April 26 - 28, 2019<br>Winston Chung Hall<br>University of California, Riverside<br><span id="address">446 Winston Chung Hall, Riverside, CA 92507</span></p>
                     </div>
                     <div class = "text-center col-xl-6">
@@ -467,7 +433,7 @@
             <h2 class="titles title-type-1 text-center">Sponsors</h2>
             <div class="row">
                 <div class="col-xs-12 text-center first-tier">
-                    <a href="https://www.equipovision.com/">
+                    <a target="_blank" href="https://www.equipovision.com/">
                         {% load static %}
                         <img class="hvr-grow" src="{% static "assets/supporters/sponsor/equipo.png" %}" alt="EquipoVision logo">
                     </a>
@@ -475,31 +441,31 @@
             </div>
             <div class="row align-items-center">
                 <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 text-center second-tier">
-                    <a href="https://www.coxautoinc.com/">
+                    <a target="_blank" href="https://www.coxautoinc.com/">
                         {% load static %}
                         <img class="hvr-grow" src="{% static "assets/supporters/sponsor/cox.png" %}" alt="CS department logo">
                     </a>
                 </div>
                 <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 text-center second-tier">
-                    <a href="https://www.esri.com/en-us/home">
+                    <a target="_blank" href="https://www.esri.com/en-us/home">
                         {% load static %}
                         <img class="hvr-grow" src="{% static "assets/supporters/sponsor/esri.png" %}" alt="DigitalOcean logo">
                     </a>
                 </div>
                 <div id="twilio" class="col-xl-4 col-lg-4 col-md-4 col-sm-12 text-center second-tier">
-                    <a href="https://twilio.com">
+                    <a target="_blank" href="https://twilio.com">
                         {% load static %}
                         <img class="hvr-grow" src="{% static "assets/supporters/sponsor/twilio.png" %}" alt="Twilio logo">
                     </a>
                 </div>
                 <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 text-center second-tier">
-                  <a href="http://linode.com">
+                  <a target="_blank" href="http://linode.com">
                     {% load static %}
                     <img class="hvr-grow" src="{% static "assets/supporters/sponsor/linode.png" %}" alt="Linode logo">
                   </a>
                 </div>
                 <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 text-center second-tier">
-                  <a href="https://cloud.google.com//">
+                  <a target="_blank" href="https://cloud.google.com//">
                     {% load static %}
                     <img src="{% static "assets/supporters/sponsor/gcp.png" %}" alt="GCP Logo" class="hvr-grow" width="50%">
                   </a>
@@ -514,13 +480,13 @@
             <h2 class="titles title-type-1 text-center">Organizers</h2>    
             <div class="row align-items-center">
                 <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 text-center second-tier">
-                    <a href="http://acmucr.org">
+                    <a target="_blank" href="http://acmucr.org">
                         {% load static %}
                         <img class="hvr-grow" src="{% static "assets/supporters/org/acm.png" %}" alt="ACM at UCR logo">
                     </a>
                 </div>
                 <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 text-center second-tier">
-                    <a href="https://ieee.ee.ucr.edu/">
+                    <a target="_blank" href="https://ieee.ee.ucr.edu/">
                         {% load static %}
                         <img class="hvr-grow" src="{% static "assets/supporters/org/ieee.png" %}" alt="IEEE logo">
                     </a>
@@ -529,13 +495,13 @@
         </div>
         <div id = "footer" class="panel-type-2">
             <p class="text-center">
-                <a class="iconSize" href="https://www.facebook.com/CitrusHack/"><i class="fab fa-facebook-f" id="fa-foot"></i></a>
-                <a class="iconSize" href="mailto:citrushack@gmail.com"><i class="fas fa-envelope" id="em-foot"></i></a>
-                <a class="iconSize" href="https://twitter.com/citrushack"><i class="fab fa-twitter" id="tw-foot"></i></a>
-                <a class="iconSize" href="https://www.instagram.com/citrushack_ucr/"><i class="fab fa-instagram" id="in-foot"></i></a>
+                <a target="_blank" class="iconSize" href="https://www.facebook.com/CitrusHack/"><i class="fab fa-facebook-f" id="fa-foot"></i></a>
+                <a target="_blank" class="iconSize" href="mailto:citrushack@gmail.com"><i class="fas fa-envelope" id="em-foot"></i></a>
+                <a target="_blank" class="iconSize" href="https://twitter.com/citrushack"><i class="fab fa-twitter" id="tw-foot"></i></a>
+                <a target="_blank" class="iconSize" href="https://www.instagram.com/citrushack_ucr/"><i class="fab fa-instagram" id="in-foot"></i></a>
             </p>
-            <p class="info-text text-center">
-                Icons designed by <a class="question-link" href="https://www.flaticon.com/authors/eucalyp">Eucalp</a> from <a class="question-link" href="https://www.flaticon.com">Flaticon</a><br>
+            <p class="info-text text-center text-shadow">
+                Icons designed by <a target="_blank" class="question-link" href="https://www.flaticon.com/authors/eucalyp">Eucalp</a> from <a target="_blank" class="question-link" href="https://www.flaticon.com">Flaticon</a><br>
                 Website made with <span class="question-link" style="text-decoration: none; text-shadow: 0px 0px 4px var(--primary-accent-color); cursor:default;">&#9829;</span> in Riverside, CA<br>
                 &#169; 2019 CitrusHack
             </p>

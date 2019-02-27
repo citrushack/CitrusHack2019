@@ -7,7 +7,7 @@
 }
 
 :root {
-	--primary-bg-color: #130F12;
+	--primary-bg-color: #000000;
 	--secondary-bg-color: #131414;
 	--primary-accent-color: #FC0E90;
 	--secondary-accent-color: #391FA7;
@@ -473,12 +473,14 @@ svg{
 
 .panel-type-1 {
 	padding: 7%;
-	background-color: var(--primary-bg-color);
 }
 
 .leading-block {
 	width:80px;
 	height:7px;
+	background: radial-gradient(75.00px at 50% 50%, #FF97D0 0%, #FF5FB6 100%, #FF008B 100%);
+	box-shadow: 0px 0px 20px #FC0E90;
+	border-radius: 25px;
 }
 
 .center-block {
@@ -487,7 +489,7 @@ svg{
 }
 
 .block-type-1 {
-	background-color: var(--primary-accent-color);
+	/*background-color: var(--primary-accent-color);*/
 }
 
 .block-type-2 {
@@ -503,13 +505,20 @@ svg{
 	letter-spacing: 0.1em;
 	color: #FFFFFF;
 }
-
+/*
 .title-type-1 {
 	text-shadow: 0px 0px 20px var(--primary-accent-color);
 }
 
 .title-type-2 {
 	text-shadow: 0px 0px 20px var(--secondary-accent-color);
+}*/
+
+.title-symbols {
+	font-family: Titillium Web;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 40px;
 }
 
 .info-text {
@@ -519,46 +528,62 @@ svg{
 	font-size: 20px;
 	letter-spacing: 0.05em;
 
-	color: #B6B6B6;
+	color: #909090;
 }
 
-.text-shadow-1 {
+/*.text-shadow-1 {
 	text-shadow: 0px 0px 1px var(--primary-accent-color);
 }
 
 .text-shadow-2 {
 	text-shadow: 0px 0px 4px var(--secondary-accent-color);
-}
+}*/
 
 .panel-type-2 {
 	padding: 7%;
-	background-color: var(--secondary-bg-color);
-}
-
-#numbers {
-	lineheight: 1rem;
+	background-color: var(--primary-bg-color);
 }
 
 .number-text {
-	color: #319B8B;
+	color: #909090;
 	font-family: Titillium Web;
 	font-size: 63px;
 	letter-spacing: 0.1em;
+	line-height: 2.3rem;
 }
 
 .number {
-	font-weight: bold;
-	color: #cccccc;
+	font-size: 86px;
+	color: #FFFFFF;
 }
 
 .count {
+	font-family: Form;
 	font-weight: 200;
-	font-size: 28px;
+	font-size: 24px;
+	text-transform: uppercase;
+	color: var(--primary-accent-color);
+	text-shadow: 0px 0px 20px var(--primary-accent-color);
+}
+
+#sentinel-card {
+	background: linear-gradient(154.25deg, #06A8E8 0%, #408CAA 31.62%, #004059 98.34%);;
+}
+
+#reclaimer-card {
+	background: linear-gradient(154.25deg, #F816E8 0%, #A1369A 31.62%, #661A61 98.34%);
+}
+
+#campaigner-card {
+	background: linear-gradient(154.25deg, #FC0E90 0%, #C03B84 31.62%, #96155C 98.34%);
+}
+
+#medic-card {
+	background: linear-gradient(154.25deg, #DF2525 0%, #C74343 31.62%, #930D0D 98.34%);
 }
 
 .track-card {
 	padding:25px;
-	background-color: var(--secondary-bg-color);
 	border-style: solid;
 	border-width: 5px;
 	border-color: var(--primary-bg-color);
@@ -567,7 +592,7 @@ svg{
 }
 
 .track-card:hover {
-	border-color: rgba(115,115,115,1);
+	border-color: #ffffff;
 	-webkit-box-shadow: 0px 0px 28px 0px rgba(115,115,115,1);
 	-moz-box-shadow: 0px 0px 28px 0px rgba(115,115,115,1);
 	box-shadow: 0px 0px 28px 0px rgba(115,115,115,1);
@@ -579,22 +604,23 @@ svg{
 }
 
 .track-title {
+	padding-top:8px;
+	text-transform: uppercase;
 	margin-top:10px;
-	font-family: Work Sans;
+	font-family: Form;
 	font-style: normal;
-	font-weight: bold;
-	font-size: 28px;
+	font-size: 20px;
 	color: #ffffff;
 }
 
 .track-text {
-	font-family: Work Sans;
+	font-family: Titillium Web;
 	font-style: normal;
-	font-weight: 500;
+	font-weight: 200;
 	color: #ffffff;
 }
 
-.volunteer-text {
+.volunteer-text {;
 	color: #ffffff;
 }
 
@@ -603,17 +629,18 @@ svg{
 }
 
 .volunteer-emblem:hover {
-	-webkit-transform: translate(0px,-12px);
-	-moz-transform: translate(0px,-12px);
-	transform: translate(0px,-12px);
+	-webkit-filter: drop-shadow(0px 0px 20px #FF0000);
+	-moz-filter:	drop-shadow(0px 0px 20px #FF0000);
+    filter:         drop-shadow(0px 0px 20px #FF0000); 
 }
 
 .helper-title {
-	font-family: Titillium Web;
+	font-family: Form;
 	font-style: normal;
-	font-weight: 600;
+	text-transform: uppercase;
 	font-size: 24px;
 	letter-spacing: 0.05em;
+	margin: 20px 10px 20px 10px;
 }
 
 .card {
@@ -630,6 +657,10 @@ svg{
 }
 
 .card-header {
+	inner-shadow: none;
+	border-left:none; 
+	border-right:none;
+	border-top:none;
 	border-bottom-style: solid;
 	border-bottom-width: 2px;
 	border-bottom-color: var(--primary-accent-color);
@@ -682,7 +713,7 @@ svg{
 }
 
 #time-and-place-text {
-	font-family: Work Sans;
+	font-family: Titillium Web;
 	font-style: normal;
 	font-weight: 500;
 	line-height: 1.5em;
@@ -750,7 +781,7 @@ svg{
 .iconSize {
 	text-decoration:none;
 	color: #bbbbbb;
-	text-shadow: 0px 0px 2px var(--secondary-accent-color);
+	text-shadow: 0px 0px 10px var(--secondary-accent-color);
 	font-size: 175%;
 	margin: 2.5%;
 	margin-top: 1%;
@@ -759,5 +790,5 @@ svg{
 
 .iconSize:hover {
 	color:white;
-	text-shadow: 0px 0px 10px var(--secondary-accent-color);
+	text-shadow: 0px 0px 20px var(--secondary-accent-color);
 }

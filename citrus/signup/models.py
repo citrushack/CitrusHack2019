@@ -1,4 +1,5 @@
 from django.db import models
+from datetime import datetime
 from django.core.mail import send_mail
 from django.contrib.auth.models import ( #to use emails as id instead of username, we have to extend the user model
     BaseUserManager, AbstractBaseUser
@@ -49,6 +50,7 @@ class MyUser(AbstractBaseUser):
     first_name = models.CharField(max_length=30, default="")
     last_name = models.CharField(max_length=30, default="")
     preferred_name = models.CharField(max_length=30, blank=True, default="")    
+    created_at = models.DateTimeField(default=datetime.now, blank=True)
     #Info that is NOT saved upon signup
     email_confirmed = models.BooleanField(default=False)
     app_status = models.CharField(max_length=30, default ="PENDING")

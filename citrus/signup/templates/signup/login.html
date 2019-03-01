@@ -24,7 +24,7 @@
 
 	<!-- Custom Stylesheet -->
     {% load static %}
-    <link rel="stylesheet" type="text/css" href="{% static "signup/css/login.css" %}">
+    <link rel="stylesheet" type="text/css" href="{% static "signup/css/login-and-reset.css" %}">
 
 	<title>Login - CitrusHack 2019</title>
 </head>
@@ -52,21 +52,7 @@
 
         <div class="text-center">
             <div class="ui-card text-center" data-aos="fade-in" data-aos-easing="ease-in">
-            	<div class="logo-container">
-                    {% load static %}
-                    <img src="{% static "assets/img/shine.png" %}" alt="CitrusHack logo">
-                    {% load static %}
-                    <img src="{% static "assets/img/shine.png" %}">
-                    {% load static %}
-                    <img src="{% static "assets/img/shine.png" %}">
-                    {% load static %}
-                    <img src="{% static "assets/img/shine.png" %}">               
-                </div> 
-
-            	<h1><span id="Citrus">Citrus</span><span id="Hack">Hack</span></h1>
-                
-                
-
+            	<h1>CITRUS HACK</h1>
                 {% if next %}
                     {% if user.is_authenticated %}
                     <p>Your account doesn't have access to this page. To proceed,
@@ -75,39 +61,25 @@
                     <p>Please login to see this page.</p>
                     {% endif %}
                 {% endif %}
-
-                <form method="post" action="{% url 'login' %}">
-            	{% csrf_token %}
-                <!-- <label for="your_name">Your name: </label> -->
-                <!-- <input type="text" name="email" placeholder="Email" value="{{ form.username }}"> -->
-               <!--  <input type="text" name="FirstName" placeholder="Email"> -->
-               
-               <!--  <div class="form-group">
-                    <div id="username"> -->
-                {% render_field form.username placeholder=form.username.label class+="inputboxes" %}
-                        <!-- {{ form.username }} -->
-                   <!--  </div>
-                </div> -->
-                <br>
-                <!-- <div class="form-group">
-                    <div id="password"> -->
-                {% render_field form.password placeholder=form.password.label class+="inputboxes" %}
-                    <!-- </div>
-                </div> -->
-                {% if form.errors %}
-                <br>
-                <small class="error-text">Username or password not correct.<br>Please try again.</small>
-                {% else %}
-                <br>
-                {% endif %}
-                <input id="login" type="submit" value="LOGIN" class="text-center">
-                <input type="hidden" name="next" value="{{ next }}">
-                </form>
-                
                 <hr>
-            	<a href="{% url 'apply' %}" class="button text-center"><div id="apply">APPLY</div></a>
-            	<hr>
-            	<a id="pw-link" href="{% url 'password_reset' %}">FORGOT PASSWORD?</a>
+                {% if form.errors %}
+                <div class="error-box">Username or password not correct.<br>Please try again.</div>            
+                {% else %}
+                {% endif %}
+                <form method="post" action="{% url 'login' %}">
+                	{% csrf_token %}
+                    {% render_field form.username placeholder=form.username.label class+="input-box" %}
+                    <br>
+                    {% render_field form.password placeholder=form.password.label class+="input-box" %}
+                    <input id="button" type="submit" value="SIGN IN" class="text-center">
+                    <input type="hidden" name="next" value="{{ next }}">
+                </form>
+            	<div class="pw-link-wrapper">
+                    <a class="pw-link" href="{% url 'apply' %}">APPLY</a>
+                </div>
+            	<div class="pw-link-wrapper">
+            	   <a class="pw-link" href="{% url 'password_reset' %}">FORGOT PASSWORD?</a>
+                </div>
 
             </div>
         </div>

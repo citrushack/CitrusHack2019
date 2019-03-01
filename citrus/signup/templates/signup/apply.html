@@ -49,19 +49,9 @@
         </div>
     </nav>
 
-    <div id="form-container" class="container" data-aos="fade-in" data-aos-easing="ease-in">
-    	<div class="logo-container">
-    		{% load static %}
-            <img src="{% static "assets/img/shine.png" %}" alt="CitrusHack logo">
-            {% load static %}
-            <img src="{% static "assets/img/shine.png" %}">
-            {% load static %}
-            <img src="{% static "assets/img/shine.png" %}">
-            {% load static %}
-            <img src="{% static "assets/img/shine.png" %}">
-        </div>  
-    	
-    	<h2 class="text-center" id="citrus-hack"><span id="Citrus">Citrus</span><span id="Hack">Hack</span></h2>
+    <div id="form-container" class="container" data-aos="fade-in" data-aos-easing="ease-in"> 
+    	<h2 class="text-center">CITRUS HACK</h2>
+    	<hr>
     	<h1 class="text-center">YOUR APPLICATION</h1>
 
     	<form method='post' enctype="multipart/form-data">
@@ -82,31 +72,31 @@
 					<div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6">	
 						<label class="required" for="first-name">First Name</label>
 						<!-- <input type="fname" class="form-control" id="first-name"> -->
-						{% render_field user_form.first_name class+="form-control" %}
+						{% render_field user_form.first_name class+="input-box" %}
 						<small>{{ user_form.first_name.help_text }}</small>
 					</div>
 					<div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6">	
 						<label class="required" for="last-name">Last Name</label>
 						<!-- <input type="lname" class="form-control" id="last-name"> -->
-						{% render_field user_form.last_name class+="form-control" %}
+						{% render_field user_form.last_name class+="input-box" %}
 						<small>{{ user_form.last_name.help_text }}</small>
 					</div>
 				</div>	
 				
-                                <label for="preferred-name">Preferred Name (if different than legal first name)</label>
-				{% render_field user_form.preferred_name class+="form-control" %}
+                <label for="preferred-name">Preferred Name (if different than legal first name)</label>
+				{% render_field user_form.preferred_name class+="input-box" %}
 				<small>{{ user_form.preferred_name.help_text }}</small>
 				
 
 				<label class="required" for="email-address">Email</label>
-				{% render_field user_form.email class+="form-control email-box" %}
+				{% render_field user_form.email class+="input-box email-input" %}
 				<small>{{ user_form.email.help_text }}</small>
 				
 				<div class="row">
 					<div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6">	
 						<label class="required" for="password1">Password</label>
 						<!-- <input type="password" class="form-control" id="password1"> -->
-						{% render_field user_form.password1 class+="form-control" %}
+						{% render_field user_form.password1 class+="input-box" %}
 						<!-- {% if form.errors %} -->
 						<small>{{ user_form.password1.help_text }}</small>
 						<!-- {% endif %} -->
@@ -114,7 +104,7 @@
 					<div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6">	
 						<label class="required" for="password2">Confirm Password</label>
 						<!-- <input type="password" class="form-control" id="password2"> -->
-						{% render_field user_form.password2 class+="form-control" %}
+						{% render_field user_form.password2 class+="input-box" %}
 						{% if form.errors %}
 						<small>{{ user_form.password2.help_text }}</small>
 						{% endif %}
@@ -127,7 +117,7 @@
 				
 				<label class="required" for="school">School</label>
 				<!-- <input type="school" class="form-control" id="school"> -->
-				{% render_field profile_form.school class+="form-control" class+="school-box" %}
+				{% render_field profile_form.school class+="input-box school-input" %}
 				<small>{{ profile_form.school.help_text }}</small>
 
 				<div class="row">
@@ -140,7 +130,7 @@
 							<option value="3">High School</option>
 							<option value="4">Prefer not to disclose</option>
 						</select> -->
-						{% render_field profile_form.level_of_study class+="form-control" %}
+						{% render_field profile_form.level_of_study class+="input-box" %}
 						<small>{{ profile_form.level_of_study.help_text }}</small>
 					</div>
 					<div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6">	
@@ -155,14 +145,14 @@
 							<option value="6">2023 or later</option>
 							<option value="7">Prefer not to disclose</option>
 						</select> -->
-						{% render_field profile_form.graduation_year class+="form-control" %}
+						{% render_field profile_form.graduation_year class+="input-box" %}
 						<small>{{ profile_form.graduation_year.help_text }}</small>
 					</div>
 				</div>
 				
 				<label class="required" for="major">Major</label>			
 				<!-- <input type="major" class="form-control" id="major"> -->
-				{% render_field profile_form.major class+="form-control" %}
+				{% render_field profile_form.major class+="input-box" %}
 				<small>{{ profile_form.major.help_text }}</small>
 
 			</div>
@@ -179,13 +169,13 @@
 							<option value="3">Other</option>
 							<option value="4">Prefer not to disclose</option>
 						</select> -->
-						{% render_field profile_form.gender class+="form-control" %}
+						{% render_field profile_form.gender class+="input-box" %}
 						<small>{{ profile_form.gender.help_text }}</small>
 					</div>
 					<div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6">	
 						<label class="required" for="dob">Date of Birth</label>
 						<!-- <input type="date" id="dob" class="form-control" placeholder="mm/dd/yyyy"> -->
-						{% render_field profile_form.date_of_birth type="date" placeholder="mm/dd/yyyy" class+="form-control" %}
+						{% render_field profile_form.date_of_birth type="date" placeholder="mm/dd/yyyy" class+="input-box" %}
 						<small>{{ profile_form.date_of_birth.help_text }}</small>
 					</div>
 				</div>
@@ -202,14 +192,14 @@
 					<option value="7">Prefer not to disclose</option>
 
 				</select> -->
-				{% render_field profile_form.race class+="form-control" %}
+				{% render_field profile_form.race class+="input-box" %}
 				<small>{{ profile_form.race.help_text }}</small>
 				
 				<div class="row">
 					<div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6">	
 						<label class="required" for="phone">Phone Number</label>
 						<!-- <input type="text" name="phone" class="form-control phone-input" id="phone" > -->
-						{% render_field profile_form.phone_number class+="form-control phone-input" %}
+						{% render_field profile_form.phone_number class+="input-box phone-input" %}
 						<small>{{ profile_form.phone_number.help_text }}</small>
 					</div>
 					<div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6">	
@@ -223,14 +213,14 @@
 							<option value="4">XL</option>
 							<option value="5">XXL</option>
 						</select> -->
-						{% render_field profile_form.shirt_size class+="form-control" %}
+						{% render_field profile_form.shirt_size class+="input-box" %}
 						<small>{{ profile_form.shirt_size.help_text }}</small>
 					</div>
 				</div>
 				
 				<label for="diet">Dietary Restrictions</label>
 				<!-- <input type="diet" class="form-control" id="diet"> -->
-				{% render_field profile_form.dietary_restrictions class+="form-control" %}
+				{% render_field profile_form.dietary_restrictions class+="input-box" %}
 				<small>{{ profile_form.dietary_restrictions.help_text }}</small>
 			</div>
 			<div class="form-group">
@@ -240,37 +230,37 @@
 					<div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6">	
 						<label for="LinkedIn">LinkedIn</label>
 						<!-- <input type="url" name="LinkedIn" id="LinkedIn" placeholder="https://" class="form-control"> -->
-						{% render_field profile_form.linkedin placeholder="https://" class+="form-control" %}
+						{% render_field profile_form.linkedin placeholder="https://" class+="input-box" %}
 						<small>{{ profile_form.linkedin.help_text }}</small>
 					</div>
 					<div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6">	
 						<label for="GitHub">GitHub</label>
 						<!-- <input type="url" name="GitHub" id="GitHub" placeholder="https://" class="form-control"> -->
-						{% render_field profile_form.github placeholder="https://" class+="form-control" %}
+						{% render_field profile_form.github placeholder="https://" class+="input-box" %}
 						<small>{{ profile_form.github.help_text }}</small>
 					</div>
 				</div>
 				
 				<label for="additional-link">Additional link (portfolio, website, etc.)</label>
 				<!-- <input type="url" name="additional-link" id="additional-link" placeholder="https://" class="form-control"> -->
-				{% render_field profile_form.additional_link placeholder="https://" class+="form-control" %}
+				{% render_field profile_form.additional_link placeholder="https://" class+="input-box" %}
 				<small>{{ profile_form.additional_link.help_text }}</small>
 				
 				<label for="self-description" class="required">I would describe myself as a...</label>
 				<!-- <input type="self-description" class="form-control" id="self-description" placeholder="Designer, Full-stack Master, Hardware Junkie, Big Data Enthusiast, etc."> -->
-				{% render_field profile_form.description placeholder="Designer, Full-stack Master, Hardware Junkie, Big Data Enthusiast, etc." class+="form-control" %}
+				{% render_field profile_form.description placeholder="Designer, Full-stack Master, Hardware Junkie, Big Data Enthusiast, etc." class+="input-box" %}
 				<small>{{ profile_form.description.help_text }}</small>
 
 				<label for="essay" class="required">What would you like to learn or gain out of coming to CitrusHack? (250-1000 characters)</label>
   				<!-- <textarea class="form-control" rows="5" id="essay"></textarea> -->
-  				{% render_field profile_form.learn_or_gain class+="form-control count-chars" rows="5" %}
+  				{% render_field profile_form.learn_or_gain class+="input-box count-chars" rows="5" %}
   				<small>{{ profile_form.learn_or_gain.help_text }}</small>
   				<div class="text-right"><small class="essay-text char-count">0</small><small class="essay-text">/1000</small></div>
 
   				<br>
   				<label for="resume">Resume (PDF format via GoogleDrive, DropBox, etc.)</label>
 				<!-- <input type="url" name="resume" id="resume" placeholder="https://" class="form-control"> -->
-				{% render_field profile_form.resume placeholder="https://" class+="form-control" %}
+				{% render_field profile_form.resume placeholder="https://" class+="input-box" %}
 				<small>{{ profile_form.resume.help_text }}</small>
 				<small class="essay-text">Please make sure that sharing settings for your resume file allow viewability to anyone with the link.</small>
 			</div>
@@ -281,7 +271,7 @@
 					<!-- <input type="checkbox" class="form-check-input" id="code-of-conduct-check"> -->
 					{% render_field profile_form.conduct_box class+="form-check-input" %}
 					<small>{{ profile_form.conduct_box.help_text }}</small>
-					<label class="form-check-label required" for="code-of-conduct-check">I have read and agree to the <a href="https://static.mlh.io/docs/mlh-code-of-conduct.pdf">MLH Code of Conduct</a>.</label>
+					<label class="form-check-label required" for="code-of-conduct-check">I have read and agree to the <a href="https://static.mlh.io/docs/mlh-code-of-conduct.pdf" class="pw-link">MLH Code of Conduct</a>.</label>
 				</div>
 				<br>
 				
@@ -290,7 +280,7 @@
 					<!-- <input type="checkbox" class="form-check-input" id="information-check"> -->
 					{% render_field profile_form.share_box class+="form-check-input" %}
 					<small>{{ profile_form.share_box.help_text }}</small>
-					<label class="form-check-label required" for="information-check">I authorize you to share my application/registration information for event administration, ranking, MLH administration, pre- and post-event informational e-mails, and occasional messages about hackathons in-line with the ​MLH Privacy Policy​. I further I agree to the terms of both the ​<a href="https://github.com/MLH/mlh-policies/blob/master/prize-terms-and-conditions/contest-terms.md">MLH Contest Terms and Conditions​</a> and the <a href="https://mlh.io/privacy">MLH Privacy Policy​</a>.</label>
+					<label class="form-check-label required" for="information-check">I authorize you to share my application/registration information for event administration, ranking, MLH administration, pre- and post-event informational e-mails, and occasional messages about hackathons in-line with the ​MLH Privacy Policy​. I further I agree to the terms of both the ​<a href="https://github.com/MLH/mlh-policies/blob/master/prize-terms-and-conditions/contest-terms.md" class="pw-link">MLH Contest Terms and Conditions​</a> and the <a href="https://mlh.io/privacy" class="pw-link">MLH Privacy Policy​</a>.</label>
 				</div>
 			</div>
 			<div class="text-center">

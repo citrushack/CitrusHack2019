@@ -68,13 +68,7 @@
                     text-xl-right text-lg-right text-md-right text-sm-right text-right">
                     	<div class="logo-container">
                             {% load static %}
-    	                    <img src="{% static "assets/img/shine.png" %}" alt="CitrusHack logo">
-    	                    {% load static %}
-    	                    <img src="{% static "assets/img/shine.png" %}">
-    	                    {% load static %}
-    	                    <img src="{% static "assets/img/shine.png" %}">
-    	                    {% load static %}
-    	                    <img src="{% static "assets/img/shine.png" %}">       
+    	                    <img src="{% static "signup/assets/img/icon.png" %}" alt="CitrusHack logo">
                             <br>        
                         </div>
                     </div>     
@@ -82,7 +76,7 @@
                     text-xl-left text-lg-left text-md-center text-sm-center text-center">
                         <br>
                         {% if not user.preferred_name %}
-			<h1 id="name">  {{ user.first_name }} {{ user.last_name }}  </h1>
+			             <h1 id="name">  {{ user.first_name }} {{ user.last_name }}  </h1>
                         {% else %}
                         <h1 id="name">{{ user.preferred_name }} </h1> <!-- <h1 id="name">{user.firstname} {user.lastname}</h1> -->
                         {% endif %}

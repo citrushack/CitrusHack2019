@@ -1,9 +1,9 @@
-
 @import url('https://fonts.googleapis.com/css?family=Titillium+Web:200,400,600|Work+Sans:500,700');
 
 @font-face {
-  font-family: Form;
-  src: url(../Form/Form.otf);
+  	font-family: Form;
+  	src: url(../Form/Form.otf) format("opentype"),
+  		 url(../Form/Form.ttf) format("truetype");
 }
 
 :root {
@@ -16,10 +16,6 @@
 body{
 	overflow-x: hidden;
 	background-color: var(--primary-bg-color);
-}
-
-svg{
-	/*margin:7px;*/
 }
 
 #top-nav {
@@ -89,7 +85,7 @@ svg{
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-	height: 115vh;
+	height: 118vh;
 	width: 100vw;
 }
 
@@ -120,16 +116,28 @@ svg{
 	transition-timing-function: ease-out;
 }
 
-.logo-container:hover svg:nth-child(2){
+.logo-container svg:nth-child(2){
 	-webkit-transform: translate(-2px, -4px);
 	-moz-transform: translate(-2px, -4px);
 	transform: translate(-2px, -4px);
 }
 
-.logo-container:hover svg:nth-child(3){
+.logo-container svg:nth-child(3){
 	-webkit-transform: translate(2px, 4px);
 	-moz-transform: translate(2px, 4px);
 	transform: translate(2px, 4px);	
+}
+
+.logo-container:hover svg:nth-child(2){
+	-webkit-transform: translate(-4px, -6px);
+	-moz-transform: translate(-4px, -6px);
+	transform: translate(-4px, -6px);
+}
+
+.logo-container:hover svg:nth-child(3){
+	-webkit-transform: translate( 4px,  6px);
+	-moz-transform: translate( 4px,  6px);
+	transform: translate( 4px,  6px);	
 }
 
 #logo-white {
@@ -305,6 +313,21 @@ hr {
 	display: inline-block;
 	padding: 10px 8px 8px 12px;
 	font-family: Form;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 18px;
+	text-align: center;
+	letter-spacing: 0.4em;
+	color: #000000;	
+}
+
+#count-down {
+	background: #CCCCCC;
+	box-sizing: border-box;
+	border-radius: 6px;
+	display: inline-block;
+	padding: 10px 8px 8px 12px;
+	font-family: Titillium Web;
 	font-style: normal;
 	font-weight: normal;
 	font-size: 18px;
@@ -544,8 +567,8 @@ hr {
 	font-weight: 200;
 	font-size: 24px;
 	text-transform: uppercase;
-	color: var(--primary-accent-color);
-	text-shadow: 0px 0px 20px var(--primary-accent-color);
+	color: #FF97D0;
+	text-shadow: 0px 0px 15px var(--primary-accent-color);
 }
 
 #sentinel-card {
@@ -614,9 +637,9 @@ hr {
 }
 
 .volunteer-emblem:hover {
-	-webkit-filter: drop-shadow(0px 0px 20px var(--primary-accent-color));
-	-moz-filter:	drop-shadow(0px 0px 20px var(--primary-accent-color));
-    filter:         drop-shadow(0px 0px 20px var(--primary-accent-color)); 
+	-webkit-transform: 	scale(1.03);
+	-moz-transform:		scale(1.03);
+    transform:         	scale(1.03);
 }
 
 .helper-title {
@@ -650,6 +673,11 @@ hr {
 	border-bottom-width: 2px;
 	border-bottom-color: var(--primary-accent-color);
 	cursor: pointer;
+	padding: 0.7rem 0.2rem 0.7rem 0.2rem;
+}
+
+.card-body {
+	padding: 0.7rem 0.2rem 0.7rem 0.2rem;
 }
 
 #acc-1 {
@@ -738,14 +766,10 @@ hr {
 }
 
 .first-tier>a>img {
-  width: 50%;
+  width: 60%;
 }
 
 .col-xl-6>a>img {
-  width: 50%;
-}
-
-.col-xl-4>a>img {
   width: 50%;
 }
 
@@ -759,14 +783,33 @@ hr {
 	margin-bottom:12px;
 }
 
+.third-tier {
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+.fourth-tier {
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+.third-tier>a>img {
+	width: 80%;
+}
+
+.fourth-tier>a>img {
+	width: 40%;
+}
+
 #footer {
+	background-color: #141414;
 	padding: 2%;
 }
 
 .iconSize {
 	text-decoration:none;
 	color: #bbbbbb;
-	text-shadow: 0px 0px 10px var(--secondary-accent-color);
+	text-shadow: 0px 0px 10px var(--primary-accent-color);
 	font-size: 175%;
 	margin: 2.5%;
 	margin-top: 1%;
@@ -775,5 +818,5 @@ hr {
 
 .iconSize:hover {
 	color:white;
-	text-shadow: 0px 0px 20px var(--secondary-accent-color);
+	text-shadow: 0px 0px 20px var(--primary-accent-color);
 }

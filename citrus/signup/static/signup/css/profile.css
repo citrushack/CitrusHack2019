@@ -1,14 +1,28 @@
-@import url('https://fonts.googleapis.com/css?family=Titillium+Web:400,700|Work+Sans:500');
+@import url('https://fonts.googleapis.com/css?family=Titillium+Web:200,400,700');
+
+@font-face {
+  	font-family: Form;
+  	src: url(../Form/Form.otf) format("opentype"),
+  		 url(../Form/Form.ttf) format("truetype");
+}
+
+:root {
+	--primary-bg-color: #000000;
+	--secondary-bg-color: #2E1E2A;
+	--tertiary-bg-color:#23171D;
+	--primary-accent-color: #FC0E90;
+	--secondary-accent-color: #391FA7;
+}
 
 body {
 	overflow-x: hidden;	
-	background: #141924;
+	background: var(--primary-bg-color);
 }
 
 #content {
 	height:100vh;
 	width:100vw;
-	background: #141924;
+	background: var(--primary-bg-color);
 }
 
 #top-nav {
@@ -30,10 +44,10 @@ body {
 }
 
 .nav-link {
-	font-family: Titillium Web;
+	font-family: Form;
 	font-style: normal;
 	font-weight: bold;
-	font-size: 28px;
+	font-size: 20px;
 	letter-spacing: 0.05em;
 	color: white !important;
 	position: relative;
@@ -42,11 +56,11 @@ body {
 .link-hover:after {
 	content:"";
 	position: absolute;
-	width: 100%;
+	width: 90%;
 	height: 2px;
 	bottom: 0;
 	left: 0;
-	background-color: #39B188;
+	background-color: var(--primary-accent-color);
 	visibility: hidden;
 	-webkit-transform: scaleX(0);
 	transform: scaleX(0);
@@ -63,16 +77,16 @@ body {
 .active:after{
 	content:"";
 	position: absolute;
-	width: 100%;
+	width: 90%;
 	height: 2px;
 	bottom: 0;
 	left: 0;
-	background-color: #39B188;
+	background-color: var(--primary-accent-color);
 }
 
 .ui-card{
 	font-family: Titillium Web;
-	padding: 20px;
+	padding: 2em;
 	position: relative;
 	margin-top:15vh;
 	margin-left:auto;
@@ -80,10 +94,7 @@ body {
 	margin-bottom: 15vh;
 	display:inline-block;
   	width: 90vw;
-	background: #333333;
-	border: 3px solid #1F1F1F;
-	box-sizing: border-box;
-	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+	background: #2E1E2A;
 	border-radius: 6px;
 }
 
@@ -135,46 +146,50 @@ img {
 	opacity: .1;
 }
 
-/*#id-tags {
-	margin-left: 5%;
-}*/
+#id-tags {
+	line-height: 1.75em;
+}
 
 #name {
+	padding-left:0.2rem;
+	font-size: 36px;
+	font-family: Form;
 	text-transform: uppercase;
-	font-weight: 700;
-	color: #03A8E8;
+	color: #FFFFFF;
 	letter-spacing: 0.1em;
 	margin-bottom: 0;
 }
 
 #title {
 	text-transform: uppercase;
-	color: #309b76;
+	color: var(--primary-accent-color);
 	letter-spacing: 0.1em;
 	margin-bottom: 0;
 }
 
 #email {
-	color: white;
+	font-weight: 200;
+	color: #B3B3B3;
 	letter-spacing: 0.1em;
 }
 
 #user-content {
-	padding: 18px;
-	background:#1F1F1F;
-	border: 1px solid #343434;
-	box-sizing: border-box;
-	border-radius: 10px;
+	padding: 4.5% 2.5% 4.5% 2.5%;
+	background:#23171D;
+	box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+	border-radius: 6px;
 	overflow-x:auto;
 }
 
 #status-view {
-	color:#03A8E8;
+	font-family: Form;
+
+	color:var(--primary-accent-color);
 	text-transform: uppercase;
 }
 
 .status {
-	font-weight: 700;
+	font-size:30px;
 	letter-spacing: 0.1em;
 }
 
@@ -198,12 +213,12 @@ td {
 
 .user-sec-label {
 	position:relative;
-	color: white;
+	color: var(--primary-accent-color);
 	font-weight: 700;
 }
 
 .attr-name {
-	color: #C5C5C5;
+	color: #B3B3B3;
 }
 
 .user-attr {
@@ -220,8 +235,10 @@ td {
 }
 
 .quotation{
-	color: #c5c5c5;
-	font-size: 30px;
+	color: #ffffff;
+	font-size: 24px;
+	letter-spacing: 0.1rem;
+	font-weight: 200;
 	margin: 0 auto;
 	quotes: "\201C""\201D""\2018""\2019";
 	padding: 10px 20px;
@@ -236,7 +253,7 @@ td {
 	left: -10px;
 	position: relative;
 	top: 30px;
-	color: #03A8E8;
+	color: #B3B3B3;
 	font-size: 3em;
 }
 .quotation::after {
@@ -246,8 +263,8 @@ td {
 	line-height: 0;
 	left: 10px;
 	position: relative;
-	top: 35px;
-	color: #03A8E8;
+	top: 30px;
+	color: #B3B3B3;
 	font-size: 3em;
 }
 

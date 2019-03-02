@@ -1,4 +1,4 @@
-$('.phone-input').mask("(999) 999-9999", {placeholder:"(___) ___-____"});
+$('.phone-input').mask("(999)999-9999", {placeholder:"(___)___-____"});
 
 $('.count-chars').on('keyup',function(){
 	var charCount = $(this).val().length;

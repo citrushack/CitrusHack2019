@@ -130,7 +130,9 @@
 							<option value="3">High School</option>
 							<option value="4">Prefer not to disclose</option>
 						</select> -->
-						{% render_field profile_form.level_of_study class+="input-box" %}
+						<div class="select-wrapper">
+							{% render_field profile_form.level_of_study class+="input-box" %}
+						</div>
 						<small>{{ profile_form.level_of_study.help_text }}</small>
 					</div>
 					<div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6">	
@@ -145,7 +147,9 @@
 							<option value="6">2023 or later</option>
 							<option value="7">Prefer not to disclose</option>
 						</select> -->
-						{% render_field profile_form.graduation_year class+="input-box" %}
+						<div class="select-wrapper">
+							{% render_field profile_form.graduation_year class+="input-box" %}
+						</div>
 						<small>{{ profile_form.graduation_year.help_text }}</small>
 					</div>
 				</div>
@@ -169,7 +173,9 @@
 							<option value="3">Other</option>
 							<option value="4">Prefer not to disclose</option>
 						</select> -->
-						{% render_field profile_form.gender class+="input-box" %}
+						<div class="select-wrapper">
+							{% render_field profile_form.gender class+="input-box" %}
+						</div>
 						<small>{{ profile_form.gender.help_text }}</small>
 					</div>
 					<div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6">	
@@ -179,22 +185,26 @@
 						<small>{{ profile_form.date_of_birth.help_text }}</small>
 					</div>
 				</div>
-				
-				<label class="required" for="race">Race/Ethnicity</label>
-				<!-- <select id="race" class="custom-select">
-					<option selected></option>
-					<option value="1">American Indian or Alaskan Native</option>
-					<option value="2">Asian/Pacific Islander</option>
-					<option value="3">Black or African American</option>
-					<option value="4">Hispanic</option>
-					<option value="5">White/Caucasian</option>
-					<option value="6">Other</option>
-					<option value="7">Prefer not to disclose</option>
+				<div class="row">
+					<div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">	
+						<label class="required" for="race">Race/Ethnicity</label>
+						<!-- <select id="race" class="custom-select">
+							<option selected></option>
+							<option value="1">American Indian or Alaskan Native</option>
+							<option value="2">Asian/Pacific Islander</option>
+							<option value="3">Black or African American</option>
+							<option value="4">Hispanic</option>
+							<option value="5">White/Caucasian</option>
+							<option value="6">Other</option>
+							<option value="7">Prefer not to disclose</option>
 
-				</select> -->
-				{% render_field profile_form.race class+="input-box" %}
-				<small>{{ profile_form.race.help_text }}</small>
-				
+						</select> -->
+						<div class="select-wrapper">
+							{% render_field profile_form.race class+="input-box" %}
+						</div>
+						<small>{{ profile_form.race.help_text }}</small>
+					</div>
+				</div>
 				<div class="row">
 					<div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6">	
 						<label class="required" for="phone">Phone Number</label>
@@ -213,7 +223,9 @@
 							<option value="4">XL</option>
 							<option value="5">XXL</option>
 						</select> -->
-						{% render_field profile_form.shirt_size class+="input-box" %}
+						<div class="select-wrapper">
+							{% render_field profile_form.shirt_size class+="input-box" %}
+						</div>
 						<small>{{ profile_form.shirt_size.help_text }}</small>
 					</div>
 				</div>

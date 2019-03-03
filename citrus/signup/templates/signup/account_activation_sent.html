@@ -24,6 +24,8 @@
 	<!-- Custom Stylesheet -->
 	{% load static %}
     <link rel="stylesheet" type="text/css" href="{% static "signup/css/activate_and_password.css" %}">
+    {% load static %}
+    <link rel="shortcut icon" type="image/png" href="{% static 'assets/img/favicon.ico' %}"/>
 
 	<title>Account Activation Sent - CitrusHack2019</title>
 </head>
@@ -51,17 +53,8 @@
 
 		<div class="text-center">
 		    <div class="ui-card text-center" data-aos="fade-in" data-aos-easing="ease-in">
-		    	<div class="logo-container">
-		            {% load static %}
-		            <img src="{% static "assets/img/shine.png" %}" alt="CitrusHack logo">
-		            {% load static %}
-		            <img src="{% static "assets/img/shine.png" %}">
-		            {% load static %}
-		            <img src="{% static "assets/img/shine.png" %}">
-		            {% load static %} 
-		            <img src="{% static "assets/img/shine.png" %}">                
-		        </div> 
-		    	<h1><span id="Citrus">Citrus</span><span id="Hack">Hack</span></h1>
+		    	<h1>CITRUS HACK</h1>
+		    	<hr>
 		    	<p class="action-text">Thank you for applying!<br><br>We’ve just sent you a confirmation email.<br>Please confirm your email address to complete the registration process.<br>Be sure to check your spam and junk email boxes.</p>
 		    </div>
 		</div>

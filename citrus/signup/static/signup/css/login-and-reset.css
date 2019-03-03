@@ -14,9 +14,15 @@
 	--secondary-accent-color: #391FA7;
 }
 
-body{
-	overflow-x: hidden;
-	background-color: var(--primary-bg-color);
+body {
+	overflow-x: hidden;	
+	background: var(--primary-bg-color);
+}
+
+#content {
+	height:100vh;
+	width:100vw;
+	background: var(--primary-bg-color);
 }
 
 #top-nav {
@@ -78,176 +84,71 @@ body{
 	background-color: var(--primary-accent-color);
 }
 
-
-#form-container{
+.ui-card{
+	width: 20rem;
 	font-family: Titillium Web;
+	padding: 2em;
+	position: relative;
 	margin-top:15vh;
-	padding-left: 15vw;
-	padding-right: 15vw;
-	margin-bottom:15vh;
-}
-
-h2 {
-	margin-left:0.425em;
-	font-family: Form;
-	font-style: normal;
-	font-weight: 500;
-	line-height: 34px;
-	font-size: 20px;
-	text-align: center;
-	letter-spacing: 0.085em;
-
-	color: #FFFFFF;
-
-}
-
-hr {
-	width:100px;
-	border-top: 3px solid var(--primary-accent-color);
-	background:#9A9A9A;
-}
-
-h1 {
-	margin-left:0.425em;
-	margin-top: 30px;
-	margin-bottom: 30px;
-
-	color: #FFFFFF;
-	font-family: Form;
-	font-size: 24px;
-	letter-spacing: 0.1em;
-}
-
-h3 {
-	margin-left:0.425em;
-	margin-top: 30px;
-	margin-bottom: 30px;
-	
-	color: var(--primary-accent-color);
-	font-family: Form;
-	font-size: 14px;
-	letter-spacing: 0.1em;
+	margin-left:auto;
+	margin-right:auto;
+	display:inline-block;
+	background: #2E1E2A;
+	border-radius: 6px;
 }
 
 .input-box {
-	width: 100%;
-
-	background-color:var(--tertiary-bg-color);
+	background:var(--tertiary-bg-color);
 	color:#6B6D6D;
 	border: 0px solid var(--tertiary-bg-color);
+	margin:4.25%;
+	min-width:90%;
 	border-radius: 4px;
-	letter-spacing: 0.1em;
-	padding: 1em;
+	letter-spacing: 0.085em;
+	font-size: 85%;
+	padding: 0.85em;
 	box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
 	transition: 0.3s;
 }
 
 .input-box:focus {
-	background-color:white;
+	background:white;
 	color:#6B6D6D;
 	border: 0px solid var(--tertiary-bg-color);
+	margin:4.25%;
+	min-width:90%;
 	border-radius: 4px;
-	letter-spacing: 0.1em;
-	padding: 1em;
+	letter-spacing: 0.085em;
+	padding: 0.85em;
 	box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
-select.input-box {
-	width: 100%;
-
-	/*background-color:var(--tertiary-bg-color);*/
-	color:#6B6D6D;
-	border: 0px solid var(--tertiary-bg-color);
-	border-radius: 4px;
-	letter-spacing: 0.1em;
-	padding: 1em;
-	box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
-	transition: 0.3s;
-}
-
-select.input-box:focus {
-	background-color:white;
-	color:#6B6D6D;
-	border: 0px solid var(--tertiary-bg-color);
-	border-radius: 4px;
-	letter-spacing: 0.1em;
-	padding: 1em;
-	box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
-}
-
-select::-ms-expand {
-    display: none;
-}
-
-select{
-    -webkit-appearance: none;
-    appearance: none;
-}
-
-.select-wrapper:after {
-	width: 0; 
-	height: 0; 
-	border-left: 8px solid transparent;
-	border-right: 8px solid transparent;
-	border-top: 8px solid #575959;
-	position: absolute;
-	top: 56%;
-	right: 30px;
-	content: "";
-	z-index: 98;
-}
-
-label {
-	/*letter-spacing: .2rem;*/
-	color: #B3B3B3;
-	margin-bottom: 2px !important;
-}
-
-input {
-	margin-bottom: 8px;
-}
-
-select {
-	border-radius: 4px;
-	letter-spacing: 0.1em;
-	padding: 1em;
-	margin-bottom: 8px !important;
-}
-
-textarea {
-	margin-bottom: 8px !important;
-}
-
-#resume {
-	margin: 0 !important;
-}
-
-small {
-	font-weight:700;
-	margin:0;
-	letter-spacing: .1rem;
-	color:#E33D3D;
-}
-
-small.essay-text {
-	color:#ffffff;
-}
-
-p {
-	font-weight:700;
-	color: #dddddd;
-}
-
-.required:after{
-	content:" *";
-	color: #E33D3D;
+h1 {
+	margin-left:0.425em;
+	font-size: 24px;
+	font-family: Form;
+	color: white;
+	letter-spacing: 0.085em;
 }
 
 .button {
-	margin: 5% 0 5% 0;
+	font-size:20px;	
+	color:white;
+	text-decoration:none;
+	letter-spacing: 0.1em;
+	text-color:white;
+}
+
+.button:hover {
+	color:white;
+	text-decoration:none;
+}
+
+#button {
+	margin: 5% 5% 0 5%;
 	padding: 0.8em;
 	
-	width:100%;
+	min-width:90%;
 	font-size: 90%;
 	color:#000000;
 	text-decoration:none;
@@ -263,32 +164,44 @@ p {
 	transition: 0.3s;
 }
 
-.button:hover {
+#button:hover {
 	box-shadow: 0px 0px 12px #FC0E90;
 }
 
-small.essay-length-good{
-	color: #329C80 !important;
+.pw-link-wrapper {
+	width: 100%;
+	margin:10% 0 0 0;
 }
 
 .pw-link {
-	color:white; 
-	text-decoration:underline; 
-	color:var(--primary-accent-color);
-	transition: 0.2s ease-in;
+	font-weight: 200;
+	letter-spacing: 0.1em;
+	color: #B3B3B3;
+	transition: 0.3s;
+	/*font-size: 20px;*/
 }
 
 .pw-link:hover {
-	color:pink;
+	color: #595959;
+	text-decoration:none;
 }
 
-.form-error {
-	width: 100%;
+hr {
+	width:100px;
+	border-top: 3px solid var(--primary-accent-color);
+	background:#9A9A9A;
+}
+
+
+.error-box {
+	min-width:90%;
+	max-width:90%;
 	text-align:left;
+	margin: 5%;
 	padding: 0.8em;
 	font-size:80%;
 	min-width:90%;
 	background: #FF4343;
+	border-radius: 6px;
 	color: #FFFFFF;
-	border-radius:6px;
 }

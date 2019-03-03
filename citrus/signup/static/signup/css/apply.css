@@ -283,5 +283,12 @@ small.essay-length-good{
 }
 
 .form-error {
-	color: red;
+	width: 100%;
+	text-align:left;
+	padding: 0.8em;
+	font-size:80%;
+	min-width:90%;
+	background: #FF4343;
+	color: #FFFFFF;
+	border-radius:6px;
 }

@@ -1163,3 +1163,22 @@ $('.email-input').on('change',function(){
 		}
 	}
 });
+
+$(".gender-select").change(function(){
+	if($( ".gender-select" ).val() === "Other (Please Specify)") {
+		$("#gender-other").removeClass("hide");
+	} else {
+		$("#gender-other").addClass("hide");
+	}
+});
+
+$(".race-select").change(function(){
+	if($( ".race-select" ).val() === "Multiple ethnicity/Other (Please Specify)") {
+		$("#race-other").removeClass("hide");
+	} else {
+		$("#race-other").addClass("hide");
+	}
+});
+
+
+

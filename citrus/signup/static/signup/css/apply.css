@@ -292,3 +292,7 @@ small.essay-length-good{
 	color: #FFFFFF;
 	border-radius:6px;
 }
+
+.hide {
+	display: none;
+}

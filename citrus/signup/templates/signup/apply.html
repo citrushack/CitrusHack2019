@@ -178,7 +178,7 @@
 							<option value="4">Prefer not to disclose</option>
 						</select> -->
 						<div class="select-wrapper">
-							{% render_field profile_form.gender class+="input-box" %}
+							{% render_field profile_form.gender class+="input-box gender-select" %}
 						</div>
 						<small>{{ profile_form.gender.help_text }}</small>
 					</div>
@@ -187,6 +187,12 @@
 						<!-- <input type="date" id="dob" class="form-control" placeholder="mm/dd/yyyy"> -->
 						{% render_field profile_form.date_of_birth type="date" placeholder="mm/dd/yyyy" class+="input-box" %}
 						<small>{{ profile_form.date_of_birth.help_text }}</small>
+					</div>
+				</div>
+				<div id="gender-other" class="row hide">
+					<div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">	
+						<label for="gender_other">Gender if other</label>
+						{% render_field profile_form.gender_other class+="input-box" %}
 					</div>
 				</div>
 				<div class="row">
@@ -204,19 +210,17 @@
 
 						</select> -->
 						<div class="select-wrapper">
-							{% render_field profile_form.race class+="input-box" %}
+							{% render_field profile_form.race class+="input-box race-select" %}
 						</div>
 						<small>{{ profile_form.race.help_text }}</small>
 					</div>
 				</div>
-				<div class="row">
+				<div id="race-other" class="row hide">
 					<div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
-						<label for="race_other">Race if Other</label>
+						<label for="race_other">Race if Multiple/Other</label>
 						<!-- <input type="diet" class="form-control" id="diet"> -->
+						{% render_field profile_form.race_other class+="input-box" %}
 						
-						<div class="select-wrapper">
-						{% render_field profile_form.race_other class+="form-control" %}
-						</div>
 					</div>
 				</div>
 

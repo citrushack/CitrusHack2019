@@ -79,9 +79,8 @@ body{
 
 #main-hero {
 	background-color: var(--primary-bg-color);
-	/*background-color: lightblue;*/
 	background-image: url("../assets/img/mainhero.png");
-	position: relative
+	position: relative;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -90,12 +89,9 @@ body{
 }
 
 #main-titles{
-	/*border-style: solid;
-	border-color: red;
-  	border-width: 2px;*/
   	position: absolute;
   	right: 10.5%;
-  	top: 36.4%;
+  	top: 26.4%;
   	text-align: center;
 }
 
@@ -128,17 +124,6 @@ body{
 	transform: translate(2px, 4px);	
 }
 
-.logo-container:hover svg:nth-child(2){
-	-webkit-transform: translate(-4px, -6px);
-	-moz-transform: translate(-4px, -6px);
-	transform: translate(-4px, -6px);
-}
-
-.logo-container:hover svg:nth-child(3){
-	-webkit-transform: translate( 4px,  6px);
-	-moz-transform: translate( 4px,  6px);
-	transform: translate( 4px,  6px);	
-}
 
 #logo-white {
 	z-index: 3;
@@ -279,8 +264,6 @@ body{
 	animation: line-anim 0.23s ease forwards 1.35s;
 }
 
-
-
 hr {
 	border-top: 1px solid white;
 	margin: 6.5% 0 6.5% 0;
@@ -336,146 +319,6 @@ hr {
 	color: #000000;	
 }
 
-/* 
-  ##Device = Tablets, Ipads (portrait)
-  ##Screen = B/w 768px to 1024px
-*/
-
-@media (min-width: 768px) and (max-width: 1024px) {
-	.logo-container {
-		margin-left:auto;
-		margin-right:auto;
-		height:200px;
-		width:200px;
-	}
-
-	.logo-container img {
-		margin:auto;
-		position:absolute;
-		display:block;
-		height:200px;
-		width:200px;
-		transition: 0.25s;
-		transition-timing-function: ease-out;
-		
-	}
-
-    #logo-text {
-		width:500px;
-		height:auto;
-		margin-bottom: 20px;
-		animation: fill 0.5s ease forwards 0.75s;
-	}
-
-	#subtitles-1 {
-		width: 375px;
-		height: auto;
-		margin-bottom: 20px;
-		animation: fill-sub 0.5s ease forwards 0.9s;
-	}
-
-	#subtitles-2 {
-		width: 345px;
-		height: auto;
-		margin-bottom: 20px;
-		animation: fill-sub-2 0.5s ease forwards 1s;
-	}
-  
-}
-
-
-
-/* 
-  ##Device = Most of the Smartphones Mobiles (Portrait)
-  ##Screen = B/w 320px to 479px
-*/
-
-@media (min-width: 320px) and (max-width: 480px) {
-	.logo-container {
-		margin-left:auto;
-		margin-right:auto;
-		height:150px;
-		width:150px;
-	}
-
-	.logo-container img {
-		margin:auto;
-		position:absolute;
-		display:block;
-		height:150px;
-		width:150px;
-		transition: 0.25s;
-		transition-timing-function: ease-out;
-		
-	}
-
-	#logo-text {
-		width:280px;
-		height:auto;
-		margin-bottom: 20px;
-		animation: fill 0.5s ease forwards 0.75s;
-	}
-
-	#subtitles-1 {
-		width: 250px;
-		height: auto;
-		margin-bottom: 20px;
-		animation: fill-sub 0.5s ease forwards 0.9s;
-	}
-
-	#subtitles-2 {
-		width: 225px;
-		height: auto;
-		margin-bottom: 20px;
-		animation: fill-sub-2 0.5s ease forwards 1s;
-	}
-}
-
-@media (min-width: 500px) and (max-width: 850px) and (orientation:landscape) {
-	#main-titles {
-		margin-top: 20px;
-	}
-
-	.logo-container {
-		margin-left:auto;
-		margin-right:auto;
-		height:100px;
-		width:100px;
-	}
-
-	.logo-container img {
-		margin:auto;
-		position:absolute;
-		display:block;
-		height:100px;
-		width:100px;
-		transition: 0.25s;
-		transition-timing-function: ease-out;
-		
-	}
-
-	#logo-text {
-		width:280px;
-		height:auto;
-		margin-bottom: 20px;
-		animation: fill 0.5s ease forwards 0.75s;
-	}
-
-	#subtitles-1 {
-		width: 250px;
-		height: auto;
-		margin-bottom: 20px;
-		animation: fill-sub 0.5s ease forwards 0.9s;
-	}
-
-	#subtitles-2 {
-		width: 225px;
-		height: auto;
-		margin-bottom: 20px;
-		animation: fill-sub-2 0.5s ease forwards 1s;
-	}
-}
-
 .panel-type-1 {
 	padding: 7%;
 }
@@ -493,14 +336,6 @@ hr {
 	margin-right: auto;
 }
 
-.block-type-1 {
-	/*background-color: var(--primary-accent-color);*/
-}
-
-.block-type-2 {
-	background-color: var(--secondary-accent-color);
-}
-
 .titles {
 	text-transform: uppercase;
 	font-family: Form;
@@ -510,14 +345,6 @@ hr {
 	letter-spacing: 0.1em;
 	color: #FFFFFF;
 }
-/*
-.title-type-1 {
-	text-shadow: 0px 0px 20px var(--primary-accent-color);
-}
-
-.title-type-2 {
-	text-shadow: 0px 0px 20px var(--secondary-accent-color);
-}*/
 
 .title-symbols {
 	font-family: Titillium Web;
@@ -535,14 +362,6 @@ hr {
 
 	color: #909090;
 }
-
-/*.text-shadow-1 {
-	text-shadow: 0px 0px 1px var(--primary-accent-color);
-}
-
-.text-shadow-2 {
-	text-shadow: 0px 0px 4px var(--secondary-accent-color);
-}*/
 
 .panel-type-2 {
 	padding: 7%;
@@ -773,6 +592,14 @@ hr {
   width: 50%;
 }
 
+.third-tier>a>img {
+	width: 80%;
+}
+
+.fourth-tier>a>img {
+	width: 40%;
+}
+
 .first-tier {
 	margin-top:36px;
 	margin-bottom:36px;
@@ -793,16 +620,8 @@ hr {
 	margin-bottom: 10px;
 }
 
-.third-tier>a>img {
-	width: 80%;
-}
-
-.fourth-tier>a>img {
-	width: 40%;
-}
-
 #footer {
-	background-color: #141414;
+	background-color: #2E1E2A;
 	padding: 2%;
 }
 
@@ -819,4 +638,165 @@ hr {
 .iconSize:hover {
 	color:white;
 	text-shadow: 0px 0px 20px var(--primary-accent-color);
+}
+
+/*
+  ##Device = MDPI laptops
+  ##Screen = 800px by 1280px
+*/
+@media (width: 1280px) and (height: 800px) {
+	#main-titles {
+	  	position: absolute;
+	  	right: 6%;
+	  	top: 33%;
+	  	text-align: center;
+	}
+}
+
+/* 
+  ##Device = Most of the Smartphones Mobiles (Portrait)
+  ##Screen = B/w 320px to 479px
+*/
+
+@media (min-width: 320px) and (max-width: 480px) {
+	#main-hero {
+		background-image: url("../assets/img/mainhero-norobot.png");
+	    background-position: left -10px center 1000px;
+	    background-repeat: no-repeat;
+	    background-size: cover;
+		height: 118vh;
+		width: 100vw;
+	}
+
+	#main-titles {
+		right: 7.5vw;
+	}
+
+	.logo-container {
+		margin-left:auto;
+		margin-right:auto;
+		width:85vw; 
+		height: auto;
+	}
+
+	.logo-container svg {
+		margin:auto;
+		position:absolute;
+		display:block;
+		width:85vw; 
+		height: auto;
+		transition: 0.25s;
+		transition-timing-function: ease-out;
+	}
+
+	hr {
+		border-top: 1px solid white;
+		margin: 15% 0 7.5% 0;
+	}
+
+	#subtitles-1 {
+		width: 85vw;
+		height: auto;
+		animation: fill-w 0.5s ease forwards 1.45s;
+	}
+
+
+	#subtitles-2 {
+		width: 60vw;
+		height: auto;
+		animation: fill-w 0.5s ease forwards 1.68s;
+		margin: 3.75% 0 14.66% 0;
+	}
+
+	.titles {
+		font-size: 26px;
+	}
+
+	.title-symbols {
+		font-size: 30px;
+	}
+
+	.third-tier>a>img {
+		width: 50%;
+	}
+
+	.fourth-tier>a>img {
+		width: 50%;
+	}
+}
+
+@media (min-width: 500px) and (max-width: 850px) and (orientation: landscape){
+	#main-titles {
+		top: 10vw;
+		right: 2.5vw;
+	}
+
+	.logo-container {
+		margin-left:auto;
+		margin-right:auto;
+		width:40vw; 
+		height: auto;
+	}
+
+	.logo-container svg {
+		margin:auto;
+		position:absolute;
+		display:block;
+		width:40vw; 
+		height: auto;
+		transition: 0.25s;
+		transition-timing-function: ease-out;
+	}
+
+	hr {
+		border-top: 1px solid white;
+		margin: 15% 0 6% 0;
+	}
+
+	#subtitles-1 {
+		width: 40vw;
+		height: auto;
+		animation: fill-w 0.5s ease forwards 1.45s;
+	}
+
+
+	#subtitles-2 {
+		width: 37.5vw;
+		height: auto;
+		animation: fill-w 0.5s ease forwards 1.68s;
+		margin: 3.75% 0 14.66% 0;
+	}
+
+	.third-tier>a>img {
+		width: 50%;
+	}
+
+	.fourth-tier>a>img {
+		width: 50%;
+	}
+}
+
+/* 
+  ##Device = Tablets, Ipads (portrait)
+  ##Screen = B/w 768px to 1024px
+*/
+
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+	#main-hero {
+		background-color: var(--primary-bg-color);
+		background-image: url("../assets/img/mainhero.png");
+		position: relative;
+	    background-position: center center;
+	    background-repeat: no-repeat;
+	    background-size: cover;
+		height: 118vh;
+		width: 100vw;
+	}
+
+	#main-titles {
+	  	position: absolute;
+	  	right: 10.5%;
+	  	top: 24%;
+	  	text-align: center;
+	}
 }

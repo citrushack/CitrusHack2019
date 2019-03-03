@@ -120,7 +120,7 @@ img {
 }
 
 #id-tags {
-	padding-left:60px;
+	padding-left:7.5vw;
 	line-height: 1.75em;
 }
 
@@ -178,7 +178,7 @@ img {
 
 .table>tbody>tr>td,
 .table>tbody>tr>th {
-  border-top-color: #333333;
+  border-top-color: #2E1E2A;
 }
 
 td {
@@ -198,6 +198,11 @@ td {
 .user-attr {
 	font-weight: 700;
 	color: #C5C5C5;
+}
+
+.user-attr-mobile {
+	font-weight: 700;
+	color: var(--action-text-color);
 }
 
 .profile-link {

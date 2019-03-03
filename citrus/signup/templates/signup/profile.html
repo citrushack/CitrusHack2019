@@ -196,80 +196,112 @@
                                 <!-- ACADEMIC -->
                                 <tr class="no-border">
                                     <th scope="row"></th>
-                                    <td class="attr-name">School:</td>
-                                    <td class="user-attr">{{ user.profile.school }}</td> <!-- <td class="user-attr">{user.school}</td> -->
+                                    <td class="user-attr-mobile">School:</td>
                                 </tr>
                                 <tr class="no-border">
                                     <th scope="row"></th>
-                                    <td class="attr-name">Level of Study:</td>
-                                    <td class="user-attr">{{ user.profile.level_of_study}}</td> <!-- <td class="user-attr">{user.level}</td> -->
+                                    <td class="attr-name" >{{ user.profile.school }}</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row"></th>
+                                    <td class="user-attr-mobile">Level of Study:</td>
                                 </tr>
                                 <tr class="no-border">
                                     <th scope="row"></th>
-                                    <td class="attr-name">Grad Year:</td>
-                                    <td class="user-attr">{{ user.profile.graduation_year }}</td> <!-- <td class="user-attr">{user.year}</td> -->
+                                    <td class="attr-name" >{{ user.profile.level_of_study}}</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row"></th>
+                                    <td class="user-attr-mobile">Grad Year:</td>
                                 </tr>
                                 <tr class="no-border">
                                     <th scope="row"></th>
-                                    <td class="attr-name">Major:</td>
-                                    <td class="user-attr">{{ user.profile.major }}</td> <!-- <td class="user-attr">{user.major}</td>  -->
+                                    <td class="attr-name" >{{ user.profile.graduation_year }}</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row"></th>
+                                    <td class="user-attr-mobile">Major:</td>
+                                </tr>
+                                <tr class="no-border">
+                                    <th scope="row"></th>
+                                    <td class="attr-name">{{ user.profile.major }}</td>
                                 </tr>
                                 <!-- DEMOGRAPHICS -->
-                                <trclass="no-border">
+                                <tr>
                                     <th scope="row"></th>
-                                    <td class="attr-name">Gender:</td>
-                                    <td class="user-attr"> {{ user.profile.gender }}</td> <!-- <td class="user-attr">{user.gender}</td>  -->
+                                    <td class="user-attr-mobile">Gender:</td>
                                 </tr>
                                 <tr class="no-border">
                                     <th scope="row"></th>
-                                    <td class="attr-name">Date of Birth:</td>
-                                    <td class="user-attr"> {{ user.profile.date_of_birth }}</td> <!-- <td class="user-attr">{user.dob}</td> -->
+                                    <td class="attr-name"> {{ user.profile.gender }}</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row"></th>
+                                    <td class="user-attr-mobile">Date of Birth:</td>
                                 </tr>
                                 <tr class="no-border">
                                     <th scope="row"></th>
-                                    <td class="attr-name">Race/Ethnicity:</td>
-                                    <td class="user-attr">{{ user.profile.race }}</td> <!-- <td class="user-attr">{user.race}</td>  -->
+                                    <td class="attr-name" > {{ user.profile.date_of_birth }}</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row"></th>
+                                    <td class="user-attr-mobile">Race/Ethnicity:</td>
                                 </tr>
                                 <tr class="no-border">
                                     <th scope="row"></th>
-                                    <td class="attr-name">Phone Number:</td>
-                                    <td class="user-attr">{{ user.profile.phone_number }}</td> <!-- <td class="user-attr">{user.phone}</td>  -->
+                                    <td class="attr-name" >{{ user.profile.race }}</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row"></th>
+                                    <td class="user-attr-mobile">Phone Number:</td>
                                 </tr>
                                 <tr class="no-border">
                                     <th scope="row"></th>
-                                    <td class="attr-name">Shirt Size:</td>
-                                    <td class="user-attr">{{ user.profile.shirt_size }}</td> <!-- <td class="user-attr">{user.}</td>  -->
+                                    <td class="attr-name" >{{ user.profile.phone_number }}</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row"></th>
+                                    <td class="user-attr-mobile">Shirt Size:</td>
                                 </tr>
                                 <tr class="no-border">
                                     <th scope="row"></th>
-                                    <td class="attr-name">Dietary Restrictions:</td>
-                                    <td class="user-attr">{{ user.profile.dietary_restrictions }}</td> <!-- <td class="user-attr">{user.}</td>  -->
+                                    <td class="attr-name" >{{ user.profile.shirt_size }}</td>
                                 </tr>
-                                <!-- PROFILE -->
-                                <tr class="no-border">
+                                <tr>
                                     <th scope="row"></th>
-                                    <td class="attr-name">LinkedIn:</td>
-                                    <td class="user-attr"><a class="profile-link"href="{{ user.profile.linkedin }}">{{ user.profile.linkedin }}</a></td> <!-- <td class="user-attr"><a class="profile-link"href="{user.linkedin}">{user.linkedin}</a></td>  -->
+                                    <td class="user-attr-mobile">Dietary Restrictions:</td>
                                 </tr>
                                 <tr class="no-border">
                                     <th scope="row"></th>
-                                    <td class="attr-name">GitHub:</td>
-                                    <td class="user-attr"><a class="profile-link"href="{{ user.profile.github }}">{{ user.profile.github }}</a></td> <!-- <td class="user-attr"><a class="profile-link"href="{user.github}">{user.github}</a></td> -->
+                                    <td class="attr-name" >{{ user.profile.dietary_restrictions }}</td>
                                 </tr>
-                                <tr class="no-border">
+                                <tr>
                                     <th scope="row"></th>
-                                    <td class="attr-name">Personal:</td>
-                                    <td class="user-attr"><a class="profile-link"href="{{ user.profile.additional_link }}">{{ user.profile.additional_link }}</a></td> <!-- <td class="user-attr"><a class="profile-link"href="{user.website}">{user.website}</a></td> -->
-                                </tr>
-                                <tr class="no-border">
-                                    <th scope="row"></th>
-                                    <td class="attr-name">Resume:</td>
-                                    <td class="user-attr"><a class="profile-link"href="{{ user.profile.resume }}">{{ user.profile.resume }}</a></td> <!-- <td class="user-attr"><a class="profile-link"href="{user.resume}">{user.resume}</a></td> -->
+                                    <td class="attr-name" ></td>
                                 </tr>
                             </tbody>
                         </table>
                     </div>
-                    
+                    <!-- <tr class="no-border">
+                        <th scope="row"></th>
+                        <td class="attr-name" class="user-attr">LinkedIn:</td>
+                        <td class="user-attr" class="attr-name" ><a class="profile-link"href="{{ user.profile.linkedin }}">{{ user.profile.linkedin }}</a></td>
+                    </tr>
+                    <tr class="no-border">
+                        <th scope="row"></th>
+                        <td class="attr-name" class="user-attr">GitHub:</td>
+                        <td class="user-attr" class="attr-name" ><a class="profile-link"href="{{ user.profile.github }}">{{ user.profile.github }}</a></td
+                    </tr>
+                    <tr class="no-border">
+                        <th scope="row"></th>
+                        <td class="attr-name" class="user-attr">Personal:</td>
+                        <td class="user-attr" class="attr-name" ><a class="profile-link"href="{{ user.profile.additional_link }}">{{ user.profile.additional_link }}</a></td>
+                    </tr>
+                    <tr class="no-border">
+                        <th scope="row"></th>
+                        <td class="attr-name" class="user-attr">Resume:</td>
+                        <td class="user-attr" class="attr-name" ><a class="profile-link"href="{{ user.profile.resume }}">{{ user.profile.resume }}</a></td>
+                    </tr> -->
                     <blockquote id="essay" class="mobile-hide">
                         <p class="quotation"> 
                             {{ user.profile.learn_or_gain }}

@@ -78,7 +78,7 @@
                     text-xl-left text-lg-left text-md-center text-sm-center text-center">
                         <br>
                         {% if not user.preferred_name %}
-			             <h1 id="name">  {{ user.first_name }} {{ user.last_name }}  </h1>
+                        <h1 id="name">  {{ user.first_name }} {{ user.last_name }}  </h1>
                         {% else %}
                         <h1 id="name">{{ user.preferred_name }} </h1> <!-- <h1 id="name">{user.firstname} {user.lastname}</h1> -->
                         {% endif %}
@@ -127,7 +127,11 @@
                                     <th scope="row"></th>
                                     <td class="user-sec-label"><span class="label-text">DEMOGRAPHIC</span></td>
                                     <td class="attr-name">Gender:</td>
-                                    <td class="user-attr"> {{ user.profile.gender }}</td> <!-- <td class="user-attr">{user.gender}</td>  -->
+                                    {% if not user.profile.gender_other %}
+                                    <td class="user-attr">{{ user.profile.gender }}</td>
+                                    {% else %}
+                                    <td class="user-attr">{{ user.profile.gender_other }}</td>
+                                    {% endif %}
                                 </tr>
                                 <tr class="no-border">
                                     <th scope="row"></th>
@@ -139,7 +143,11 @@
                                     <th scope="row"></th>
                                     <td></td>
                                     <td class="attr-name">Race/Ethnicity:</td>
-                                    <td class="user-attr">{{ user.profile.race }}</td> <!-- <td class="user-attr">{user.race}</td>  -->
+                                    {% if not user.profile.race_other %}
+                                    <td class="user-attr" >{{ user.profile.race }}</td>
+                                    {% else %}
+                                    <td class="user-attr" >{{ user.profile.race_other }}</td>
+                                    {% endif %}
                                 </tr>
                                 <tr class="no-border">
                                     <th scope="row"></th>
@@ -234,7 +242,11 @@
                                 </tr>
                                 <tr class="no-border">
                                     <th scope="row"></th>
-                                    <td class="attr-name"> {{ user.profile.gender }}</td>
+                                    {% if not user.profile.gender_other %}
+                                    <td class="attr-name">{{ user.profile.gender }}</td>
+                                    {% else %}
+                                    <td class="attr-name">{{ user.profile.gender_other }}</td>
+                                    {% endif %}
                                 </tr>
                                 <tr>
                                     <th scope="row"></th>
@@ -250,7 +262,11 @@
                                 </tr>
                                 <tr class="no-border">
                                     <th scope="row"></th>
+                                    {% if not user.profile.race_other %}
                                     <td class="attr-name" >{{ user.profile.race }}</td>
+                                    {% else %}
+                                    <td class="attr-name" >{{ user.profile.race_other }}</td>
+                                    {% endif %}
                                 </tr>
                                 <tr>
                                     <th scope="row"></th>
@@ -283,26 +299,6 @@
                             </tbody>
                         </table>
                     </div>
-                    <!-- <tr class="no-border">
-                        <th scope="row"></th>
-                        <td class="attr-name" class="user-attr">LinkedIn:</td>
-                        <td class="user-attr" class="attr-name" ><a class="profile-link"href="{{ user.profile.linkedin }}">{{ user.profile.linkedin }}</a></td>
-                    </tr>
-                    <tr class="no-border">
-                        <th scope="row"></th>
-                        <td class="attr-name" class="user-attr">GitHub:</td>
-                        <td class="user-attr" class="attr-name" ><a class="profile-link"href="{{ user.profile.github }}">{{ user.profile.github }}</a></td
-                    </tr>
-                    <tr class="no-border">
-                        <th scope="row"></th>
-                        <td class="attr-name" class="user-attr">Personal:</td>
-                        <td class="user-attr" class="attr-name" ><a class="profile-link"href="{{ user.profile.additional_link }}">{{ user.profile.additional_link }}</a></td>
-                    </tr>
-                    <tr class="no-border">
-                        <th scope="row"></th>
-                        <td class="attr-name" class="user-attr">Resume:</td>
-                        <td class="user-attr" class="attr-name" ><a class="profile-link"href="{{ user.profile.resume }}">{{ user.profile.resume }}</a></td>
-                    </tr> -->
                     <blockquote id="essay" class="mobile-hide">
                         <p class="quotation"> 
                             {{ user.profile.learn_or_gain }}

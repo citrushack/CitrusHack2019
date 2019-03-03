@@ -133,7 +133,7 @@ class Profile(models.Model):
       ('Multiple ethnicity/Other (Please Specify)','Multiple ethnicity/Other (Please Specify)'),
       ('Prefer not to diclose', 'Prefer not to disclose'), 
     )
-    race = models.CharField(max_length=30, choices=RACE_CHOICES, default="")
+    race = models.CharField(max_length=45, choices=RACE_CHOICES, default="")
     race_other = models.CharField(max_length=50, blank=True, default="")
     phone_number = models.CharField(max_length=13, default="")
     SHIRT_SIZE_CHOICES = (

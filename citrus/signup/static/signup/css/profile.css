@@ -306,7 +306,7 @@ footer{
 		left: -10px;
 		position: relative;
 		top: 18px;
-		color: #03A8E8;
+		color: #B3B3B3;
 		font-size: 2.4em;
 	}
 	.quotation::after {
@@ -317,7 +317,7 @@ footer{
 		left: 10px;
 		position: relative;
 		top: 20px;
-		color: #03A8E8;
+		color: #B3B3B3;
 		font-size: 2.4em;
 	}
 

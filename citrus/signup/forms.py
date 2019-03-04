@@ -53,6 +53,36 @@ class ProfileForm(forms.ModelForm):
          'share_box',
       )
 
+class ProfileEditForm(forms.ModelForm):
+   #learn or gain textfield is charfield with widget=forms.textarea in modelforms, min_length only in forms
+   learn_or_gain = forms.CharField(min_length=250, widget=forms.Textarea)
+   # BooleanField default blank is true hence only by setting required=True in forms.py will make it required 
+
+   class Meta:
+      model = Profile
+      fields = (
+    'preferred_name',
+         'school', 
+         'level_of_study', 
+         'graduation_year',
+         'major', 
+
+         'gender',
+    'gender_other', 
+         'date_of_birth',
+         'race',
+    'race_other',
+         'phone_number',
+         'shirt_size',
+         'dietary_restrictions',
+
+         'linkedin', 
+         'github', 
+         'additional_link', 
+         'description',
+         'learn_or_gain',
+         'resume',
+      )
 
 # class CustomAuthForm(AuthenticationForm):
 #     username = forms.CharField(widget=TextInput(attrs={'placeholder': 'Email'}))

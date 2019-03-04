@@ -7,6 +7,7 @@ from django.utils.encoding import force_bytes, force_text
 from django.utils.http import urlsafe_base64_encode, urlsafe_base64_decode
 from .forms import SignUpForm
 from .forms import ProfileForm
+from .forms import ProfileEditForm
 from .tokens import account_activation_token
 from django.db import transaction
 import os
@@ -55,7 +56,7 @@ def update_profile(request):
         return redirect('login')
 
     if request.method == 'POST':
-        profile_form = ProfileForm(request.POST, instance=request.user.profile)
+        profile_form = ProfileEditForm(request.POST, instance=request.user.profile)
         if profile_form.is_valid():
             profile_form.save()
        #     messages.success(request, _('Your profile was successfully updated!'))

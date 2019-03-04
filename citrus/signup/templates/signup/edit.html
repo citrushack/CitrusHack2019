@@ -1,5 +1,291 @@
-<form method="post">
-  {% csrf_token %}
-  {{ profile_form.as_p }}
-  <button type="submit">Save changes</button>
-</form>
+{% load widget_tweaks %}
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-127067482-2"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-127067482-2');
+    </script>
+	
+	<!-- Meta -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+    <!-- AnimateOnScroll -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- Custom Stylesheet -->
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static "signup/css/apply.css" %}">
+
+    {% load static %}
+    <link rel="shortcut icon" type="image/png" href="{% static 'assets/img/favicon.png' %}"/>
+
+	<title>Edit - CitrusHack 2019</title>
+</head>
+<body>
+	<nav id="top-nav" class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+        <a class="navbar-brand" href="#"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+            <div class = "nav">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                        <a class="nav-link link-hover" href="{% url 'home' %}">HOME</a>
+                    </li>
+                    {% if user.is_authenticated %}
+                    <li class="nav-item">
+                        <a class="nav-link active" href="{% url 'profile' %}">PROFILE</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link link-hover" href="{% url 'logout' %}">LOGOUT</a>
+                    </li>
+                    {% else %}
+                    <li class="nav-item">
+                        <a class="nav-link link-hover" href="{% url 'login' %}">LOGIN</a>
+                    </li>
+                    {% endif %}
+                </ul>
+            </div>  
+        </div>
+    </nav>
+
+    <div id="form-container" class="container" data-aos="fade-in" data-aos-easing="ease-in"> 
+    	<h2 class="text-center">CITRUS HACK</h2>
+    	<hr>
+    	<h1 class="text-center">EDIT YOUR APPLICATION</h1>
+
+    	<form method='post' enctype="multipart/form-data">
+    	{% csrf_token %}
+			<!-- error display field-->
+			{% if form.errors %}
+			<div class="form-group">
+				<div class="form-error"> 
+				{% for field in user_form %}
+    				{{ field.errors }}
+				{% endfor %}
+				</div>
+			</div>
+			{% endif %}
+
+			<div class="form-group">
+				<h3 class="text-center">ACCOUNT INFORMATION</h3>	
+				
+                <label for="preferred-name">Preferred Name (if different than legal first name)</label>
+				{% render_field profile_form.preferred_name class+="input-box" %}
+				<small>{{ profile_form.preferred_name.help_text }}</small>
+				
+
+			</div>
+			<div class="form-group">
+				<h3 class="text-center">SCHOOL INFORMATION</h3>
+				
+				<label class="required" for="school">School</label>
+				<!-- <input type="school" class="form-control" id="school"> -->
+				{% render_field profile_form.school class+="input-box school-input" %}
+				<small>{{ profile_form.school.help_text }}</small>
+
+				<div class="row">
+					<div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6">	
+						<label class="required" for="level-of-study">Level of Study</label>
+						<!-- <select id="level-of-study" class="custom-select">
+							<option selected></option>
+							<option value="1">Undergraduate</option>
+							<option value="2">Graduate</option>
+							<option value="3">High School</option>
+							<option value="4">Prefer not to disclose</option>
+						</select> -->
+						<div class="select-wrapper">
+							{% render_field profile_form.level_of_study class+="input-box" %}
+						</div>
+						<small>{{ profile_form.level_of_study.help_text }}</small>
+					</div>
+					<div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6">	
+						<label class="required" for="graduation-year">Graduation Year</label>
+						<!-- <select id="graduation-year" class="custom-select">
+							<option selected></option>
+							<option value="1">2018</option>
+							<option value="2">2019</option>
+							<option value="3">2020</option>
+							<option value="4">2021</option>
+							<option value="5">2022</option>
+							<option value="6">2023 or later</option>
+							<option value="7">Prefer not to disclose</option>
+						</select> -->
+						<div class="select-wrapper">
+							{% render_field profile_form.graduation_year class+="input-box" %}
+						</div>
+						<small>{{ profile_form.graduation_year.help_text }}</small>
+					</div>
+				</div>
+				
+				<label class="required" for="major">Major</label>			
+				<!-- <input type="major" class="form-control" id="major"> -->
+				{% render_field profile_form.major class+="input-box" %}
+				<small>{{ profile_form.major.help_text }}</small>
+
+			</div>
+			<div class="form-group">
+				<h3 class="text-center">ADDITIONAL INFORMATION</h3>
+				
+				<div class="row">
+					<div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6">	
+						<label class="required" for="gender">Gender</label>
+						<!-- <select id="gender" class="custom-select">
+							<option selected></option>
+							<option value="1">Female</option>
+							<option value="2">Male</option>
+							<option value="3">Other</option>
+							<option value="4">Prefer not to disclose</option>
+						</select> -->
+						<div class="select-wrapper">
+							{% render_field profile_form.gender class+="input-box gender-select" %}
+						</div>
+						<small>{{ profile_form.gender.help_text }}</small>
+					</div>
+					<div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6">	
+						<label class="required" for="dob">Date of Birth</label>
+						<!-- <input type="date" id="dob" class="form-control" placeholder="mm/dd/yyyy"> -->
+						{% render_field profile_form.date_of_birth type="date" placeholder="mm/dd/yyyy" class+="input-box" %}
+						<small>{{ profile_form.date_of_birth.help_text }}</small>
+					</div>
+				</div>
+				<div id="gender-other" class="row hide">
+					<div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">	
+						<label for="gender_other">Gender if other</label>
+						{% render_field profile_form.gender_other class+="input-box" %}
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">	
+						<label class="required" for="race">Race/Ethnicity</label>
+						<!-- <select id="race" class="custom-select">
+							<option selected></option>
+							<option value="1">American Indian or Alaskan Native</option>
+							<option value="2">Asian/Pacific Islander</option>
+							<option value="3">Black or African American</option>
+							<option value="4">Hispanic</option>
+							<option value="5">White/Caucasian</option>
+							<option value="6">Other</option>
+							<option value="7">Prefer not to disclose</option>
+
+						</select> -->
+						<div class="select-wrapper">
+							{% render_field profile_form.race class+="input-box race-select" %}
+						</div>
+						<small>{{ profile_form.race.help_text }}</small>
+					</div>
+				</div>
+				<div id="race-other" class="row hide">
+					<div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+						<label for="race_other">Race if Multiple/Other</label>
+						<!-- <input type="diet" class="form-control" id="diet"> -->
+						{% render_field profile_form.race_other class+="input-box" %}
+						
+					</div>
+				</div>
+
+				<div class="row">
+					<div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6">	
+						<label class="required" for="phone">Phone Number</label>
+						<!-- <input type="text" name="phone" class="form-control phone-input" id="phone" > -->
+						{% render_field profile_form.phone_number class+="input-box phone-input" %}
+						<small>{{ profile_form.phone_number.help_text }}</small>
+					</div>
+					<div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6">	
+						<label class="required" for="shirt">Shirt Size</label>
+						<!-- <select id="race" class="custom-select">
+							<option selected></option>
+							<option value="1">XS</option>
+							<option value="2">S</option>
+							<option value="3">M</option>
+							<option value="3">L</option>
+							<option value="4">XL</option>
+							<option value="5">XXL</option>
+						</select> -->
+						<div class="select-wrapper">
+							{% render_field profile_form.shirt_size class+="input-box" %}
+						</div>
+						<small>{{ profile_form.shirt_size.help_text }}</small>
+					</div>
+				</div>
+				
+				<label for="diet">Dietary Restrictions</label>
+				<!-- <input type="diet" class="form-control" id="diet"> -->
+				{% render_field profile_form.dietary_restrictions class+="input-box" %}
+				<small>{{ profile_form.dietary_restrictions.help_text }}</small>
+			</div>
+			<div class="form-group">
+				<h3 class="text-center">PROFILE INFORMATION</h3>
+				
+				<div class="row">
+					<div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6">	
+						<label for="LinkedIn">LinkedIn</label>
+						<!-- <input type="url" name="LinkedIn" id="LinkedIn" placeholder="https://" class="form-control"> -->
+						{% render_field profile_form.linkedin placeholder="https://" class+="input-box" %}
+						<small>{{ profile_form.linkedin.help_text }}</small>
+					</div>
+					<div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6">	
+						<label for="GitHub">GitHub</label>
+						<!-- <input type="url" name="GitHub" id="GitHub" placeholder="https://" class="form-control"> -->
+						{% render_field profile_form.github placeholder="https://" class+="input-box" %}
+						<small>{{ profile_form.github.help_text }}</small>
+					</div>
+				</div>
+				
+				<label for="additional-link">Additional link (portfolio, website, etc.)</label>
+				<!-- <input type="url" name="additional-link" id="additional-link" placeholder="https://" class="form-control"> -->
+				{% render_field profile_form.additional_link placeholder="https://" class+="input-box" %}
+				<small>{{ profile_form.additional_link.help_text }}</small>
+				
+				<label for="self-description" class="required">I would describe myself as a...</label>
+				<!-- <input type="self-description" class="form-control" id="self-description" placeholder="Designer, Full-stack Master, Hardware Junkie, Big Data Enthusiast, etc."> -->
+				{% render_field profile_form.description placeholder="Designer, Full-stack Master, Hardware Junkie, Big Data Enthusiast, etc." class+="input-box" %}
+				<small>{{ profile_form.description.help_text }}</small>
+
+				<label for="essay" class="required">What would you like to learn or gain out of coming to CitrusHack? (250-1000 characters)</label>
+  				<!-- <textarea class="form-control" rows="5" id="essay"></textarea> -->
+  				{% render_field profile_form.learn_or_gain class+="input-box count-chars" rows="5" %}
+  				<small>{{ profile_form.learn_or_gain.help_text }}</small>
+  				<div class="text-right"><small class="essay-text char-count">0</small><small class="essay-text">/1000</small></div>
+
+  				<br>
+  				<label for="resume">Resume (PDF format via GoogleDrive, DropBox, etc.)</label>
+				<!-- <input type="url" name="resume" id="resume" placeholder="https://" class="form-control"> -->
+				{% render_field profile_form.resume placeholder="https://" class+="input-box" %}
+				<small>{{ profile_form.resume.help_text }}</small>
+				<small class="essay-text">Please make sure that sharing settings for your resume file allow viewability to anyone with the link.</small>
+			</div>
+			
+			<div class="text-center">
+				<button type="submit" class="button text-center">SAVE CHANGES</button>
+			</div>
+			{{ form.non_field_errors }}
+		
+		</form> 	
+    </div>
+<!-- Scripts -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.10/jquery.mask.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+<!-- AOS -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>AOS.init();</script>
+{% load static %}
+<script src="{% static "signup/js/apply.js" %}"></script>
+</body>
+</html>

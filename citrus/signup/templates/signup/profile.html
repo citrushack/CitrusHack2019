@@ -77,10 +77,10 @@
                     <div id="id-tags" class="col-12 col-sm-12 col-md-12 col-lg-10 col-xl-10 
                     text-xl-left text-lg-left text-md-center text-sm-center text-center">
                         <br>
-                        {% if not user.preferred_name %}
+                        {% if not user.profile.preferred_name %}
                         <h1 id="name">  {{ user.first_name }} {{ user.last_name }}  </h1>
                         {% else %}
-                        <h1 id="name">{{ user.preferred_name }} </h1> <!-- <h1 id="name">{user.firstname} {user.lastname}</h1> -->
+                        <h1 id="name">{{ user.profile.preferred_name }} </h1> <!-- <h1 id="name">{user.firstname} {user.lastname}</h1> -->
                         {% endif %}
                         <p id="title">{{ user.profile.description }}</p> <!-- <p id="title">{user.description}</p> -->
                         <p id="email">{{ user.email }}</p> <!-- <p id="email">{user.email}</p>  -->

@@ -49,7 +49,6 @@ class MyUser(AbstractBaseUser):
         # verbose_name='Email',
     first_name = models.CharField(max_length=30, default="")
     last_name = models.CharField(max_length=30, default="")
-    preferred_name = models.CharField(max_length=30, blank=True, default="")    
     created_at = models.DateTimeField(default=datetime.now, blank=True)
     #Info that is NOT saved upon signup
     email_confirmed = models.BooleanField(default=False)
@@ -87,7 +86,8 @@ class MyUser(AbstractBaseUser):
 class Profile(models.Model):
     # OneToOne Relationship between MyUser and Profile Model (basically linked)
     user = models.OneToOneField(MyUser, on_delete=models.CASCADE)
-
+    preferred_name = models.CharField(max_length=30, blank=True, default="")    
+    
     #School Information
     school = models.CharField(max_length=50, default="")
     LEVEL_OF_STUDY_CHOICES = (

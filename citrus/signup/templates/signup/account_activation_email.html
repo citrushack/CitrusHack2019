@@ -1,8 +1,8 @@
 {% autoescape off %}
-{% if not user.preferred_name %}
+{% if not user.profile.preferred_name %}
 Hi {{ user.first_name }},
 {% else %}
-Hi {{ user.preferred_name }},
+Hi {{ user.profile.preferred_name }},
 {% endif %}
 
 Please click on the link below to confirm your registration:

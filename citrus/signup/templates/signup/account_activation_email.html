@@ -8,4 +8,7 @@ Hi {{ user.profile.preferred_name }},
 Please click on the link below to confirm your registration:
 
 http://{{ domain }}{% url 'activate' uidb64=uid token=token %}
+
+Sincerely,
+The CitrusHack Team
 {% endautoescape %}

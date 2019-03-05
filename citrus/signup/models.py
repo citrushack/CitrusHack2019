@@ -53,7 +53,7 @@ class MyUser(AbstractBaseUser):
     #Info that is NOT saved upon signup
     email_confirmed = models.BooleanField(default=False)
     app_status = models.CharField(max_length=30, default ="PENDING")
-    is_active = models.BooleanField(default=False)
+    is_active = models.BooleanField(default=True)
     is_admin = models.BooleanField(default=False)
 
     objects = MyUserManager()

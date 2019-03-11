@@ -80,7 +80,7 @@ class UserAdmin(BaseUserAdmin):
             'fields': ('email', 'password1', 'password2')} #'date_of_birth'
         ),
     )
-    search_fields = ('email',)
+    search_fields = ('email','profile__school',)
     ordering = ('email',)
     filter_horizontal = ()
     def get_school(self, instance):

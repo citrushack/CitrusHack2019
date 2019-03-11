@@ -64,7 +64,7 @@ class UserAdmin(BaseUserAdmin):
     # The fields to be used in displaying the User model.
     # These override the definitions on the base UserAdmin
     # that reference specific fields on auth.User.
-    list_display = ('email', 'is_admin', 'app_status', 'created_at')#'get_fname','get_status', 'get_diet') #'date_of_birth'
+    list_display = ('email','get_school', 'created_at')#'get_fname','get_status', 'get_diet') #'date_of_birth'
     list_select_related=('profile',)
     list_filter = ('is_admin', 'app_status', 'created_at',)
     fieldsets = (
@@ -83,9 +83,9 @@ class UserAdmin(BaseUserAdmin):
     search_fields = ('email',)
     ordering = ('email',)
     filter_horizontal = ()
-    # def get_fname(self, instance):
-    #     return instance.profile.first_name
-    # get_fname.short_description = 'Name'
+    def get_school(self, instance):
+    	return instance.profile.school
+    get_school.short_description = 'school'
 
     # def get_status(self, instance):
     #     return instance.profile.appStatus

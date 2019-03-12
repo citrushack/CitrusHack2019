@@ -72,7 +72,15 @@
         <link rel="shortcut icon" type="image/png" href="{% static 'assets/img/favicon.png' %}"/>
         <title>CitrusHack 2019</title>
     </head>
-<a id="mlh-trust-badge" style="display:block;max-width:100px;min-width:60px;position:absolute;left:50px;top:0;width:10%;z-index:10000" href="https://mlh.io/seasons/na-2019/events?utm_source=na-hackathon&utm_medium=TrustBadge&utm_campaign=2019-season&utm_content=gray" target="_blank"><img src="https://s3.amazonaws.com/logged-assets/trust-badge/2019/mlh-trust-badge-2019-gray.svg" alt="Major League Hacking 2019 Hackathon Season" style="width:100%"></a> 
+<!-- <a id="mlh-trust-badge"  href="https://mlh.io/seasons/na-2019/events?utm_source=na-hackathon&utm_medium=TrustBadge&utm_campaign=2019-season&utm_content=gray" target="_blank"><img src="https://s3.amazonaws.com/logged-assets/trust-badge/2019/mlh-trust-badge-2019-gray.svg" alt="Major League Hacking 2019 Hackathon Season"></a>  -->
+    <a id="mlh-trust-badge"  href="https://mlh.io/seasons/na-2019/events?utm_source=na-hackathon&utm_medium=TrustBadge&utm_campaign=2019-season&utm_content=gray" target="_blank"><img src="https://s3.amazonaws.com/logged-assets/trust-badge/2019/mlh-trust-badge-2019-gray.svg" alt="Major League Hacking 2019 Hackathon Season" style = "display:block;
+    max-width:100px;
+    min-width:60px;
+    position:absolute;
+    left:50px;top:-10px;
+    width:10%;
+    z-index:10000;
+    width:100%;"></a>
   <body>
     <div id="content">
       	<nav id="top-nav" class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
@@ -282,21 +290,27 @@
     	</div>
         <div id="numbers" class="text-center panel-type-2">
             <div class="row">
-                <p data-aos="fade-down" data-aos-duration="150" class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 number-text">
-                    <span class="number">36</span>
-                    <br>
-                    <span class="count">hours</span>
-                </p>
-                <p data-aos="fade-down" data-aos-duration="150" data-aos-delay="200" class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 number-text">
-                    <span class="number">350</span>
-                    <br>
-                    <span class="count">hackers</span>
-                </p>
-                <p data-aos="fade-down" data-aos-duration="150" data-aos-delay="400" class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 number-text">
-                    <span class="number">80</span>
-                    <br>
-                    <span class="count">projects</span>
-                </p>
+                <div class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 number-container">
+                    <p data-aos="fade-down" data-aos-duration="150" class="number-text">
+                        <span class="number">36</span>
+                        <br>
+                        <span class="count">hours</span>
+                    </p>
+                </div>
+                <div class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 number-container">
+                    <p data-aos="fade-down" data-aos-duration="150" data-aos-delay="200" class="number-text">
+                        <span class="number">350</span>
+                        <br>
+                        <span class="count">hackers</span>
+                    </p>
+                </div>
+                <div class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 number-container">
+                    <p data-aos="fade-down" data-aos-duration="150" data-aos-delay="400" class="number-text">
+                        <span class="number">80</span>
+                        <br>
+                        <span class="count">projects</span>
+                    </p>
+                </div>
             </div>
         </div>
         <div id = "tracks" class="panel-type-1">   
@@ -329,7 +343,7 @@
                 </div>
                 <div id="campaigner-card" class="track-card text-center col-12 col-sm-12 col-md-6 col-lg-6 col-xl-3">
                     {% load static %}
-                    <img class="track-icon" src="{% static "assets/tracks/brain.png" %}">
+                    <img class="track-icon" src="{% static "assets/tracks/city.png" %}">
                     <br>
                     <h3 class="track-title">Campaigner</h3>
                     <br>
@@ -340,7 +354,7 @@
                 </div>
                 <div id="medic-card" class="track-card text-center col-12 col-sm-12 col-md-6 col-lg-6 col-xl-3">
                     {% load static %}
-                    <img class="track-icon" src="{% static "assets/tracks/city.png" %}">
+                    <img class="track-icon" src="{% static "assets/tracks/brain.png" %}">
                     <br>
                     <h3 class="track-title">Medic</h3>
                     <br>
@@ -371,6 +385,7 @@
                 </div>
             </div>
         </div>
+
         <div id = "faq" class="panel-type-1">
             <div class="leading-block block-type-1 center-block" data-aos="flip-right"></div>
             <br> 

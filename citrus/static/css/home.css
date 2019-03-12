@@ -18,7 +18,7 @@ body{
 	background-color: var(--primary-bg-color);
 }
 
-#mlh-trust-badge{
+/*#mlh-trust-badge{
 	display:block;
 	max-width:100px;
 	min-width:60px;
@@ -32,7 +32,7 @@ body{
 
 #mlh-trust-badge:hover{
 	transform:translateY(10px);
-}
+}*/
 
 #top-nav {
 	z-index:10001;

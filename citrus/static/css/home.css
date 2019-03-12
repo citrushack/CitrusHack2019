@@ -18,7 +18,24 @@ body{
 	background-color: var(--primary-bg-color);
 }
 
+#mlh-trust-badge{
+	display:block;
+	max-width:100px;
+	min-width:60px;
+	position:absolute;
+	left:50px;top:-10px;
+	width:10%;
+	z-index:10000;
+	width:100%;
+	transition: 0.3s;
+}
+
+#mlh-trust-badge:hover{
+	transform:translateY(10px);
+}
+
 #top-nav {
+	z-index:10001;
 	position: fixed;
     left: 0;
     right: 0;
@@ -376,6 +393,10 @@ hr {
 	line-height: 2.3rem;
 }
 
+.number-container {
+	transition: 0.3s;
+}
+
 .number {
 	font-size: 86px;
 	color: #FFFFFF;
@@ -386,8 +407,16 @@ hr {
 	font-weight: 200;
 	font-size: 24px;
 	text-transform: uppercase;
-	color: #FF97D0;
-	text-shadow: 0px 0px 15px var(--primary-accent-color);
+	color: #ea419e;
+	text-shadow: 0px 0px 10px var(--primary-accent-color);
+	transition: 0.3s;
+	transition-timing-function: ease-in;
+}
+
+.number-container:hover {
+	transform: scale(1.05);
+	color: #f4d7e7;
+	text-shadow: 0px 0px 10px var(--primary-accent-color);
 }
 
 #sentinel-card {
@@ -489,10 +518,15 @@ hr {
 	border-right:none;
 	border-top:none;
 	border-bottom-style: solid;
-	border-bottom-width: 2px;
+	border-bottom-width: 1px;
 	border-bottom-color: var(--primary-accent-color);
 	cursor: pointer;
 	padding: 0.7rem 0.2rem 0.7rem 0.2rem;
+	transition: 0.3s ease-in;
+}
+
+.card-header:hover {
+	box-shadow: 0px 2px 0px #FF5BB5;
 }
 
 .card-body {
@@ -534,6 +568,36 @@ hr {
 	text-decoration: none;
 	color:#EEEEEE;
 	text-shadow: 0px 0px 10px var(--primary-accent-color);
+}
+
+.hvr-underline-from-left {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  position: relative;
+  overflow: hidden;
+}
+.hvr-underline-from-left:before {
+  content: "";
+  position: absolute;
+  z-index: 5;
+  left: 0;
+  right: 100%;
+  bottom: 0;
+  background: var(--primary-accent-color);
+  height: 2px;
+  box-shadow: 0px 0px 25px var(--primary-accent-color);
+  -webkit-transition-property: right;
+  transition-property: right;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+.hvr-underline-from-left:hover:before, .hvr-underline-from-left:focus:before, .hvr-underline-from-left:active:before {
+  right: 0;
 }
 
 .card-body {

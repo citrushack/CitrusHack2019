@@ -15,4 +15,4 @@ def volunteer(request):
     return redirect("https://docs.google.com/forms/d/e/1FAIpQLSdK66VnO-NYPyL_qN8P3GZYUuehluLNB_dgDpiQx9anj8OP3A/viewform")
 
 def workshop(request):
-    return redirect("https://docs.google.com/forms/d/1jl_xvG1ojitGRm9AmfU7zRqbo0SpgDU4u1qPJMNhEAw/viewform?edit_requested=true")
+    return redirect("https://docs.google.com/forms/d/e/1FAIpQLSeb5P1dlnnsWL6IPdsZsb3KhGBqL4TKIA8I-p9LoRVndTHVEA/viewform")

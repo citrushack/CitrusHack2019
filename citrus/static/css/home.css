@@ -685,7 +685,7 @@ hr {
 }
 
 #microsoft {
-	width: 100%;
+	width: 80%;
 }
 
 #footer {
@@ -785,15 +785,15 @@ hr {
 	}
 
 	#microsoft {
-		width: 50%;
+		width: 60%;
 	}
 
 	.third-tier>a>img {
-		width: 50%;
+		width: 60%;
 	}
 
 	.fourth-tier>a>img {
-		width: 50%;
+		width: 60%;
 	}
 }
 
@@ -840,15 +840,15 @@ hr {
 	}
 
 	#microsoft {
-		width: 50%;
+		width: 60%;
 	}
 
 	.third-tier>a>img {
-		width: 50%;
+		width: 60%;
 	}
 
 	.fourth-tier>a>img {
-		width: 50%;
+		width: 60%;
 	}
 }
 

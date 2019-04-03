@@ -321,6 +321,11 @@ hr {
 	color: #000000;	
 }
 
+#deadline {
+	font-family: Titillium Web;
+	color: var(--primary-accent-color);
+}
+
 #count-down {
 	background: #CCCCCC;
 	box-sizing: border-box;

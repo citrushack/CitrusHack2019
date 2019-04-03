@@ -129,6 +129,15 @@ h3 {
 	letter-spacing: 0.1em;
 }
 
+#deadline{
+	line-height: 1.5;
+}
+
+#deadline-symbols{
+	font-family: Titillium Web;
+	font-size: 130%;
+}
+
 .input-box {
 	width: 100%;
 

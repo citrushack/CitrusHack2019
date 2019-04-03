@@ -146,6 +146,10 @@ img {
 	letter-spacing: 0.1em;
 }
 
+#edit {
+	margin-bottom: 0;
+}
+
 #user-content {
 	padding: 4.5% 2.5% 4.5% 2.5%;
 	background:#23171D;
@@ -213,6 +217,10 @@ td {
 .profile-link:hover {
 	text-decoration: none;
 	color:pink;
+}
+
+#deadline {
+	color:var(--action-text-color);
 }
 
 .quotation{

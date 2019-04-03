@@ -1,3 +1,15 @@
+if($( ".gender-select" ).val() === "Other (Please Specify)") {
+	$("#gender-other").removeClass("hide");
+} else {
+	$("#gender-other").addClass("hide");
+}
+
+if($( ".race-select" ).val() === "Multiple ethnicity/Other (Please Specify)") {
+	$("#race-other").removeClass("hide");
+} else {
+	$("#race-other").addClass("hide");
+}
+
 $('.phone-input').mask("(999)999-9999", {placeholder:"(___)___-____"});
 
 $('.count-chars').on('keyup',function(){

@@ -186,6 +186,11 @@ h1 {
 	text-decoration:none;
 }
 
+.disabled-link {
+	color: #B3B3B3;
+	cursor: no-drop;
+}
+
 hr {
 	width:100px;
 	border-top: 3px solid var(--primary-accent-color);

@@ -187,8 +187,16 @@ h1 {
 }
 
 .disabled-link {
-	color: #B3B3B3;
+	font-weight: 200;
+	letter-spacing: 0.1em;
+	color: #595959;
+	transition: 0.3s;
 	cursor: no-drop;
+}
+
+.disabled-link:hover {
+	color: #2a2a2a;
+	text-decoration:none;
 }
 
 hr {

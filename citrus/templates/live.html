@@ -238,7 +238,7 @@
                 <div class="section-container hidden" id="schedule">
                     <h1>SCHEDULE OF EVENTS</h1>
                     <div class="leading-block"></div>
-                    <div class="ui-element text-center">
+                    <div class="ui-element text-center" style="margin-bottom:0;">
                         <h2>FRIDAY<span class="h2-sym">,</span> APRIL <span class="h2-sym">26</span></h2>
                         <table class="table">
                             <thead>
@@ -267,18 +267,77 @@
                             </tbody>
                         </table>
                     </div>
-                    <div class="ui-element text-center">
+                    {% load static %}
+                    <img class="lantern" src="{% static "assets/img/lantern-02.png" %}" alt="" style="-moz-transform: scaleX(-1);-o-transform: scaleX(-1);-webkit-transform: scaleX(-1);transform: scaleX(-1);filter: FlipH;">
+                    <div class="ui-element text-center" style="margin-top:0;margin-bottom:0;">
                         <h2>SATURDAY<span class="h2-sym">,</span> APRIL <span class="h2-sym">27</span></h2>
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th scope="col">Time</th>
+                                    <th scope="col">Event</th>
+                                    <th scope="col">Location</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">5:00-9:00pm</th>
+                                    <td>Registration</td>
+                                    <td>UNLH</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">7:00pm</th>
+                                    <td>Dinner - Marcello's Pizza</td>
+                                    <td>PLCHLDR</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">3</th>
+                                    <td>Larry</td>
+                                    <td>the Bird</td>
+                                </tr>
+                            </tbody>
+                        </table>
                     </div>
-                    <div class="ui-element text-center">
+                    {% load static %}
+                    <img class="lantern" src="{% static "assets/img/lantern-01.png" %}" alt="">
+                    <div class="ui-element text-center" style="margin-top:0;">
                         <h2>SUNDAY<span class="h2-sym">,</span> APRIL <span class="h2-sym">28</span></h2>
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th scope="col">Time</th>
+                                    <th scope="col">Event</th>
+                                    <th scope="col">Location</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">5:00-9:00pm</th>
+                                    <td>Registration</td>
+                                    <td>UNLH</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">7:00pm</th>
+                                    <td>Dinner - Marcello's Pizza</td>
+                                    <td>PLCHLDR</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">3</th>
+                                    <td>Larry</td>
+                                    <td>the Bird</td>
+                                </tr>
+                            </tbody>
+                        </table>
                     </div>
+                    {% load static %}
+                    <img class="robot" src="{% static "assets/img/robot.png" %}" alt="">
                 </div>
                 <div class="section-container" id="map">
                     <h1>EVENT MAP</h1>
                     <div class="leading-block"></div>
                     <div class="ui-element text-center">
-                        
+                        {% load static %}
+                        <img class="robot" src="{% static "assets/img/map.png" %}" alt="" style="width:100%">
                     </div>
                 </div>
                 <div class="section-container" id="judging">

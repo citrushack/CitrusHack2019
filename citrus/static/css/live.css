@@ -276,3 +276,46 @@ table {
 .table tr {
 	text-align: left;
 }
+
+#map-container {
+	padding: 5%;
+}
+
+#expo-table {
+	padding: 2% 5% 2% 5%;
+}
+
+.align-right {
+	text-align: right;
+}
+
+#judges-container{
+	padding:0 10% 0 10%;
+}
+
+.judge {
+	height: 45%;
+	width: auto;
+	border-radius: 6px;
+}
+
+.judge-name {
+	margin-top:10px;
+	/*text-transform:uppercase;*/
+	font-family: Titillium Web;
+	font-size: 20px;
+	font-weight: 400;
+	color:#FFFFFF;
+	letter-spacing: 0.16em;
+	text-shadow: 0px 0px 4px #5539A7;
+	margin-bottom:2px;
+}
+
+.judge-title {
+	margin-top:2px;
+	font-family: Titillium Web;
+	font-size: 14px;
+	font-weight: 200;
+	letter-spacing: 0.15em;
+	color:#CCCCCC;
+}

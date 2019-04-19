@@ -97,12 +97,11 @@
                     <h1>CITRUS HACK <span class="h1-sym">2019</span></h1>
                     <h3>SECURE THE FUTURE</h3>
                     <div>
-                        <a target="_blank" href="https://citrushack2019.slack.com/">{% load static %}<img class="media-icon" src="{% static "assets/media-icons/slack.png" %}" alt=""></a>
-                        <a target="_blank" href="https://citrushack2019.devpost.com/">{% load static %}<img class="media-icon" src="{% static "assets/media-icons/devpost.png" %}" alt=""></a>
-                        <a target="_blank" href="">{% load static %}<img class="media-icon" src="{% static "assets/media-icons/github.png" %}" alt=""></a>
-                        <a target="_blank" href="https://www.facebook.com/CitrusHack/">{% load static %}<img class="media-icon" src="{% static "assets/media-icons/fb.png" %}" alt=""></a>
-                        <a target="_blank" href="https://twitter.com/citrushack">{% load static %}<img class="media-icon" src="{% static "assets/media-icons/twitter.png" %}" alt=""></a>
-                        <a target="_blank" href="https://www.instagram.com/citrushack_ucr/">{% load static %}<img class="media-icon" src="{% static "assets/media-icons/insta.png" %}" alt=""></a>
+                        <a target="_blank" href="https://citrushack2019.slack.com/">{% load static %}<img class="media-icon hvr-grow" src="{% static "assets/media-icons/slack.png" %}" alt=""></a>
+                        <a target="_blank" href="https://citrushack2019.devpost.com/">{% load static %}<img class="media-icon hvr-grow" src="{% static "assets/media-icons/devpost.png" %}" alt=""></a>
+                        <a target="_blank" href="https://www.facebook.com/CitrusHack/">{% load static %}<img class="media-icon hvr-grow" src="{% static "assets/media-icons/fb.png" %}" alt=""></a>
+                        <a target="_blank" href="https://twitter.com/citrushack">{% load static %}<img class="media-icon hvr-grow" src="{% static "assets/media-icons/twitter.png" %}" alt=""></a>
+                        <a target="_blank" href="https://www.instagram.com/citrushack_ucr/">{% load static %}<img class="media-icon hvr-grow" src="{% static "assets/media-icons/insta.png" %}" alt=""></a>
                     </div>
                     {% load static %}
                     <img class="lantern" src="{% static "assets/img/lantern-01.png" %}" alt="">
@@ -150,6 +149,12 @@
                             <a target="_blank" href="http://linode.com">
                             {% load static %}
                             <img class="hvr-grow sponsor-light" src="{% static "assets/supporters/sponsor/linode.png" %}" alt="Linode">
+                          </a>
+                        </div>
+                        <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 text-center fourth-tier">
+                            <a target="_blank" href="https://www.haascnc.com/index.html">
+                            {% load static %}
+                            <img class="hvr-grow sponsor-light" src="{% static "assets/supporters/sponsor/haas.png" %}" alt="Haas Automation">
                           </a>
                         </div>
                         <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 text-center fourth-tier">
@@ -335,9 +340,9 @@
                 <div class="section-container hidden" id="map">
                     <h1>EVENT MAP</h1>
                     <div class="leading-block"></div>
-                    <div class="ui-element text-center">
+                    <div class="ui-element text-center" id="map-container">
                         {% load static %}
-                        <img class="robot" src="{% static "assets/img/map.png" %}" alt="" style="width:100%">
+                        <img class="Citrus Hack Map" src="{% static "assets/img/map.png" %}" alt="" style="width:100%">
                     </div>
                 </div>
                 <div class="section-container hidden" id="judging">
@@ -348,16 +353,402 @@
                     </div>
                     <h1>ESTEEMED JUDGES</h1>
                     <div class="leading-block"></div>
-                    <div class="ui-element text-center">
-                        
+                    <div id="judges-container">
+                        <div class="row">
+                            <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4">
+                                {% load static %}
+                                <img class="judge" src="{% static "assets/judges/jihwan.png" %}" alt="">
+                                <p class="judge-name">JiHwan Kim</p>
+                                <p class="judge-title">President<br>UCR Competitive Programming</p>
+                            </div>
+                            <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4">
+                                {% load static %}
+                                <img class="judge" src="{% static "assets/judges/jihwan.png" %}" alt="">
+                                <p class="judge-name">JiHwan Kim</p>
+                                <p class="judge-title">Co-Director of Event Coordination<br>ACM UCR</p>
+                            </div>
+                            <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4">
+                                {% load static %}
+                                <img class="judge" src="{% static "assets/judges/jihwan.png" %}" alt="">
+                                <p class="judge-name">JiHwan Kim</p>
+                                <p class="judge-title">(Former) Treasurer<br>Cyber@UCR</p>
+                            </div>
+                            <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4">
+                                {% load static %}
+                                <img class="judge" src="{% static "assets/judges/jihwan.png" %}" alt="">
+                                <p class="judge-name">JiHwan Kim</p>
+                                <p class="judge-title">Lead Web Developer<br>Citrus Hack</p>
+                            </div>
+                            <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4">
+                                {% load static %}
+                                <img class="judge" src="{% static "assets/judges/jihwan.png" %}" alt="">
+                                <p class="judge-name">JiHwan Kim</p>
+                                <p class="judge-title">Wonderful Human Being</p>
+                            </div>
+                            <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4">
+                                {% load static %}
+                                <img class="judge" src="{% static "assets/judges/jihwan.png" %}" alt="">
+                                <p class="judge-name">JiHwan Kim</p>
+                                <p class="judge-title">The definition of "the homie"</p>
+                            </div>
+                            <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4">
+                                {% load static %}
+                                <img class="judge" src="{% static "assets/judges/jihwan.png" %}" alt="">
+                                <p class="judge-name">JiHwan Kim</p>
+                                <p class="judge-title">International Treasure</p>
+                            </div>
+                            <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4">
+                                {% load static %}
+                                <img class="judge" src="{% static "assets/judges/jihwan.png" %}" alt="">
+                                <p class="judge-name">JiHwan Kim</p>
+                                <p class="judge-title">Loving Husband and Father</p>
+                            </div>
+                            <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4">
+                                {% load static %}
+                                <img class="judge" src="{% static "assets/judges/jihwan.png" %}" alt="">
+                                <p class="judge-name">JiHwan Kim</p>
+                                <p class="judge-title">Good with kids and pets</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="section-container hidden" id="expo">
                     <h1>CITRUS HACK EXPO</h1>
                     <div class="leading-block"></div>
-                    <div class="ui-element text-center">
-                        
+                    <div id="expo-table" class="ui-element text-center">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th scope="col">Table</th>
+                                    <th scope="col">Project</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <th scope="row">Breadcrumb</th>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <th scope="row">IoTea</th>
+                                </tr>
+                                <tr>
+                                    <td>3</td>
+                                    <th scope="row">Pixl</th>
+                                </tr>
+                                <tr>
+                                    <td>4</td>
+                                    <th scope="row">Breadcrumb</th>
+                                </tr>
+                                <tr>
+                                    <td>5</td>
+                                    <th scope="row">Reservoir</th>
+                                </tr>
+                                <tr>
+                                    <td>6</td>
+                                    <th scope="row">Go-Bot</th>
+                                </tr>
+                                <tr>
+                                    <td>7</td>
+                                    <th scope="row">Lune</th>
+                                </tr>
+                                <tr>
+                                    <td>8</td>
+                                    <th scope="row">Azurite</th>
+                                </tr>
+                                <tr>
+                                    <td>9</td>
+                                    <th scope="row">IoTea</th>
+                                </tr>
+                                <tr>
+                                    <td>10</td>
+                                    <th scope="row">scattertech</th>
+                                </tr>
+                                <tr>
+                                    <td>11</td>
+                                    <th scope="row">Lune</th>
+                                </tr>
+                                <tr>
+                                    <td>12</td>
+                                    <th scope="row">Morning Glory</th>
+                                </tr>
+                                <tr>
+                                    <td>13</td>
+                                    <th scope="row">scattertech</th>
+                                </tr>
+                                <tr>
+                                    <td>14</td>
+                                    <th scope="row">IoTea</th>
+                                </tr>
+                                <tr>
+                                    <td>15</td>
+                                    <th scope="row">scattertech</th>
+                                </tr>
+                                <tr>
+                                    <td>16</td>
+                                    <th scope="row">wonderkey</th>
+                                </tr>
+                                <tr>
+                                    <td>17</td>
+                                    <th scope="row">Aether Tides</th>
+                                </tr>
+                                <tr>
+                                    <td>18</td>
+                                    <th scope="row">Azurite</th>
+                                </tr>
+                                <tr>
+                                    <td>19</td>
+                                    <th scope="row">Pixl</th>
+                                </tr>
+                                <tr>
+                                    <td>20</td>
+                                    <th scope="row">scattertech</th>
+                                </tr>
+                                <tr>
+                                    <td>21</td>
+                                    <th scope="row">wonderkey</th>
+                                </tr>
+                                <tr>
+                                    <td>22</td>
+                                    <th scope="row">IoTea</th>
+                                </tr>
+                                <tr>
+                                    <td>23</td>
+                                    <th scope="row">scattertech</th>
+                                </tr>
+                                <tr>
+                                    <td>24</td>
+                                    <th scope="row">wonderkey</th>
+                                </tr>
+                                <tr>
+                                    <td>25</td>
+                                    <th scope="row">Lune</th>
+                                </tr>
+                                <tr>
+                                    <td>26</td>
+                                    <th scope="row">IoTea</th>
+                                </tr>
+                                <tr>
+                                    <td>27</td>
+                                    <th scope="row">Morning Glory</th>
+                                </tr>
+                                <tr>
+                                    <td>28</td>
+                                    <th scope="row">wonderkey</th>
+                                </tr>
+                                <tr>
+                                    <td>29</td>
+                                    <th scope="row">Lune</th>
+                                </tr>
+                                <tr>
+                                    <td>30</td>
+                                    <th scope="row">Morning Glory</th>
+                                </tr>
+                                <tr>
+                                    <td>31</td>
+                                    <th scope="row">Breadcrumb</th>
+                                </tr>
+                                <tr>
+                                    <td>32</td>
+                                    <th scope="row">IoTea</th>
+                                </tr>
+                                <tr>
+                                    <td>33</td>
+                                    <th scope="row">Breadcrumb</th>
+                                </tr>
+                                <tr>
+                                    <td>34</td>
+                                    <th scope="row">Reservoir</th>
+                                </tr>
+                                <tr>
+                                    <td>35</td>
+                                    <th scope="row">IoTea</th>
+                                </tr>
+                                <tr>
+                                    <td>36</td>
+                                    <th scope="row">Breadcrumb</th>
+                                </tr>
+                                <tr>
+                                    <td>37</td>
+                                    <th scope="row">Aether Tides</th>
+                                </tr>
+                                <tr>
+                                    <td>38</td>
+                                    <th scope="row">wonderkey</th>
+                                </tr>
+                                <tr>
+                                    <td>39</td>
+                                    <th scope="row">Reservoir</th>
+                                </tr>
+                                <tr>
+                                    <td>40</td>
+                                    <th scope="row">IoTea</th>
+                                </tr>
+                                <tr>
+                                    <td>41</td>
+                                    <th scope="row">Lune</th>
+                                </tr>
+                                <tr>
+                                    <td>42</td>
+                                    <th scope="row">Reservoir</th>
+                                </tr>
+                                <tr>
+                                    <td>43</td>
+                                    <th scope="row">Lune</th>
+                                </tr>
+                                <tr>
+                                    <td>44</td>
+                                    <th scope="row">Go-Bot</th>
+                                </tr>
+                                <tr>
+                                    <td>45</td>
+                                    <th scope="row">scattertech</th>
+                                </tr>
+                                <tr>
+                                    <td>46</td>
+                                    <th scope="row">Go-Bot</th>
+                                </tr>
+                                <tr>
+                                    <td>47</td>
+                                    <th scope="row">Breadcrumb</th>
+                                </tr>
+                                <tr>
+                                    <td>48</td>
+                                    <th scope="row">wonderkey</th>
+                                </tr>
+                                <tr>
+                                    <td>49</td>
+                                    <th scope="row">Reverbium</th>
+                                </tr>
+                                <tr>
+                                    <td>50</td>
+                                    <th scope="row">Reservoir</th>
+                                </tr>
+                                <tr>
+                                    <td>51</td>
+                                    <th scope="row">Reverbium</th>
+                                </tr>
+                                <tr>
+                                    <td>52</td>
+                                    <th scope="row">Morning Glory</th>
+                                </tr>
+                                <tr>
+                                    <td>53</td>
+                                    <th scope="row">Lune</th>
+                                </tr>
+                                <tr>
+                                    <td>54</td>
+                                    <th scope="row">Reverbium</th>
+                                </tr>
+                                <tr>
+                                    <td>55</td>
+                                    <th scope="row">Reverbium</th>
+                                </tr>
+                                <tr>
+                                    <td>56</td>
+                                    <th scope="row">IoTea</th>
+                                </tr>
+                                <tr>
+                                    <td>57</td>
+                                    <th scope="row">Reverbium</th>
+                                </tr>
+                                <tr>
+                                    <td>58</td>
+                                    <th scope="row">Azurite</th>
+                                </tr>
+                                <tr>
+                                    <td>59</td>
+                                    <th scope="row">wonderkey</th>
+                                </tr>
+                                <tr>
+                                    <td>60</td>
+                                    <th scope="row">scattertech</th>
+                                </tr>
+                                <tr>
+                                    <td>61</td>
+                                    <th scope="row">IoTea</th>
+                                </tr>
+                                <tr>
+                                    <td>62</td>
+                                    <th scope="row">Azurite</th>
+                                </tr>
+                                <tr>
+                                    <td>63</td>
+                                    <th scope="row">Morning Glory</th>
+                                </tr>
+                                <tr>
+                                    <td>64</td>
+                                    <th scope="row">IoTea</th>
+                                </tr>
+                                <tr>
+                                    <td>65</td>
+                                    <th scope="row">IoTea</th>
+                                </tr>
+                                <tr>
+                                    <td>66</td>
+                                    <th scope="row">Breadcrumb</th>
+                                </tr>
+                                <tr>
+                                    <td>67</td>
+                                    <th scope="row">scattertech</th>
+                                </tr>
+                                <tr>
+                                    <td>68</td>
+                                    <th scope="row">Go-Bot</th>
+                                </tr>
+                                <tr>
+                                    <td>69</td>
+                                    <th scope="row">Reverbium</th>
+                                </tr>
+                                <tr>
+                                    <td>70</td>
+                                    <th scope="row">IoTea</th>
+                                </tr>
+                                <tr>
+                                    <td>71</td>
+                                    <th scope="row">Azurite</th>
+                                </tr>
+                                <tr>
+                                    <td>72</td>
+                                    <th scope="row">scattertech</th>
+                                </tr>
+                                <tr>
+                                    <td>73</td>
+                                    <th scope="row">Aether Tides</th>
+                                </tr>
+                                <tr>
+                                    <td>74</td>
+                                    <th scope="row">Morning Glory</th>
+                                </tr>
+                                <tr>
+                                    <td>75</td>
+                                    <th scope="row">Reverbium</th>
+                                </tr>
+                                <tr>
+                                    <td>76</td>
+                                    <th scope="row">Lune</th>
+                                </tr>
+                                <tr>
+                                    <td>77</td>
+                                    <th scope="row">IoTea</th>
+                                </tr>
+                                <tr>
+                                    <td>78</td>
+                                    <th scope="row">Reservoir</th>
+                                </tr>
+                                <tr>
+                                    <td>79</td>
+                                    <th scope="row">IoTea</th>
+                                </tr>
+                                <tr>
+                                    <td>80</td>
+                                    <th scope="row">Lune</th>
+                                </tr>
+                            </tbody>
+                        </table>
                     </div>
+                    {% load static %}
+                    <img class="robot" src="{% static "assets/img/robot.png" %}" alt="">
                 </div>
             </div>
         </div>        

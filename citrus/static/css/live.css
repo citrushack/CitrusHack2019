@@ -311,6 +311,10 @@ table {
 	text-shadow: 0px 0px 4px #E04C8E;
 }
 
+#parking-direction-container {
+	padding: 5%;
+}
+
 #map-container {
 	padding: 5%;
 }

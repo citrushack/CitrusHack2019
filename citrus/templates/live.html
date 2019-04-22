@@ -76,9 +76,9 @@
             <div id="sidebar">
                 {% load static %}
                 <img id="icon" src="{% static "assets/img/icon-no-reflect.png" %}" alt="">
-                <h5 class="text-center">CITRUS HACK</h3>
+                <h5 class="text-center">CITRUS HACK</h5>
                 <div id="countdown" class="text-center">
-                    <h6 class="text-center">TIME REMAINING</h4>
+                    <h6 class="text-center">TIME REMAINING</h6>
                     <div id="timer" class="text-center">35:59:59</div>
                 </div>
                 <ul id="navigation">
@@ -87,8 +87,25 @@
                     <li id="map-link" class="navlink">MAP</li>
                     <li id="resources-link" class="navlink">RESOURCES</li>
                     <li id="judging-link" class="navlink">JUDGING</li>
-                    <li id="expo-link" class="navlink">EXPO FAIR</li>
+                    <!-- <li id="expo-link" class="navlink">EXPO FAIR</li> -->
                 </ul>
+            </div>
+            <div id="mobile-nav" class="row text-center">
+                <div class="col">
+                    <img class="mobile-icon" id="schedule-icon" src="{% static "assets/img/mobile-icons/schedule.png" %}" alt="">
+                </div>
+                <div class="col">
+                    <img class="mobile-icon" id="map-icon" src="{% static "assets/img/mobile-icons/map.png" %}" alt="">
+                </div>
+                <div class="col">
+                    <img class="mobile-icon" id="home-icon" src="{% static "assets/img/mobile-icons/home.png" %}" alt="">
+                </div>
+                <div class="col">
+                    <img class="mobile-icon" id="resources-icon" src="{% static "assets/img/mobile-icons/resources.png" %}" alt="">
+                </div>
+                <div class="col">
+                    <img class="mobile-icon" id="judging-icon" src="{% static "assets/img/mobile-icons/judging.png" %}" alt="">
+                </div>
             </div>
             <div id="main" class="text-center">
                 <div class="section-container" id="home" style="margin-top:0">
@@ -99,15 +116,16 @@
                     <div>
                         <a target="_blank" href="https://citrushack2019.slack.com/">{% load static %}<img class="media-icon hvr-grow" src="{% static "assets/media-icons/slack.png" %}" alt=""></a>
                         <a target="_blank" href="https://citrushack2019.devpost.com/">{% load static %}<img class="media-icon hvr-grow" src="{% static "assets/media-icons/devpost.png" %}" alt=""></a>
+                        <span class="desktop-hide"><br></span>
                         <a target="_blank" href="https://www.facebook.com/CitrusHack/">{% load static %}<img class="media-icon hvr-grow" src="{% static "assets/media-icons/fb.png" %}" alt=""></a>
                         <a target="_blank" href="https://twitter.com/citrushack">{% load static %}<img class="media-icon hvr-grow" src="{% static "assets/media-icons/twitter.png" %}" alt=""></a>
                         <a target="_blank" href="https://www.instagram.com/citrushack_ucr/">{% load static %}<img class="media-icon hvr-grow" src="{% static "assets/media-icons/insta.png" %}" alt=""></a>
                     </div>
                     {% load static %}
                     <img class="lantern" src="{% static "assets/img/lantern-01.png" %}" alt="">
-                    <h2>SPONSORS</h2>
+                    <h2 class="home-h2">SPONSORS</h2>
                     <div class="row">
-                        <div class="col-12 text-center first-tier">
+                        <div class="judge col-12 text-center first-tier">
                             <a target="_blank" href="https://www.equipovision.com/">
                                 {% load static %}
                                 <img class="hvr-grow sponsor-light" src="{% static "assets/supporters/sponsor/equipo.png" %}" alt="EquipoVision">
@@ -224,7 +242,7 @@
                             </a>
                         </div>
                     </div>
-                    <h2>ORGANIZERS</h2>
+                    <h2 class="home-h2">ORGANIZERS</h2>
                     <div class="row align-items-center">
                         <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 text-center second-tier">
                             <a target="_blank" href="http://acmucr.org">
@@ -244,7 +262,7 @@
                     <h1>SCHEDULE OF EVENTS</h1>
                     <div class="leading-block"></div>
                     <div class="ui-element text-center" style="margin-bottom:0;">
-                        <h2>FRIDAY<span class="h2-sym">,</span> APRIL <span class="h2-sym">26</span></h2>
+                        <h2>FRIDAY<span class="h2-sym">,</span><span class="desktop-hide"><br></span> APRIL <span class="h2-sym">26</span></h2>
                         <table class="table">
                             <thead>
                                 <tr>
@@ -255,19 +273,49 @@
                             </thead>
                             <tbody>
                                 <tr>
-                                    <th scope="row">5:00-9:00pm</th>
+                                    <th scope="row">5:00-8:00pm</th>
                                     <td>Registration</td>
-                                    <td>UNLH</td>
+                                    <td>Outside UNLH</td>
                                 </tr>
                                 <tr>
                                     <th scope="row">7:00pm</th>
-                                    <td>Dinner - Marcello's Pizza</td>
-                                    <td>PLCHLDR</td>
+                                    <td>Dinner</td>
+                                    <td>Outside UNLH</td>
                                 </tr>
                                 <tr>
-                                    <th scope="row">3</th>
-                                    <td>Larry</td>
-                                    <td>the Bird</td>
+                                    <th scope="row">8:00pm</th>
+                                    <td>Opening Ceremony</td>
+                                    <td>UNLH 1000</td>
+                                </tr>
+                                <tr class="hacking">
+                                    <th scope="row">9:00pm</th>
+                                    <td>Hacking Begins</td>
+                                    <td></td>
+                                </tr>
+                                <tr class="workshop">
+                                    <th scope="row">9:00pm</th>
+                                    <td>Team Building Exercise</td>
+                                    <td>UNLH 1000</td>
+                                </tr>
+                                <tr class="workshop">
+                                    <th scope="row">9:00pm</th>
+                                    <td>Google Cloud Platform Tech Talk</td>
+                                    <td>Bourns A265</td>
+                                </tr>
+                                <tr class="workshop">
+                                    <th scope="row">10:00pm</th>
+                                    <td>Google Cloud Platform Workshop</td>
+                                    <td>WCH 127</td>
+                                </tr>
+                                <tr class="workshop">
+                                    <th scope="row">11:00pm</th>
+                                    <td>Intro to Flask</td>
+                                    <td>WCH 127</td>
+                                </tr>
+                                <tr class="workshop">
+                                    <th scope="row">11:00pm</th>
+                                    <td>Intro to Git</td>
+                                    <td>WCH 135</td>
                                 </tr>
                             </tbody>
                         </table>
@@ -275,7 +323,7 @@
                     {% load static %}
                     <img class="lantern" src="{% static "assets/img/lantern-02.png" %}" alt="" style="-moz-transform: scaleX(-1);-o-transform: scaleX(-1);-webkit-transform: scaleX(-1);transform: scaleX(-1);filter: FlipH;">
                     <div class="ui-element text-center" style="margin-top:0;margin-bottom:0;">
-                        <h2>SATURDAY<span class="h2-sym">,</span> APRIL <span class="h2-sym">27</span></h2>
+                        <h2>SATURDAY<span class="h2-sym">,</span><span class="desktop-hide"><br></span> APRIL <span class="h2-sym">27</span></h2>
                         <table class="table">
                             <thead>
                                 <tr>
@@ -285,20 +333,105 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr>
-                                    <th scope="row">5:00-9:00pm</th>
-                                    <td>Registration</td>
-                                    <td>UNLH</td>
+                                <tr class="fun">
+                                    <th scope="row">2:00-4:30am</th>
+                                    <td>Smash Ultimate Tournament</td>
+                                    <td>Bourns A265</td>
                                 </tr>
                                 <tr>
-                                    <th scope="row">7:00pm</th>
-                                    <td>Dinner - Marcello's Pizza</td>
-                                    <td>PLCHLDR</td>
+                                    <th scope="row">7:00am</th>
+                                    <td>Breakfast</td>
+                                    <td>Bytes Cafe</td>
+                                </tr>
+                                <tr class="workshop">
+                                    <th scope="row">8:00am</th>
+                                    <td>Esri Workshop</td>
+                                    <td>WCH 127</td>
                                 </tr>
                                 <tr>
-                                    <th scope="row">3</th>
-                                    <td>Larry</td>
-                                    <td>the Bird</td>
+                                    <th scope="row">9:00am</th>
+                                    <td>Sponsor Room Opens</td>
+                                    <td>WCH 205/206</td>
+                                </tr>
+                                <tr class="workshop">
+                                    <th scope="row">9:00am</th>
+                                    <td>Serverless Workshop</td>
+                                    <td>WCH 135</td>
+                                </tr>
+                                <tr class="workshop">
+                                    <th scope="row">10:00am</th>
+                                    <td>Intro to Microsoft Azure</td>
+                                    <td>WCH 127</td>
+                                </tr>
+                                <tr class="workshop">
+                                    <th scope="row">11:00am</th>
+                                    <td>Intro to Unity (VR)</td>
+                                    <td>WCH 127</td>
+                                </tr>
+                                <tr class="workshop">
+                                    <th scope="row">11:00am</th>
+                                    <td>Intro to Arduino and Embedded Systems</td>
+                                    <td>WCH 135</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">12:30pm</th>
+                                    <td>Lunch</td>
+                                    <td>Bytes Cafe</td>
+                                </tr>
+                                <tr class="fun">
+                                    <th scope="row">1:00pm</th>
+                                    <td>Rock, Paper, Scissors Tournament</td>
+                                    <td></td>
+                                </tr>
+                                <tr class="workshop">
+                                    <th scope="row">2:30pm</th>
+                                    <td>PC Building Workshop</td>
+                                    <td>WCH 135</td>
+                                </tr>
+                                <tr class="workshop">
+                                    <th scope="row">3:00pm</th>
+                                    <td>iOS Development Workshop</td>
+                                    <td>WCH 127</td>
+                                </tr>
+                                <tr class="fun">
+                                    <th scope="row">4:00pm</th>
+                                    <td>Professional Photoshoot</td>
+                                    <td>WCH Patio</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">5:00pm</th>
+                                    <td>Sponsor Room Closes</td>
+                                    <td>WCH 127</td>
+                                </tr>
+                                <tr class="workshop">
+                                    <th scope="row">5:00pm</th>
+                                    <td>Cybersecurity Workshop</td>
+                                    <td>WCH 127</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">6:00pm</th>
+                                    <td>Dinner</td>
+                                    <td>Bytes Cafe</td>
+                                </tr>
+                                <tr class="fun">
+                                    <th scope="row">8:00pm</th>
+                                    <td>Cupstacking Competition</td>
+                                    <td>WCH 205/206</td>
+                                </tr>
+                                <tr class="workshop">
+                                    <th scope="row">9:00pm</th>
+                                    <td>Architecting your Application Workshop</td>
+                                    <td>WCH 127</td>
+                                </tr>
+                                <tr class="workshop">
+                                    <th scope="row">10:00pm</th>
+                                    <td>Personal Finance for Tech Folks Workshop</td>
+                                    <td>WCH 127</td>
+                                </tr>
+                                <tr class="workshop">
+                                    <th scope="row">11:00pm</th>
+                                    <td>Lockpicking Workshop</td>
+                                    <td>WCH 127</td>
                                 </tr>
                             </tbody>
                         </table>
@@ -306,7 +439,7 @@
                     {% load static %}
                     <img class="lantern" src="{% static "assets/img/lantern-01.png" %}" alt="">
                     <div class="ui-element text-center" style="margin-top:0;">
-                        <h2>SUNDAY<span class="h2-sym">,</span> APRIL <span class="h2-sym">28</span></h2>
+                        <h2>SUNDAY<span class="h2-sym">,</span><span class="desktop-hide"><br></span> APRIL <span class="h2-sym">28</span></h2>
                         <table class="table">
                             <thead>
                                 <tr>
@@ -317,20 +450,45 @@
                             </thead>
                             <tbody>
                                 <tr>
-                                    <th scope="row">5:00-9:00pm</th>
-                                    <td>Registration</td>
-                                    <td>UNLH</td>
+                                    <th scope="row">12:00am</th>
+                                    <td>Midnight Snack</td>
+                                    <td>Bytes Cafe</td>
+                                </th>
+                                <tr>
+                                    <th scope="row">6:00am</th>
+                                    <td>Breakfast</td>
+                                    <td>Bytes Cafe</td>
+                                </th>
+                                <tr class="workshop">
+                                    <th scope="row">7:00am</th>
+                                    <td>How to Demo Workshop</td>
+                                    <td>WCH 127</td>
+                                </tr>
+                                <tr class="hacking">
+                                    <th scope="row">9:00am</th>
+                                    <td>HACKING ENDS</td>
+                                    <td></td>
                                 </tr>
                                 <tr>
-                                    <th scope="row">7:00pm</th>
-                                    <td>Dinner - Marcello's Pizza</td>
-                                    <td>PLCHLDR</td>
-                                </tr>
+                                    <th scope="row">10:00-12:00pm</th>
+                                    <td>Demos</td>
+                                    <td>WCH 205/206<br>WCH Patio</td>
+                                </th>
                                 <tr>
-                                    <th scope="row">3</th>
-                                    <td>Larry</td>
-                                    <td>the Bird</td>
-                                </tr>
+                                    <th scope="row">12:00pm</th>
+                                    <td>Lunch</td>
+                                    <td>Bytes</td>
+                                </th>
+                                <tr>
+                                    <th scope="row">1:00pm</th>
+                                    <td>Keynote Speech</td>
+                                    <td>UNLH 1000</td>
+                                </th>
+                                <tr>
+                                    <th scope="row">2:30pm</th>
+                                    <td>Closing Ceremony</td>
+                                    <td>UNLH 1000</td>
+                                </th>
                             </tbody>
                         </table>
                     </div>
@@ -345,74 +503,234 @@
                         <img class="Citrus Hack Map" src="{% static "assets/img/map.png" %}" alt="" style="width:100%">
                     </div>
                 </div>
+                <div class="section-container hidden" id="resources">
+                    <h1>HACKER RESOURCES</h1>
+                    <div class="leading-block"></div>
+                    <div class="ui-element text-center" style="padding:1.5em 4.5% 0 4.5%">
+                        <div class="resource row">
+                            <div class="col-12 col-sm-12 col-md-3 col-lg-3 col-xl-3">
+                                <a target="_blank" href="https://citrushack2019.slack.com/">
+                                    {% load static %}
+                                    <img class="resource-icon" src="{% static "assets/img/slack-icon-l.png" %}" alt="">
+                                </a>
+                            </div>
+                            <div class="text-center text-sm-center text-md-left text-lg-left text-xl-left col-12 col-sm-12 col-md-9 col-lg-9 col-xl-9">
+                                <h3>SLACK</h3>
+                                <p class="resource-description">Get live updates, see event reminders, search for teammates, reach out to our organizers, find mentors, share memes, and so much more.</p>
+                            </div>
+                        </div>
+                        <div class="resource row">
+                            <div class="col-12 col-sm-12 col-md-3 col-lg-3 col-xl-3">
+                                <a target="_blank" href="https://citrushack2019.devpost.com/">
+                                    {% load static %}
+                                    <img class="resource-icon" src="{% static "assets/img/devpost-icon-l.png" %}" alt="">
+                                </a>
+                            </div>
+                            <div class="text-center text-sm-center text-md-left text-lg-left text-xl-left col-12 col-sm-12 col-md-9 col-lg-9 col-xl-9">
+                                <h3>DEVPOST</h3>
+                                <p class="resource-description">View official prizes, submit your project, and view other projects made at Citrus Hack 2019. Be sure to start your Devpost submission early!</p>
+                            </div>
+                        </div>
+                        <div class="resource row">
+                            <div class="col-12 col-sm-12 col-md-3 col-lg-3 col-xl-3">
+                                <a target="_blank" href="">
+                                    {% load static %}
+                                    <img class="resource-icon" src="{% static "assets/img/github-icon-l.png" %}" alt="">
+                                </a>
+                            </div>
+                            <div class="text-center text-sm-center text-md-left text-lg-left text-xl-left col-12 col-sm-12 col-md-9 col-lg-9 col-xl-9">
+                                <h3>CODE STARTER PACK</h3>
+                                <p class="resource-description">Check out some suggested software to help you get your project started.</p>
+                            </div>
+                        </div>
+                        <div class="resource row">
+                            <div class="col-12 col-sm-12 col-md-3 col-lg-3 col-xl-3">
+                                <a target="_blank" href="https://hack.mlh.io/learn/">
+                                    {% load static %}
+                                    <img class="resource-icon" src="{% static "assets/img/mlh-logo-white.png" %}" alt="">
+                                </a>
+                            </div>
+                            <div class="text-center text-sm-center text-md-left text-lg-left text-xl-left col-12 col-sm-12 col-md-9 col-lg-9 col-xl-9">
+                                <h3>MLH HACK PACK</h3>
+                                <p class="resource-description">Look at Major League Hacking's official suggestions for resources and tutorials.</p>
+                            </div>
+                        </div>
+                        <div class="resource row" style="border-bottom: none;">
+                            <div class="col-12 col-sm-12 col-md-3 col-lg-3 col-xl-3">
+                                <a target="_blank" href="https://hardware.mlh.io/">
+                                    {% load static %}
+                                    <img class="resource-icon" src="{% static "assets/img/hardware.png" %}" alt="">
+                                </a>
+                            </div>
+                            <div class="text-center text-sm-center text-md-left text-lg-left text-xl-left col-12 col-sm-12 col-md-9 col-lg-9 col-xl-9">
+                                <h3>HARDWARE</h3>
+                                <p class="resource-description">View and request available hardware.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- <div class="ui-element text-center">
+                        <h2>SUBMITTING ON DEVPOST</h2>
+                    </div> -->
+                </div>
                 <div class="section-container hidden" id="judging">
                     <h1>JUDGING CATEGORIES</h1>
                     <div class="leading-block"></div>
                     <div class="ui-element text-center">
-                        
+                        <div class="judging-category">
+                            <p class="category-title">First Place Overall</p>
+                            <p class="category-description">Awarded to the team whose project contains exceptional complexity, design, utility, and polish.</p>
+                        </div>
+                        <div class="judging-category">
+                            <p class="category-title">Second Place Overall</p>
+                            <p class="category-description">Awarded to the team whose project exhibits a high level of complexity, design, utility, and polish.</p>
+                        </div>
+                        <div class="judging-category">
+                            <p class="category-title">Sentinel: Cyber Security</p>
+                            <p class="category-description">Awarded to the team whose project has best proven to ethically break into complex systems and/or withstand known methods of targeted cyber attacks.</p>
+                        </div>
+                        <div class="judging-category">
+                            <p class="category-title">Reclaimer: Sustainability</p>
+                            <p class="category-description">Awarded to the team whose project best contributes to the betterment of the environment and/or promotes an environmentally friendly lifestyle.</p>
+                        </div>
+                        <div class="judging-category">
+                            <p class="category-title">Campaigner: Social Good</p>
+                            <p class="category-description">Awarded to the team whose project best attempts to solve societal problems within diversity and inclusivity.</p>
+                        </div>
+                        <div class="judging-category">
+                            <p class="category-title">Medic: Health</p>
+                            <p class="category-description">Awarded to the team whose project best innovates within med-tech or promotes a healthy lifestyle.</p>
+                        </div>
+                        <div class="judging-category">
+                            <p class="category-title">Best Beginner</p>
+                            <p class="category-description">Awarded to the team composed of at least 50% first-time-hackers whose project exhibits commendable complexity, design, utility, and/or polish.</p>
+                        </div>
+                        <div class="judging-category">
+                            <p class="category-title">Best Hardware Hack</p>
+                            <p class="category-description">Awarded to the team whose project best utilizes external hardware components.</p>
+                        </div>
+                        <div class="judging-category">
+                            <p class="category-title">Best Design</p>
+                            <p class="category-description">Awarded to the team whose project exhibits the most clean, concise, and cohesive interface.</p>
+                        </div>
+                        <div class="judging-category">
+                            <p class="category-title">Best Use of Google Cloud Platform (3)</p>
+                            <p class="category-description">Awarded to teams whose projects utilize Google Cloud Platform in creative and innovative ways.</p>
+                        </div>
+                        <div class="judging-category">
+                            <p class="category-title">Best Use of Snap Kit</p>
+                            <p class="category-description">Awarded to the team whose project utilizes Snap Kit in creative and innovative ways.</p>
+                        </div>
+                        <div class="judging-category">
+                            <p class="category-title">Best Domain Name Registered with Domain.com</p>
+                            <p class="category-description">Awarded to the team exhibitting the best project that utilizes a domain name registered with Domain.com</p>
+                        </div>
+                        <div class="judging-category">
+                            <p class="category-title">Best IoT Hack Using a Qualcomm Device</p>
+                            <p class="category-description">Awarded to the team who best utilizes a Qualcomm Device to create an IoT-centered project.</p>
+                        </div>
+                        <div class="judging-category">
+                            <p class="category-title">Best Use of Blockstack</p>
+                            <p class="category-description">Awarded to the team whose project best utilizes Blockstack in creative and innovative ways.</p>
+                        </div>
+                        <div class="judging-category">
+                            <p class="category-title">Best Use of Transposit</p>
+                            <p class="category-description">Awarded to the team whose project best utilizes Transposit in creative and innovative ways.</p>
+                        </div>
+                        <div class="judging-category">
+                            <p class="category-title">Best Entrepreneurial Hack (Equipo Vision) (2)</p>
+                            <p class="category-description">Awarded to the teams whose projects best aim to launch a technology start-up business or service (Awarded by Equipo Vision).</p>
+                        </div>
+                        <div class="judging-category" style="border-bottom:none;">
+                            <p class="category-title">Best Entrepreneurial Hack (UCR Office of Technology Partnerships) (2)</p>
+                            <p class="category-description">Awarded to the teams whose projects best aim to launch a technology start-up business or service (Awarded by UCR Office of Technology Partnerships).</p>
+                        </div>
                     </div>
                     <h1>ESTEEMED JUDGES</h1>
                     <div class="leading-block"></div>
                     <div id="judges-container">
                         <div class="row">
-                            <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4">
+                            <div class="judge col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4">
                                 {% load static %}
-                                <img class="judge" src="{% static "assets/judges/jihwan.png" %}" alt="">
-                                <p class="judge-name">JiHwan Kim</p>
-                                <p class="judge-title">President<br>UCR Competitive Programming</p>
+                                <img class="judge-img" src="{% static "assets/judges/JosiahJordan.jpeg" %}" alt="">
+                                <p class="judge-name">Josiah Jordan</p>
+                                <p class="judge-title">Senior Software Engineer<br>Blizzard Entertainment</p>
                             </div>
-                            <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4">
+                            <div class="judge col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4">
                                 {% load static %}
-                                <img class="judge" src="{% static "assets/judges/jihwan.png" %}" alt="">
-                                <p class="judge-name">JiHwan Kim</p>
-                                <p class="judge-title">Co-Director of Event Coordination<br>ACM UCR</p>
+                                <img class="judge-img" src="{% static "assets/judges/JedSchwendiman.jpeg" %}" alt="">
+                                <p class="judge-name">Jed Schwendiman</p>
+                                <p class="judge-title">Senior Director of Development<br>Bourns College of Engineering, UC Riverside.</p>
                             </div>
-                            <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4">
+                            <div class="judge col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4">
                                 {% load static %}
-                                <img class="judge" src="{% static "assets/judges/jihwan.png" %}" alt="">
-                                <p class="judge-name">JiHwan Kim</p>
-                                <p class="judge-title">(Former) Treasurer<br>Cyber@UCR</p>
+                                <img class="judge-img" src="{% static "assets/judges/NathanCastle.jpeg" %}" alt="">
+                                <p class="judge-name">Nathan Castle</p>
+                                <p class="judge-title">Product Engineer<br>Esri</p>
                             </div>
-                            <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4">
+                            <div class="judge col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4">
                                 {% load static %}
-                                <img class="judge" src="{% static "assets/judges/jihwan.png" %}" alt="">
-                                <p class="judge-name">JiHwan Kim</p>
-                                <p class="judge-title">Lead Web Developer<br>Citrus Hack</p>
+                                <img class="judge-img" src="{% static "assets/judges/KoushikHajra.jpeg" %}" alt="">
+                                <p class="judge-name">Koushik Hajra</p>
+                                <p class="judge-title">Product Engineer<br>Esri</p>
                             </div>
-                            <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4">
+                            <div class="judge col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4">
                                 {% load static %}
-                                <img class="judge" src="{% static "assets/judges/jihwan.png" %}" alt="">
-                                <p class="judge-name">JiHwan Kim</p>
-                                <p class="judge-title">Wonderful Human Being</p>
+                                <img class="judge-img" src="{% static "assets/judges/ErwinSoekianto.jpeg" %}" alt="">
+                                <p class="judge-name">Erwin Soekianto</p>
+                                <p class="judge-title">Product Engineer<br>Esri</p>
                             </div>
-                            <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4">
+                            <div class="judge col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4">
                                 {% load static %}
-                                <img class="judge" src="{% static "assets/judges/jihwan.png" %}" alt="">
-                                <p class="judge-name">JiHwan Kim</p>
-                                <p class="judge-title">The definition of "the homie"</p>
+                                <img class="judge-img" src="{% static "assets/judges/JohnYaist.jpeg" %}" alt="">
+                                <p class="judge-name">John Yaist</p>
+                                <p class="judge-title">Product Engineer<br>Esri</p>
                             </div>
-                            <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4">
+                            <div class="judge col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4">
                                 {% load static %}
-                                <img class="judge" src="{% static "assets/judges/jihwan.png" %}" alt="">
-                                <p class="judge-name">JiHwan Kim</p>
-                                <p class="judge-title">International Treasure</p>
+                                <img class="judge-img" src="{% static "assets/judges/DavidMartinez.jpeg" %}" alt="">
+                                <p class="judge-name">David Martinez</p>
+                                <p class="judge-title">Product Manager<br>Esri</p>
                             </div>
-                            <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4">
+                            <div class="judge col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4">
                                 {% load static %}
-                                <img class="judge" src="{% static "assets/judges/jihwan.png" %}" alt="">
-                                <p class="judge-name">JiHwan Kim</p>
-                                <p class="judge-title">Loving Husband and Father</p>
+                                <img class="judge-img" src="{% static "assets/meta/citrus-icon.png" %}" alt="">
+                                <p class="judge-name">Biraja Nayak</p>
+                                <p class="judge-title">Senior Geodata Analyst<br>Esri</p>
                             </div>
-                            <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4">
+                            <div class="judge col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4">
                                 {% load static %}
-                                <img class="judge" src="{% static "assets/judges/jihwan.png" %}" alt="">
-                                <p class="judge-name">JiHwan Kim</p>
-                                <p class="judge-title">Good with kids and pets</p>
+                                <img class="judge-img" src="{% static "assets/judges/AmitSen.jpeg" %}" alt="">
+                                <p class="judge-name">Amit Sen</p>
+                                <p class="judge-title">Software Development Engineer<br>Esri</p>
+                            </div>
+                            <div class="judge col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4">
+                                {% load static %}
+                                <img class="judge-img" src="{% static "assets/judges/HarshPathak.jpeg" %}" alt="">
+                                <p class="judge-name">Harsh Pathak</p>
+                                <p class="judge-title">Technical SDK Specialist (Programming)<br>Esri</p>
+                            </div>
+                            <div class="judge col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4">
+                                {% load static %}
+                                <img class="judge-img" src="{% static "assets/judges/JohnPham.jpeg" %}" alt="">
+                                <p class="judge-name">John Pham</p>
+                                <p class="judge-title">Incoming Software Engineer<br>Microsoft</p>
+                            </div>
+                            <div class="judge col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4">
+                                {% load static %}
+                                <img class="judge-img" src="{% static "assets/judges/PaeaLePendu.jpg" %}" alt="">
+                                <p class="judge-name">Paea LePendu</p>
+                                <p class="judge-title">Assistant Professor (Formal Languages and Automata, Natural Language Processing)<br>UC Riverside</p>
+                            </div>
+                            <div class="judge col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4">
+                                {% load static %}
+                                <img class="judge-img" src="{% static "assets/judges/XukanRan.png" %}" alt="">
+                                <p class="judge-name">Xukan Ran</p>
+                                <p class="judge-title">PhD Student and Research Assistant<br>UC Riverside </p>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="section-container hidden" id="expo">
+<!--                 <div class="section-container hidden" id="expo">
                     <h1>CITRUS HACK EXPO</h1>
                     <div class="leading-block"></div>
                     <div id="expo-table" class="ui-element text-center">
@@ -749,7 +1067,7 @@
                     </div>
                     {% load static %}
                     <img class="robot" src="{% static "assets/img/robot.png" %}" alt="">
-                </div>
+                </div> -->
             </div>
         </div>        
 

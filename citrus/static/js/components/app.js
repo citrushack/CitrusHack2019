@@ -16,7 +16,17 @@ $( "#home-link" ).click(function() {
     $('#home').removeClass('hidden');
 });
 
+$( "#home-icon" ).click(function() {
+    $('.section-container').addClass('hidden');
+    $('#home').removeClass('hidden');
+});
+
 $( "#sched-link" ).click(function() {
+    $('.section-container').addClass('hidden');
+    $('#schedule').removeClass('hidden');
+});
+
+$( "#schedule-icon" ).click(function() {
     $('.section-container').addClass('hidden');
     $('#schedule').removeClass('hidden');
 });
@@ -26,7 +36,27 @@ $( "#map-link" ).click(function() {
     $('#map').removeClass('hidden');
 });
 
+$( "#map-icon" ).click(function() {
+    $('.section-container').addClass('hidden');
+    $('#map').removeClass('hidden');
+});
+
+$( "#resources-link" ).click(function() {
+    $('.section-container').addClass('hidden');
+    $('#resources').removeClass('hidden');
+});
+
+$( "#resources-icon" ).click(function() {
+    $('.section-container').addClass('hidden');
+    $('#resources').removeClass('hidden');
+});
+
 $( "#judging-link" ).click(function() {
+    $('.section-container').addClass('hidden');
+    $('#judging').removeClass('hidden');
+});
+
+$( "#judging-icon" ).click(function() {
     $('.section-container').addClass('hidden');
     $('#judging').removeClass('hidden');
 });

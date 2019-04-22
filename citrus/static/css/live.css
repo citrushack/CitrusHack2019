@@ -49,6 +49,7 @@ h5 {
 	font-size: 24px;
 	letter-spacing: 0.25em;
 	color: #FFFFFF;
+	text-shadow: 0px 0px 8px #444573;
 }
 
 h6 {
@@ -158,10 +159,13 @@ h3 {
 
 h2 {
 	color: #FFFFFF;
-	margin: 8px;
 	font-family: Form;
 	text-shadow: 0px 0px 8px #513C89;
 	letter-spacing: 0.06em;
+}
+
+.home-h2 {
+	margin: 5% 0 5% 0;
 }
 
 .h2-sym {
@@ -253,7 +257,7 @@ h2 {
 	margin-top: 30px;
 	margin-bottom: 30px;
 	border-radius: 6px;
-	padding: 18px;
+	padding: 4.5%;
 }
 
 table {
@@ -277,6 +281,36 @@ table {
 	text-align: left;
 }
 
+.food {
+	color: #6EECE4;
+	text-shadow: 0px 0px 4px #5DB6B0;
+}
+
+.resource {
+	border-bottom: 1px solid rgba(132, 132, 132, 0.18);
+	margin-bottom: 1.5em;
+	padding-bottom: 1.5em;
+	margin-top: 1.5em;
+	padding-top: 1.5em;
+}
+
+.resource-icon {
+	width:75%;
+	height: auto;
+}
+
+.resource-description {
+	font-family: Titillium Web;
+	font-weight: 200;
+	color:#DFDFDF;
+	letter-spacing: 0.15em;
+}
+
+.hacking {
+	color: #F57FB4;
+	text-shadow: 0px 0px 4px #E04C8E;
+}
+
 #map-container {
 	padding: 5%;
 }
@@ -289,14 +323,44 @@ table {
 	text-align: right;
 }
 
-#judges-container{
-	padding:0 10% 0 10%;
+.judging-category {
+	border-bottom: 1px solid rgba(132, 132, 132, 0.18);
+	text-align:left;
+	font-family: Titillium Web;
+	padding: 10px 0 10px 0;
 }
 
-.judge {
-	height: 45%;
+.category-title {
+	font-size: 20px;
+	font-weight: 400;
+	color:#FFFFFF;
+	letter-spacing: 0.16em;
+	text-shadow: 0px 0px 4px #5539A7;
+	margin-bottom:0.05em;
+}
+
+.category-description {
+	font-family: Titillium Web;
+	font-size: 14px;
+	font-weight: 200;
+	letter-spacing: 0.15em;
+	color:#CCCCCC;
+	margin-bottom:0.4em;
+}
+
+#judges-container{
+	padding:0% 10% 0% 10%;
+}
+
+.judge{
+	margin:3% 0 3% 0;
+}
+
+.judge-img {
+	height: 12em;
 	width: auto;
 	border-radius: 6px;
+	box-shadow: 0px 2px 14px rgba(121, 112, 143, 0.29);
 }
 
 .judge-name {
@@ -318,4 +382,49 @@ table {
 	font-weight: 200;
 	letter-spacing: 0.15em;
 	color:#CCCCCC;
+}
+
+@media (max-width: 800px) {
+	#sidebar {
+		display:none;
+	}
+
+	#main {
+		margin-left:0;
+		/*padding: 4%;*/
+		margin-bottom: 2rem;
+	}
+
+	#mobile-nav {
+		z-index:99999;
+		padding:5px;
+		background: var(--element-bg-color);
+		position: fixed;
+		bottom: 0;
+	}
+
+	.mobile-icon {
+		width: 50%;
+		height: auto;
+		margin: 1em 0 1em 0;
+	}
+
+	.resource-icon {
+		margin-bottom: 2em;
+	}
+
+	.ui-element {
+		width: 100%;
+		background: none;
+	}
+}
+
+@media (min-width: 800px) {
+	#mobile-nav {
+		display:none;
+	}
+
+	.desktop-hide {
+		display:none;
+	}
 }

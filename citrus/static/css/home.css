@@ -307,38 +307,23 @@ hr {
 
 
 #apply-button {
-	background: #CCCCCC;
+	background: linear-gradient(154.25deg, #FC0E90 0%, #C03B84 31.62%, #96155C 98.34%);;
 	box-sizing: border-box;
 	border-radius: 6px;
 	display: inline-block;
-	padding: 10px 8px 8px 12px;
+	padding: 1em 1em .8em 1.6em;
 	font-family: Form;
 	font-style: normal;
 	font-weight: normal;
 	font-size: 18px;
 	text-align: center;
 	letter-spacing: 0.4em;
-	color: #000000;	
+	color: #FFFFFF;	
 }
 
 #deadline {
 	font-family: Titillium Web;
 	color: var(--primary-accent-color);
-}
-
-#count-down {
-	background: #CCCCCC;
-	box-sizing: border-box;
-	border-radius: 6px;
-	display: inline-block;
-	padding: 10px 8px 8px 12px;
-	font-family: Titillium Web;
-	font-style: normal;
-	font-weight: normal;
-	font-size: 18px;
-	text-align: center;
-	letter-spacing: 0.4em;
-	color: #000000;	
 }
 
 .panel-type-1 {

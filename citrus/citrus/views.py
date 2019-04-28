@@ -8,6 +8,9 @@ def home(request):
 def live(request):
     return render(request, 'live.html', context={}, )
 
+def expo(request):
+    return render(request, 'expo.html', context={}, )
+
 def mentor(request):
     return redirect("https://docs.google.com/forms/d/e/1FAIpQLScp0a5PhwBc-36Im7HkytyqlvTiQSPnNIg3rtaHlSVAPn3U1g/viewform")
 
